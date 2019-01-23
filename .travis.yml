@@ -1,3 +1,5 @@
+notifications:
+  email: false
 language: node_js
 node_js:
 - node
@@ -15,5 +17,4 @@ deploy:
   github-token: $GH_PAGES_DEPLOY_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
-     branch: gitbook
-
+     branch: master
