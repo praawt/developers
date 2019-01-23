@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- node
+cache:
+  directories:
+  - node_modules
+  - "$HOME/.npm"
+script:
+- npm install -g gitbook-cli
+- gitbook build
+deploy:
+  provider: pages
+  local-dir: _book
+  skip-cleanup: true
+  github-token: $GH_PAGES_DEPLOY_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+     branch: gitbook
+
