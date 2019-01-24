@@ -1,0 +1,10 @@
+{
+    "plugins": ["insert-logo-link"],
+    "pluginsConfig": {
+        "insert-logo-link": {
+            "src": "assets/logo.svg",
+            "url": "https://windingtree.github.io/docs/"
+        }
+    }
+}
+
