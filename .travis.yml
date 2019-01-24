@@ -8,8 +8,7 @@ cache:
   - node_modules
   - "$HOME/.npm"
 script:
-- npm install -g gitbook-cli
-- gitbook build
+- npm run build
 deploy:
   provider: pages
   local-dir: _book
