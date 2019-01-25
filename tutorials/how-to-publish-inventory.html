@@ -218,11 +218,11 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p><em>Last modified: Fri Jan 25 2019 13:42:19 GMT+0000 (Coordinated Universal Time)</em></p>
+<p><em>Last modified: Fri Jan 25 2019 15:00:34 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
 <h1 id="how-to-publish-inventory">How to publish Inventory</h1>
 <p>In this tutorial, you will learn how tu publish the simplest offering
-possible: Your appartment for a period of your vacation.</p>
+possible: Your apartment for a period of your vacation.</p>
 <h2 id="requirements">Requirements</h2>
 <!-- TODO reword -->
 <ul>
@@ -232,6 +232,193 @@ the Winding Tree ecosystem APIs.</p>
 </div></div></li>
 </ul>
 <h2 id="step-by-step">Step by step</h2>
+<p>Let&apos;s say your name is Frank, you are accidentaly living
+in NASA offices in Washington, DC and you are going out of town
+for a weekend. That&apos;s a great moment to offer your apartment to
+other travellers.</p>
+<h3 id="preparing-the-data">Preparing the data</h3>
+<p>In Winding Tree ecosystem, data is divided into the following
+groups:</p>
+<ul>
+<li>general description</li>
+<li>inventory</li>
+<li>prices</li>
+<li>availability</li>
+</ul>
+<p>We are going to construct the data document necessary to register
+your apartment in Winding Tree ecosystem and offer it to the world.</p>
+<h4 id="general-description">General description</h4>
+<p>This part identifies you as a property owner and contains basic information
+about both you and the property. In Frank&apos;s case, it will look like this:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;description&quot;</span>: {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Frank&apos;s apartment&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Beautiful apartment near city center.&quot;</span>,
+    <span class="hljs-string">&quot;contacts&quot;</span>: {
+      <span class="hljs-string">&quot;general&quot;</span>: {
+        <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;wt-frank@mailinator.com&quot;</span>,
+        <span class="hljs-string">&quot;phone&quot;</span>: <span class="hljs-string">&quot;+12023581900&quot;</span>
+      }
+    },
+    <span class="hljs-string">&quot;address&quot;</span>: {
+      <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;300 E. Street SW, Suite 5R30&quot;</span>,
+      <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Washington&quot;</span>,
+      <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;DC&quot;</span>,
+      <span class="hljs-string">&quot;postalCode&quot;</span>: <span class="hljs-string">&quot;20546&quot;</span>,
+      <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;US&quot;</span>
+    },
+    <span class="hljs-string">&quot;timezone&quot;</span>: <span class="hljs-string">&quot;America/New_York&quot;</span>,
+    <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;USD&quot;</span>,
+    <span class="hljs-string">&quot;defaultCancellationAmount&quot;</span>: <span class="hljs-number">100</span>
+  }
+}
+</code></pre>
+<p>The <code>defaultCancellationAmount</code> is necessary for handling situations
+where the travelers need to cancel their reservation. The value <code>100</code>
+simply means that cancellations are not possible and the money cannot
+be returned.</p>
+<h4 id="inventory">Inventory</h4>
+<p>Inventory describes the property itself, in our case, we are offering
+the apartment as a whole and we do not want more than 3 people there.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;roomTypes&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;franks-apartment&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Whole apartment&quot;</span>,
+      <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;This is a whole apartment&quot;</span>,
+      <span class="hljs-string">&quot;totalQuantity&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-string">&quot;occupancy&quot;</span>: {
+        <span class="hljs-string">&quot;max&quot;</span>: <span class="hljs-number">3</span>
+      }
+    }
+  ]
+}
+</code></pre>
+<h4 id="prices">Prices</h4>
+<p>Prices are defined as a set of rate plans that can be adjusted and combined
+to individual needs. In this instance, we are happy with a fixed price of
+125 USD per night.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;ratePlans&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;franks-price&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Fixed price&quot;</span>,
+      <span class="hljs-string">&quot;price&quot;</span>: <span class="hljs-number">125</span>,
+      <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+        <span class="hljs-string">&quot;franks-apartment&quot;</span>
+      ]
+    }
+  ]
+}
+</code></pre>
+<h4 id="availability">Availability</h4>
+<p>Of course Frank wants to list his apartment only for the weekend when he is
+out of town, so we need to set the availability for those dates. The apartment
+will be free for three nights - from Thursday to Sunday.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;availability&quot;</span>: {
+    <span class="hljs-string">&quot;roomTypes&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;franks-apartment&quot;</span>,
+        <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2019-07-04&quot;</span>,
+        <span class="hljs-string">&quot;quantity&quot;</span>: <span class="hljs-number">1</span>
+      },
+      {
+        <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;franks-apartment&quot;</span>,
+        <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2019-07-05&quot;</span>,
+        <span class="hljs-string">&quot;quantity&quot;</span>: <span class="hljs-number">1</span>
+      },
+      {
+        <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;franks-apartment&quot;</span>,
+        <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2019-07-06&quot;</span>,
+        <span class="hljs-string">&quot;quantity&quot;</span>: <span class="hljs-number">1</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="uploading-the-data">Uploading the data</h3>
+<p>The <a href="https://github.com/windingtree/wt-write-api" target="_blank">Write API</a> wants all
+of the data in a single request, so we need to combine everything together.
+Notice that the inventory is actually part of the description section.</p>
+<p>We will store the data into a file called <code>franks-apartment.json</code>.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;description&quot;</span>: {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Frank&apos;s apartment&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Beautiful apartment near city center.&quot;</span>,
+    <span class="hljs-string">&quot;contacts&quot;</span>: {
+      <span class="hljs-string">&quot;general&quot;</span>: {
+        <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;wt-frank@mailinator.com&quot;</span>,
+        <span class="hljs-string">&quot;phone&quot;</span>: <span class="hljs-string">&quot;+12023581900&quot;</span>
+      }
+    },
+    <span class="hljs-string">&quot;address&quot;</span>: {
+      <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;300 E. Street SW, Suite 5R30&quot;</span>,
+      <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Washington&quot;</span>,
+      <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;DC&quot;</span>,
+      <span class="hljs-string">&quot;postalCode&quot;</span>: <span class="hljs-string">&quot;20546&quot;</span>,
+      <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;US&quot;</span>
+    },
+    <span class="hljs-string">&quot;roomTypes&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;franks-apartment&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Whole apartment&quot;</span>,
+        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;This is a whole apartment&quot;</span>,
+        <span class="hljs-string">&quot;totalQuantity&quot;</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;occupancy&quot;</span>: {
+          <span class="hljs-string">&quot;max&quot;</span>: <span class="hljs-number">3</span>
+        }
+      }
+    ],
+    <span class="hljs-string">&quot;timezone&quot;</span>: <span class="hljs-string">&quot;America/New_York&quot;</span>,
+    <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;USD&quot;</span>,
+    <span class="hljs-string">&quot;defaultCancellationAmount&quot;</span>: <span class="hljs-number">100</span>
+  },
+  <span class="hljs-string">&quot;ratePlans&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;franks-price&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Fixed price&quot;</span>,
+      <span class="hljs-string">&quot;price&quot;</span>: <span class="hljs-number">125</span>,
+      <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+        <span class="hljs-string">&quot;franks-apartment&quot;</span>
+      ]
+    }
+  ],
+  <span class="hljs-string">&quot;availability&quot;</span>: {
+    <span class="hljs-string">&quot;roomTypes&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;franks-apartment&quot;</span>,
+        <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2019-07-04&quot;</span>,
+        <span class="hljs-string">&quot;quantity&quot;</span>: <span class="hljs-number">1</span>
+      },
+      {
+        <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;franks-apartment&quot;</span>,
+        <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2019-07-05&quot;</span>,
+        <span class="hljs-string">&quot;quantity&quot;</span>: <span class="hljs-number">1</span>
+      },
+      {
+        <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;franks-apartment&quot;</span>,
+        <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2019-07-06&quot;</span>,
+        <span class="hljs-string">&quot;quantity&quot;</span>: <span class="hljs-number">1</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<p>In order to list the apartment, we will call the Write API&apos;s <code>/hotels</code>
+endpoint. To be able to do that, you need to have your Write API
+<a href="">account ready and configured</a>.</p>
+<pre><code class="lang-sh">$ curl -X POST https://playground-write-api.windingtree.com/hotels \
+  -H <span class="hljs-string">&apos;Content-Type: application/json&apos;</span> \
+  -H <span class="hljs-string">&apos;X-Access-Key: write-api-account-access-key&apos;</span> \
+  -H <span class="hljs-string">&apos;X-Wallet-Password: ethereum-wallet-password&apos;</span> \
+  --data @franks-apartment.json
+</code></pre>
+<p>In the response, you will get an Ethereum address where Frank&apos;s apartment
+is registered. That address belongs only to the holder of the used
+Ethereum wallet and noone else can modify the record stored there.</p>
+<pre><code class="lang-json">{<span class="hljs-string">&quot;address&quot;</span>:<span class="hljs-string">&quot;0xA603FF7EA9A1B81FB45EF6AeC92A323a88211f40&quot;</span>}
+</code></pre>
 <h2 id="where-to-next">Where to next</h2>
 <ul>
 <li>Publishing inventory and availability offering for an entire hotel</li>
@@ -280,7 +467,7 @@ the Winding Tree ecosystem APIs.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to publish inventory","level":"1.2.1","depth":2,"next":{"title":"How to setup Winding Tree Write API","level":"1.2.2","depth":2,"path":"tutorials/how-to-setup-winding-tree-write-api.md","ref":"tutorials/how-to-setup-winding-tree-write-api.md","articles":[]},"previous":{"title":"Tutorials","level":"1.2","depth":1,"path":"tutorials.md","ref":"tutorials.md","articles":[{"title":"How to publish inventory","level":"1.2.1","depth":2,"path":"tutorials/how-to-publish-inventory.md","ref":"tutorials/how-to-publish-inventory.md","articles":[]},{"title":"How to setup Winding Tree Write API","level":"1.2.2","depth":2,"path":"tutorials/how-to-setup-winding-tree-write-api.md","ref":"tutorials/how-to-setup-winding-tree-write-api.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["insert-logo-link","last-modified","hints"],"pluginsConfig":{"last-modified":{},"insert-logo-link":{"src":"https://windingtree.github.io/docs/assets/logo.svg","url":"https://windingtree.github.io/docs/"},"search":{},"hints":{"info":"fa fa-info-circle","tip":"fa fa-mortar-board","danger":"fa fa-exclamation-circle","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorials/how-to-publish-inventory.md","mtime":"2019-01-25T13:42:19.385Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-25T13:43:03.611Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to publish inventory","level":"1.2.1","depth":2,"next":{"title":"How to setup Winding Tree Write API","level":"1.2.2","depth":2,"path":"tutorials/how-to-setup-winding-tree-write-api.md","ref":"tutorials/how-to-setup-winding-tree-write-api.md","articles":[]},"previous":{"title":"Tutorials","level":"1.2","depth":1,"path":"tutorials.md","ref":"tutorials.md","articles":[{"title":"How to publish inventory","level":"1.2.1","depth":2,"path":"tutorials/how-to-publish-inventory.md","ref":"tutorials/how-to-publish-inventory.md","articles":[]},{"title":"How to setup Winding Tree Write API","level":"1.2.2","depth":2,"path":"tutorials/how-to-setup-winding-tree-write-api.md","ref":"tutorials/how-to-setup-winding-tree-write-api.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["insert-logo-link","last-modified","hints"],"pluginsConfig":{"last-modified":{},"insert-logo-link":{"src":"https://windingtree.github.io/docs/assets/logo.svg","url":"https://windingtree.github.io/docs/"},"search":{},"hints":{"info":"fa fa-info-circle","tip":"fa fa-mortar-board","danger":"fa fa-exclamation-circle","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tutorials/how-to-publish-inventory.md","mtime":"2019-01-25T15:00:34.954Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-25T15:01:17.966Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
