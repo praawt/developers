@@ -24,6 +24,8 @@
   "homepage": "https://github.com/windingtree/docs#readme",
   "devDependencies": {
     "gitbook-cli": "^2.3.2",
-    "gitbook-plugin-insert-logo-link": "^1.0.1"
+    "gitbook-plugin-hints": "^1.0.2",
+    "gitbook-plugin-insert-logo-link": "^1.0.1",
+    "gitbook-plugin-last-modified": "^1.0.0"
   }
 }

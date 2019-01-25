@@ -3,10 +3,16 @@
 ## Requirements
 
 - Ethereum wallet
-  (i) How do I generate Ethereum wallet
+{% hint style='info' %}
+How do I generate Ethereum wallet?
+{% endhint %}
 - Own enough ETH for transaction gas
-  (i) How do I buy my first Ether?
-  (i) How much gas do I need?
+{% hint style='info' %}
+How do I buy my first Ether?
+{% endhint %}
+{% hint style='info' %}
+How much gas do I need?
+{% endhint %}
 
 
 ## Step by step
