@@ -3,8 +3,8 @@
     "plugins": ["insert-logo-link", "last-modified", "callouts"],
     "pluginsConfig": {
         "insert-logo-link": {
-            "src": "https://windingtree.github.io/docs/assets/logo.svg",
-            "url": "https://windingtree.github.io/docs/"
+            "src": "https://docs.windingtree.com/assets/logo.svg",
+            "url": "https://docs.windingtree.com/"
         }
     }
 }
