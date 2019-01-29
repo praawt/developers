@@ -1,4 +1,5 @@
 {
+    "root": "book",
     "plugins": ["insert-logo-link", "last-modified", "hints"],
     "pluginsConfig": {
         "insert-logo-link": {
