@@ -2,6 +2,25 @@
 
 {% block book_header %}
 {{ super() }}
-  <script> window.intergramId = "-335576402" </script>
-  <script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+  <script type="text/javascript">
+    window.intergramId = "-1001171733386";
+    window.intergramServer = 'https://bot-intergram.windingtree.com';
+    window.intergramCustomizations = {
+      closedStyle: 'button', // button or chat
+      closedChatAvatarUrl: 'https://raw.githubusercontent.com/windingtree/wt-media/master/logo-variants/tree/png/tree--gradient-on-white.png',  // only used if closedStyle is set to 'chat'
+      cookieExpiration: 1, // in days. Once opened, closed chat title will be shown as button (when closedStyle is set to 'chat')
+      titleClosed: 'Ask us anything!',
+      titleOpen: 'Winding Tree tech team',
+      introMessage: 'Feel free to ask anything regarding this documentation!',
+      autoResponse: 'Thank you! We will get back to you as soon as we can.',
+      autoNoResponse: 'Huh... It looks like nobody is listening at the moment. Leave us a more permanent contact (e-mail will do) and somebody will reach out to you.',
+      mainColor: "#18e9a6", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+      alwaysUseFloatingButton: false, // Use the mobile floating button also on large screens
+      displayMessageTime: true, // Show or hide time indicators in the chat window
+      displayBanner: true, // Show or hide banner on the bottom side of the chat window
+      desktopHeight: 500, // Height of the chat window on desktop
+      desktopWidth: 370, // Width of the chat window on desktop
+    };
+  </script>
+  <script id="intergram" type="text/javascript" src="https://bot-intergram.windingtree.com/js/widget.js"></script>
 {% endblock %}
