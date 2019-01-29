@@ -1,4 +1,4 @@
-# How to publish Inventory
+# How to publish inventory
 
 In this tutorial, you will learn how tu publish the simplest offering
 possible: Your apartment for a period of your vacation.
@@ -8,7 +8,7 @@ possible: Your apartment for a period of your vacation.
 <!-- TODO reword -->
 - [Winding Tree Write API](https://github.com/windingtree/wt-write-api) URL.
 {% hint style='info' %}
-Learn how to [discover](), [setup]() and [make discoverable]()
+Learn how to [discover](), [setup](how-to-setup-write-api.md) and [make discoverable]()
 the Winding Tree ecosystem APIs.
 {% endhint %}
 
@@ -215,7 +215,7 @@ We will store the data into a file called `franks-apartment.json`.
 
 In order to list the apartment, we will call the Write API's `/hotels`
 endpoint. To be able to do that, you need to have your Write API
-[account ready and configured]().
+[account ready and configured](how-to-setup-write-api.md).
 
 ```sh
 $ curl -X POST https://playground-write-api.windingtree.com/hotels \
