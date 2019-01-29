@@ -7,10 +7,9 @@ possible: Your apartment for a period of your vacation.
 
 <!-- TODO reword -->
 - [Winding Tree Write API](https://github.com/windingtree/wt-write-api) URL.
-{% hint style='info' %}
-Learn how to [discover](), [setup](how-to-setup-write-api.md) and [make discoverable]()
+> ####Info
+> Learn how to [discover](), [setup](how-to-setup-write-api.md) and [make discoverable]()
 the Winding Tree ecosystem APIs.
-{% endhint %}
 
 ## Step by step
 

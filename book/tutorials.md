@@ -3,6 +3,7 @@
 - [How to publish Inventory](tutorials/how-to-publish-inventory.md)
 <!--- [How to retrieve My Inventory]()-->
 - [How to setup Winding Tree Write API](tutorials/how-to-setup-write-api.md)
+- [How to secure Winding Tree Write API](tutorials/how-to-secure-write-api.md)
 
 <!--
 - How do I generate eth wallet and buy ETH = $1

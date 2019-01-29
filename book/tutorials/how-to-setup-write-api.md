@@ -2,26 +2,21 @@
 
 In this tutorial, you will learn about
 [Winding Tree Write API](https://github.com/windingtree/wt-write-api) and
-how to set it up and operate it.
+how to set it up and work with it.
 
 ## Requirements
 
 - Installed and running [Docker](https://www.docker.com)
 - Chosen Winding Tree ecosystem environment
-{% hint style='info' %}
-Which Winding Tree ecosystem environments are available?
-{% endhint %}
+> #### Info
+> Which Winding Tree ecosystem environments are available?
 - Ethereum wallet
-{% hint style='info' %}
-How do I generate Ethereum wallet?
-{% endhint %}
+> #### Info
+> How do I generate Ethereum wallet?
 - Own enough ETH for transaction gas
-{% hint style='info' %}
-How do I buy my first Ether?
-{% endhint %}
-{% hint style='info' %}
-How much gas do I need?
-{% endhint %}
+> #### Info
+> - How do I buy my first Ether?
+> - How much gas do I need?
 
 ## Step by step
 
@@ -129,7 +124,8 @@ two headers with such request:
 - `X-Access-Key` - The value of `accessKey` returned upon account creation
 - `X-Wallet-Password` - Password that decrypts your Ethereum wallet, in our case `windingtree`
 
-For example if you are creating new record in Winding Tree Index, you would call:
+For example if you are [creating new record](how-to-publish-inventory.md)
+ in Winding Tree Index, you would call:
 
 ```sh
 $ curl -X POST https://playground-write-api.windingtree.com/hotels \
@@ -163,4 +159,4 @@ $ curl -X DELETE localhost:8000/accounts/aa43edaf8266e8f8 \
 ## Where to next
 
 - [How to publish inventory](how-to-publish-inventory.md)
-- Security
+- [How to secure Winding Tree Write API](how-to-secure-write-api.md)
