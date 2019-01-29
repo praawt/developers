@@ -159,4 +159,4 @@ $ curl -X DELETE localhost:8000/accounts/aa43edaf8266e8f8 \
 ## Where to next
 
 - [How to publish inventory](how-to-publish-inventory.md)
-- [How to secure Winding Tree Write API](how-to-secure-write-api.md)
+- [Security tips](security-tips.md)
