@@ -60,6 +60,8 @@ them available in a wallet stored in any software.
 **That is why we recommend to keep the ETH funds assigned
 to each wallet to a bare minimum.**
 
+<!-- TODO mulitsigs -->
+
 ### Data isolation
 
 Write API allows you to control many records in Winding Tree
@@ -80,3 +82,4 @@ one record in Winding Tree Index.**
 ## Where to next
 
 - [How to setup Winding Tree Write API?](how-to-setup-write-api.md)
+
