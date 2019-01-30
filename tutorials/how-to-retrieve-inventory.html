@@ -1,0 +1,697 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>How to retrieve Inventory · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo-link/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="how-to-setup-write-api.html" />
+    
+    
+    <link rel="prev" href="how-to-publish-inventory.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../tutorials.html">
+            
+                <a href="../tutorials.html">
+            
+                    
+                    Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="how-to-publish-inventory.html">
+            
+                <a href="how-to-publish-inventory.html">
+            
+                    
+                    How to publish Inventory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="how-to-retrieve-inventory.html">
+            
+                <a href="how-to-retrieve-inventory.html">
+            
+                    
+                    How to retrieve Inventory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="how-to-setup-write-api.html">
+            
+                <a href="how-to-setup-write-api.html">
+            
+                    
+                    How to setup Winding Tree Write API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="security-tips.html">
+            
+                <a href="security-tips.html">
+            
+                    
+                    Security tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >How to retrieve Inventory</a>
+    </h1>
+</div>
+
+  <script type="text/javascript">
+    window.intergramId = "-1001171733386";
+    window.intergramServer = 'https://bot-intergram.windingtree.com';
+    window.intergramCustomizations = {
+      closedStyle: 'button', // button or chat
+      closedChatAvatarUrl: 'https://raw.githubusercontent.com/windingtree/wt-media/master/logo-variants/tree/png/tree--gradient-on-white.png',  // only used if closedStyle is set to 'chat'
+      cookieExpiration: 1, // in days. Once opened, closed chat title will be shown as button (when closedStyle is set to 'chat')
+      titleClosed: 'Ask us anything!',
+      titleOpen: 'Winding Tree tech team',
+      introMessage: 'Feel free to ask anything regarding this documentation!',
+      autoResponse: 'Thank you! We will get back to you as soon as we can.',
+      autoNoResponse: 'Huh... It looks like nobody is listening at the moment. Leave us a more permanent contact (e-mail will do) and somebody will reach out to you.',
+      mainColor: "#18e9a6", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+      alwaysUseFloatingButton: false, // Use the mobile floating button also on large screens
+      displayMessageTime: true, // Show or hide time indicators in the chat window
+      displayBanner: true, // Show or hide banner on the bottom side of the chat window
+      desktopHeight: 500, // Height of the chat window on desktop
+      desktopWidth: 370, // Width of the chat window on desktop
+    };
+  </script>
+  <script id="intergram" type="text/javascript" src="https://bot-intergram.windingtree.com/js/widget.js"></script>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p><em>Last modified: Wed Jan 30 2019 13:20:00 GMT+0000 (Coordinated Universal Time)</em></p>
+</blockquote>
+<h1 id="how-to-retrieve-inventory">How to retrieve inventory</h1>
+<p>In this tutorial, you will learn how to obtain offerings
+published in Winding Tree ecosystem.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://github.com/windingtree/wt-read-api" target="_blank">Winding Tree Read API</a> URL.<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="">discover</a>, <a href="">setup</a> and <a href="">make discoverable</a>
+the Winding Tree ecosystem APIs.</p></div></div>
+</li>
+</ul>
+<h2 id="step-by-step">Step by step</h2>
+<p>Retrieving information from Winding Tree ecosystem is as easy
+as calling a common REST API can be. At this time, there is
+no authorization or registration needed.</p>
+<!-- TODO information about versions, errors, warnings? -->
+<h3 id="list-hotels">List hotels</h3>
+<p>The basic call to the API will give you back only the basic information.
+You can limit the amount of returned results with <code>limit</code> query parameter.
+The next page (if there is one) is linked in the <code>next</code> field. The <code>items</code>
+field contains the information itself. The <code>error</code> fields contains eventual
+errors that might occur when retrieving the data from various external
+storages.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels?limit=2&apos;</span>
+
+{
+  <span class="hljs-string">&quot;items&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;location&quot;</span>: {
+        <span class="hljs-string">&quot;latitude&quot;</span>: 46.6546544,
+        <span class="hljs-string">&quot;longitude&quot;</span>: 23.8745633
+      },
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Central Hill Apartments&quot;</span>,
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x2869E8459B73Cd5599726c762053375dc186A0Dc&quot;</span>
+    },
+    {
+      <span class="hljs-string">&quot;location&quot;</span>: {
+        <span class="hljs-string">&quot;latitude&quot;</span>: 46.4528031,
+        <span class="hljs-string">&quot;longitude&quot;</span>: 23.5229753
+      },
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Guest House One Eyed Badger&quot;</span>,
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x79C5dD88b385e6822C80aC02461A69d4a04A6703&quot;</span>
+    }
+  ],
+  <span class="hljs-string">&quot;errors&quot;</span>: [],
+  <span class="hljs-string">&quot;next&quot;</span>: <span class="hljs-string">&quot;https://playground-api.windingtree.com/hotels?limit=2&amp;fields=id,location,name&amp;startWith=0xFfC10871d7d8c5648b386E1F6778d132c02Eea33&quot;</span>
+}
+</code></pre>
+<p>If you would like to get particular details in the hotel listing, you can
+with the use of <code>fields</code> query parameter. For nested fields, you can use the
+dot notation, such as <code>location.latitude</code>. The <code>id</code> field is always present.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels?limit=2&amp;fields=name,address,currency,location.latitude&apos;</span>
+
+{
+  <span class="hljs-string">&quot;items&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Central Hill Apartments&quot;</span>,
+      <span class="hljs-string">&quot;address&quot;</span>: {
+        <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;Park Lane 554&quot;</span>,
+        <span class="hljs-string">&quot;line2&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;postalCode&quot;</span>: <span class="hljs-string">&quot;33317&quot;</span>,
+        <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Dragolm&quot;</span>,
+        <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
+      },
+      <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+      <span class="hljs-string">&quot;location&quot;</span>: {
+        <span class="hljs-string">&quot;latitude&quot;</span>: 46.6546544
+      },
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x2869E8459B73Cd5599726c762053375dc186A0Dc&quot;</span>
+    },
+    {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Guest House One Eyed Badger&quot;</span>,
+      <span class="hljs-string">&quot;address&quot;</span>: {
+        <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;Oak street 77&quot;</span>,
+        <span class="hljs-string">&quot;line2&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;postalCode&quot;</span>: <span class="hljs-string">&quot;33313&quot;</span>,
+        <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Dragolm&quot;</span>,
+        <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
+      },
+      <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+      <span class="hljs-string">&quot;location&quot;</span>: {
+        <span class="hljs-string">&quot;latitude&quot;</span>: 46.4528031
+      },
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x79C5dD88b385e6822C80aC02461A69d4a04A6703&quot;</span>
+    }
+  ],
+  <span class="hljs-string">&quot;errors&quot;</span>: [],
+  <span class="hljs-string">&quot;next&quot;</span>: <span class="hljs-string">&quot;https://playground-api.windingtree.com/hotels?limit=2&amp;fields=name,address,currency,location.latitude&amp;startWith=0xFfC10871d7d8c5648b386E1F6778d132c02Eea33&quot;</span>
+}
+</code></pre>
+<p>The hotels are sorted by the order of creation in the Winding Tree Index,
+there is currently no other sorting option.</p>
+<h3 id="get-hotels-general-information">Get hotel&apos;s general information</h3>
+<p>You can of course ask for information on a single hotel by referring to it
+with its blockchain address, called <code>id</code> in the data.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703&apos;</span>
+
+{
+  <span class="hljs-string">&quot;location&quot;</span>: {
+    <span class="hljs-string">&quot;latitude&quot;</span>: 46.4528031,
+    <span class="hljs-string">&quot;longitude&quot;</span>: 23.5229753
+  },
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Guest House One Eyed Badger&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Small, private guest house in the quiet part of Dragolm. No kids, no pets. Smokers are welcome.&quot;</span>,
+  <span class="hljs-string">&quot;contacts&quot;</span>: {
+    <span class="hljs-string">&quot;general&quot;</span>: {
+      <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;astorius.grumpstein@one-eyed-badger.com&quot;</span>,
+      <span class="hljs-string">&quot;phone&quot;</span>: <span class="hljs-string">&quot;004057666711&quot;</span>,
+      <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://one-eyed-badger.com&quot;</span>
+    }
+  },
+  <span class="hljs-string">&quot;address&quot;</span>: {
+    <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;Oak street 77&quot;</span>,
+    <span class="hljs-string">&quot;line2&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;postalCode&quot;</span>: <span class="hljs-string">&quot;33313&quot;</span>,
+    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Dragolm&quot;</span>,
+    <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
+  },
+  <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+  <span class="hljs-string">&quot;images&quot;</span>: [
+    <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/8223315e04f9ee3ee9fb2c9e6d44dd92a60407bbc6d19430cb51595bf73d9fb0&quot;</span>,
+    <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/1f9403308dc3d8db27285b7fe1d84695370b91968c935a6dbb4b43ad5d7f251a&quot;</span>
+  ],
+  <span class="hljs-string">&quot;amenities&quot;</span>: [
+    <span class="hljs-string">&quot;lounge&quot;</span>,
+    <span class="hljs-string">&quot;fireplace&quot;</span>,
+    <span class="hljs-string">&quot;bar&quot;</span>
+  ],
+  <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>,
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x79C5dD88b385e6822C80aC02461A69d4a04A6703&quot;</span>
+}
+</code></pre>
+<p>You can use the query parameter <code>fields</code> here as well.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703?fields=address.city,name&apos;</span>
+
+{
+  <span class="hljs-string">&quot;address&quot;</span>: {
+    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Dragolm&quot;</span>
+  },
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Guest House One Eyed Badger&quot;</span>,
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x79C5dD88b385e6822C80aC02461A69d4a04A6703&quot;</span>
+}
+</code></pre>
+<h3 id="get-hotels-inventory">Get hotel&apos;s inventory</h3>
+<p>There is a special endpoint for listing hotel&apos;s inventory. The <code>fields</code>
+query parameter does not work here.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/roomTypes&apos;</span>
+
+[
+  {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Room with a single bed&quot;</span>,
+    <span class="hljs-string">&quot;totalQuantity&quot;</span>: 8,
+    <span class="hljs-string">&quot;occupancy&quot;</span>: {
+      <span class="hljs-string">&quot;min&quot;</span>: 1,
+      <span class="hljs-string">&quot;max&quot;</span>: 1
+    },
+    <span class="hljs-string">&quot;amenities&quot;</span>: [
+      <span class="hljs-string">&quot;ashtray&quot;</span>,
+      <span class="hljs-string">&quot;minibar&quot;</span>,
+      <span class="hljs-string">&quot;TV&quot;</span>
+    ],
+    <span class="hljs-string">&quot;images&quot;</span>: [
+      <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/29996d00d7b2b9e882ea1ae28ce221a873322de42eeadd5c38bf6a1c5173e7a4&quot;</span>,
+      <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/49608659632835abf7cb83c068628e13ec39163da5e263c5d3843a1ca4d110d8&quot;</span>
+    ],
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+  },
+  {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Twin bed&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Room with a twin bed&quot;</span>,
+    <span class="hljs-string">&quot;totalQuantity&quot;</span>: 4,
+    <span class="hljs-string">&quot;occupancy&quot;</span>: {
+      <span class="hljs-string">&quot;min&quot;</span>: 2,
+      <span class="hljs-string">&quot;max&quot;</span>: 2
+    },
+    <span class="hljs-string">&quot;amenities&quot;</span>: [
+      <span class="hljs-string">&quot;ashtray&quot;</span>,
+      <span class="hljs-string">&quot;minibar&quot;</span>,
+      <span class="hljs-string">&quot;TV&quot;</span>
+    ],
+    <span class="hljs-string">&quot;images&quot;</span>: [
+      <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/29996d00d7b2b9e882ea1ae28ce221a873322de42eeadd5c38bf6a1c5173e7a4&quot;</span>,
+      <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/49608659632835abf7cb83c068628e13ec39163da5e263c5d3843a1ca4d110d8&quot;</span>
+    ],
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+  }
+]
+</code></pre>
+<p>You can also get a single room type on a special endpoint. You would use
+the <code>id</code> property to address that.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/roomTypes/single-room&apos;</span>
+
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Room with a single bed&quot;</span>,
+  <span class="hljs-string">&quot;totalQuantity&quot;</span>: 8,
+  <span class="hljs-string">&quot;occupancy&quot;</span>: {
+    <span class="hljs-string">&quot;min&quot;</span>: 1,
+    <span class="hljs-string">&quot;max&quot;</span>: 1
+  },
+  <span class="hljs-string">&quot;amenities&quot;</span>: [
+    <span class="hljs-string">&quot;ashtray&quot;</span>,
+    <span class="hljs-string">&quot;minibar&quot;</span>,
+    <span class="hljs-string">&quot;TV&quot;</span>
+  ],
+  <span class="hljs-string">&quot;images&quot;</span>: [
+    <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/29996d00d7b2b9e882ea1ae28ce221a873322de42eeadd5c38bf6a1c5173e7a4&quot;</span>,
+    <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/49608659632835abf7cb83c068628e13ec39163da5e263c5d3843a1ca4d110d8&quot;</span>
+  ],
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+  <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+}
+</code></pre>
+<h3 id="get-hotels-pricing-information">Get hotel&apos;s pricing information</h3>
+<p>Pricing information in Winding Tree ecosystem is stored as a list
+of rate plans and you can retrieve them for the whole hotel.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/ratePlans&apos;</span>
+
+[
+  {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per night for a standard single room.&quot;</span>,
+    <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+    <span class="hljs-string">&quot;price&quot;</span>: 158,
+    <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+      <span class="hljs-string">&quot;single-room&quot;</span>
+    ],
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+  },
+  {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Twin bed&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per person per night for a twin bed room.&quot;</span>,
+    <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+    <span class="hljs-string">&quot;price&quot;</span>: 257,
+    <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+      <span class="hljs-string">&quot;twin-bed&quot;</span>
+    ],
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+  }
+]
+</code></pre>
+<p>You can get a particular rate plan as well by using the <code>id</code> property in the
+URL.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/ratePlans/single-room&apos;</span>
+
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per night for a standard single room.&quot;</span>,
+  <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+  <span class="hljs-string">&quot;price&quot;</span>: 158,
+  <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+    <span class="hljs-string">&quot;single-room&quot;</span>
+  ],
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+  <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+}
+</code></pre>
+<p>Or you can retrieve only rate plans matched to a certain room type.</p>
+<pre><code class="lang-sh">curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/roomTypes/single-room/ratePlans&apos;</span>
+
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per night for a standard single room.&quot;</span>,
+  <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+  <span class="hljs-string">&quot;price&quot;</span>: 158,
+  <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+    <span class="hljs-string">&quot;single-room&quot;</span>
+  ],
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+  <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+}
+</code></pre>
+<h3 id="get-hotels-availability">Get hotel&apos;s availability</h3>
+<p>Read API is serving availability data in a raw form, all aggregations and
+any other additional logic has to performed by the API client.</p>
+<p>Availability can be retrieved for the whole hotel.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/availability&apos;</span>
+
+{
+  <span class="hljs-string">&quot;roomTypes&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-24&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 0
+    },
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-25&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 5
+    },
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-26&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 0
+    },
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-24&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 3
+    },
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-25&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 2
+    },
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-26&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 0
+    }
+  ],
+  <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+}
+</code></pre>
+<p>Or of course for a single room type.</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/roomTypes/single-room/availability&apos;</span>
+
+{
+  <span class="hljs-string">&quot;roomTypes&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-24&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 0
+    },
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-25&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 5
+    },
+    {
+      <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+      <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-26&quot;</span>,
+      <span class="hljs-string">&quot;quantity&quot;</span>: 0
+    }
+  ],
+  <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+}
+</code></pre>
+<h2 id="where-to-next">Where to next</h2>
+<ul>
+<li>Searching for inventory</li>
+<li>How to calculate prices</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="how-to-publish-inventory.html" class="navigation navigation-prev " aria-label="Previous page: How to publish Inventory">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="how-to-setup-write-api.html" class="navigation navigation-next " aria-label="Next page: How to setup Winding Tree Write API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"How to retrieve Inventory","level":"1.2.2","depth":2,"next":{"title":"How to setup Winding Tree Write API","level":"1.2.3","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},"previous":{"title":"How to publish Inventory","level":"1.2.1","depth":2,"path":"tutorials/how-to-publish-inventory.md","ref":"tutorials/how-to-publish-inventory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-retrieve-inventory.md","mtime":"2019-01-30T13:20:00.959Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T13:20:45.496Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
