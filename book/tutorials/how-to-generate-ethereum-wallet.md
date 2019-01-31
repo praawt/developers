@@ -110,4 +110,4 @@ create transactions in the Ethereum network.
 
 # Where to next
 
-- How do I buy my first Ether
+- [How do I buy my first Ether?](how-to-get-first-ether.md)

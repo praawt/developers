@@ -12,10 +12,10 @@ how to set it up and work with it.
 > Which Winding Tree ecosystem environments are available?
 - Ethereum wallet
 > #### Info
-> How do I generate Ethereum wallet?
+> [How do I generate Ethereum wallet?](how-to-generate-ethereum-wallet.md)
 - Own enough ETH for transaction gas
 > #### Info
-> - How do I buy my first Ether?
+> - [How do I get my first Ether?](how-to-get-first-ether.md)
 > - How much gas do I need?
 
 ## Step by step
