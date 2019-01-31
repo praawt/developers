@@ -8,7 +8,7 @@ and wallet management.
 
 - Ethereum wallet
 > #### Info
-> How do I generate Ethereum wallet?
+> [How do I generate Ethereum wallet?](how-to-generate-ethereum-wallet.md)
 
 ## Step by step
 

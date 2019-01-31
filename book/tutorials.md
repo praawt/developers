@@ -3,6 +3,7 @@
 - [How to publish Inventory](tutorials/how-to-publish-inventory.md)
 - [How to retrieve Inventory](tutorials/how-to-retrieve-inventory.md)
 - [How to setup Winding Tree Write API](tutorials/how-to-setup-write-api.md)
+- [How to generate Ethereum wallet](tutorials/how-to-generate-ethereum-wallet.md)
 - [Security tips](tutorials/security-tips.md)
 
 <!--
