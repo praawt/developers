@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to generate Ethereum wallet · GitBook</title>
+        <title>How to keep the Write API secure · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="how-to-get-first-ether.html" />
+    <link rel="next" href="how-to-generate-ethereum-wallet.html" />
     
     
-    <link rel="prev" href="security-tips.html" />
+    <link rel="prev" href="how-to-setup-write-api.html" />
     
 
     </head>
@@ -163,7 +163,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="security-tips.html">
+        <li class="chapter active" data-level="1.2.4" data-path="security-tips.html">
             
                 <a href="security-tips.html">
             
@@ -176,7 +176,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5" data-path="how-to-generate-ethereum-wallet.html">
+        <li class="chapter " data-level="1.2.5" data-path="how-to-generate-ethereum-wallet.html">
             
                 <a href="how-to-generate-ethereum-wallet.html">
             
@@ -419,7 +419,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >How to generate Ethereum wallet</a>
+        <a href=".." >How to keep the Write API secure</a>
     </h1>
 </div>
 
@@ -459,92 +459,68 @@
                                 <blockquote>
 <p><em>Last modified: Thu Jan 31 2019 14:45:52 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
-<h1 id="how-to-generate-ethereum-wallet">How to generate Ethereum wallet?</h1>
-<p>In this tutorial, you will learn what an Ethereum wallet
-is, why do you need it and how to get one.</p>
-<h1 id="step-by-step">Step by step</h1>
-<p><a href="https://ethereum.org/" target="_blank">Ethereum</a> is a blockchain application platform.
-Every participant is identified by a public unique address, such as
-<code>0xd037ab9025d43f60a31b32a82e10936f07484246</code>. This address is sometimes
-called Ethereum wallet. A single person can own many addresses at
-once. And behind some addresses there aren&apos;t even people, but computer code.</p>
-<h2 id="how-do-i-own-a-wallet">How do I own a wallet?</h2>
-<p>Every address is derived from a thing called <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">private key</a>
-and anyone who has access to this private key is in control of the wallet.</p>
-<p><strong>Never share your private key!</strong> If you do, you are risking losing your
-funds. It is like sharing a password. You should never do that.</p>
-<p>When you are in control of a wallet, you can perform (technically correct
-term is sign) transactions with it. Transactions tell Ethereum to do something,
-the usual operation is to transfer <a href="https://www.ethereum.org/ether" target="_blank">Ether (ETH)</a> or
-another <a href="https://en.wikipedia.org/wiki/ERC-20" target="_blank">ERC-20 token</a>.</p>
-<p>Every transaction also costs <em>gas</em> which is paid in ETH and the amount
-spent depends on how complex your transaction is. For example registering
-a hotel in Widing Tree platform will be more expensive than transferring
-ETH from one wallet to another.</p>
-<!-- TODO multisigs -->
-<h2 id="why-do-i-need-a-wallet">Why do I need a wallet?</h2>
-<p>Winding Tree&apos;s core entity is deployed to Ethereum blockchain. It is
-called Winding Tree Index and it&apos;s a registry of hotels, airlines and
-other ecosystem participants.</p>
-<p>In order to register your property to Winding Tree index, you need to perform
-a transaction on Ethereum and that is why you need a wallet with some ETH
-in it. You will also need your wallet to modify the record in Winding Tree
-index.</p>
-<p><strong>The important thing to know is, that only the owner of the record can
-work with it. That means that only the owner of the wallet can work with the
-record.</strong> So don&apos;t throw your wallet away, it&apos;s your key to working with
-your data in Winding Tree ecosystem.</p>
-<h2 id="how-to-create-a-new-wallet">How to create a new wallet?</h2>
-<p>There are many options of how to create a new wallet. Some
-more secure than others.</p>
-<!-- TODO hardware wallets, differentiate between one time interaction with WT and software-based interaction -->
-<p>Since Winding Tree ecosystem is using wallets in the
-<a href="https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition" target="_blank">Web3 Secret Storage</a>
-format, we will show you how to get that one.</p>
-<p>As we said before, you should never share a private key, so
-<strong>never generate a wallet in an online service.</strong> Use a trusted
-software that is running locally and does not expose your secrets.</p>
-<p>One of such tools is <a href="https://download.mycrypto.com/" target="_blank">MyCrypto</a> which
-allows you to generate a Keystore file.</p>
-<p>A Keystore file is a <a href="https://www.json.org/" target="_blank">JSON</a> file that contains
-a private key encrypted by a unique passphrase. If you forget your
-passphrase or lose your Keystore file, you will lose access to
-your wallet. So be careful.</p>
-<p>Upon starting MyCrypto, you can select <em>Create new wallet</em> in the
-left menu. Then you select <em>Generate wallet</em> and finally a <em>Keystore
-file</em>. You will put in your passphrase which encrypts the Keystore file
-and then you can download the file itself. It will look like this:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">3</span>,
-  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;7fe84016-4686-4622-97c9-dc7b47f5f5c6&quot;</span>,
-  <span class="hljs-string">&quot;address&quot;</span>: <span class="hljs-string">&quot;d037ab9025d43f60a31b32a82e10936f07484246&quot;</span>,
-  <span class="hljs-string">&quot;crypto&quot;</span>: {
-    <span class="hljs-string">&quot;ciphertext&quot;</span>: <span class="hljs-string">&quot;ef9dcce915eeb0c4f7aa2bb16b9ae6ce5a4444b4ed8be45d94e6b7fe7f4f9b47&quot;</span>,
-    <span class="hljs-string">&quot;cipherparams&quot;</span>: {
-      <span class="hljs-string">&quot;iv&quot;</span>: <span class="hljs-string">&quot;31b12ef1d308ea1edacc4ab00de80d55&quot;</span>
-    },
-    <span class="hljs-string">&quot;cipher&quot;</span>: <span class="hljs-string">&quot;aes-128-ctr&quot;</span>,
-    <span class="hljs-string">&quot;kdf&quot;</span>: <span class="hljs-string">&quot;scrypt&quot;</span>,
-    <span class="hljs-string">&quot;kdfparams&quot;</span>: {
-      <span class="hljs-string">&quot;dklen&quot;</span>: <span class="hljs-number">32</span>,
-      <span class="hljs-string">&quot;salt&quot;</span>: <span class="hljs-string">&quot;d06ccd5d9c5d75e1a66a81d2076628f5716a3161ca204d92d04a42c057562541&quot;</span>,
-      <span class="hljs-string">&quot;n&quot;</span>: <span class="hljs-number">8192</span>,
-      <span class="hljs-string">&quot;r&quot;</span>: <span class="hljs-number">8</span>,
-      <span class="hljs-string">&quot;p&quot;</span>: <span class="hljs-number">1</span>
-    },
-    <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;2c30bc373c19c5b41385b85ffde14b9ea9f0f609c7812a10fdcb0a565034d9db&quot;</span>
-  }
-}
-</code></pre>
-<p>In addition to the Keystore file, you can save and even print your private key. That&apos;s
-an equivalent to the Keystore file and password combination. Protect it with the same
-care.</p>
-<p>This JSON file can directly be used when <a href="how-to-setup-write-api.html">creating an account in Write API</a>.
-Without ETH associated with this wallet, however, you are not yet able to
-create transactions in the Ethereum network.</p>
-<h1 id="where-to-next">Where to next</h1>
+<h1 id="how-to-keep-the-write-api-secure">How to keep the Write API secure</h1>
+<p>In this tutorial, you will learn a few security tips
+regarding <a href="https://github.com/windingtree/wt-write-api" target="_blank">Winding Tree Write API</a>
+and wallet management.</p>
+<h2 id="requirements">Requirements</h2>
 <ul>
-<li><a href="how-to-get-first-ether.html">How do I buy my first Ether?</a></li>
+<li>Ethereum wallet<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p><a href="how-to-generate-ethereum-wallet.html">How do I generate Ethereum wallet?</a></p></div></div>
+</li>
+</ul>
+<h2 id="step-by-step">Step by step</h2>
+<p>Ethereum&apos;s best practice is to sign every transaction locally,
+in a way that your private key never leaves your computer.
+But in an environment where you need to issue many transactions,
+it is just not feasible to sign everything by hand.</p>
+<p>Another best practice is to protect the private key by a passphrase.
+That&apos;s exactly what the wallet in a
+<a href="https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition" target="_blank">Web3 Secret Storage format</a>
+enables us. But this wallet file has to inevitably be stored in
+a software, in our case Write API.</p>
+<p>And it is also inevitable that you have to decrypt the wallet
+file to extract the private key when you need to sign a transaction.</p>
+<p>The Write API design tries to at least decouple the wallet
+and the passphrase as much as possible. That&apos;s why you
+have to provide your wallet passphrase with every request. The
+private keys are only exposed in-memory for the shortest time possible.</p>
+<p>Here are some more tips on how to make your Write API instance
+as secure as possible.</p>
+<h3 id="network-isolation">Network isolation</h3>
+<p>Since the Write API stores an Ethereum wallet for every account
+and it can possibly hold dozens or hundreds of accounts and
+therefore wallets, it can easily become an attacker&apos;s target.</p>
+<p>By design, an attacker can try to crack the passphrases totally
+offline with as much computing power as she can.</p>
+<p><strong>That is why we recommend to run the Write API in a secure
+isolated network and prevent access to it from the public
+internet.</strong></p>
+<h3 id="funds">Funds</h3>
+<p>Because you can never be sure that your wallets from Write
+API are totally safe, you should take an extra measure and
+keep the amount of ETH in them limited only to cover the
+necessary costs.</p>
+<p>If you hold large amounts of ETH, you should never make
+them available in a wallet stored in any software.</p>
+<p><strong>That is why we recommend to keep the ETH funds assigned
+to each wallet to a bare minimum.</strong></p>
+<!-- TODO mulitsigs -->
+<h3 id="data-isolation">Data isolation</h3>
+<p>Write API allows you to control many records in Winding Tree
+Index under a single Ethereum wallet. That means that
+such wallet is an owner of all of the records in Winding Tree
+Index and if it gets compromised, an attacker will get control
+of all of these records.</p>
+<p>It is a best practice to have every record managed by a different
+Ethereum wallet. This also brings you performance gains as it 
+will allow you to publish changes for multiple records to the 
+same Ethereum block.</p>
+<p><strong>That is why we recommend to associate a particular wallet
+with only one Write API account and use that account to manage only
+one record in Winding Tree Index.</strong></p>
+<h2 id="where-to-next">Where to next</h2>
+<ul>
+<li><a href="how-to-setup-write-api.html">How to setup Winding Tree Write API?</a></li>
 </ul>
 
                                 
@@ -573,12 +549,12 @@ create transactions in the Ethereum network.</p>
 
             
                 
-                <a href="security-tips.html" class="navigation navigation-prev " aria-label="Previous page: How to keep the Write API secure">
+                <a href="how-to-setup-write-api.html" class="navigation navigation-prev " aria-label="Previous page: How to setup Winding Tree Write API">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="how-to-get-first-ether.html" class="navigation navigation-next " aria-label="Next page: How to get first Ether (ETH)">
+                <a href="how-to-generate-ethereum-wallet.html" class="navigation navigation-next " aria-label="Next page: How to generate Ethereum wallet">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -589,7 +565,7 @@ create transactions in the Ethereum network.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to generate Ethereum wallet","level":"1.2.5","depth":2,"next":{"title":"How to get first Ether (ETH)","level":"1.2.6","depth":2,"path":"tutorials/how-to-get-first-ether.md","ref":"tutorials/how-to-get-first-ether.md","articles":[]},"previous":{"title":"How to keep the Write API secure","level":"1.2.4","depth":2,"path":"tutorials/security-tips.md","ref":"tutorials/security-tips.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-generate-ethereum-wallet.md","mtime":"2019-01-31T14:45:52.601Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-31T14:46:42.772Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to keep the Write API secure","level":"1.2.4","depth":2,"next":{"title":"How to generate Ethereum wallet","level":"1.2.5","depth":2,"path":"tutorials/how-to-generate-ethereum-wallet.md","ref":"tutorials/how-to-generate-ethereum-wallet.md","articles":[]},"previous":{"title":"How to setup Winding Tree Write API","level":"1.2.3","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/security-tips.md","mtime":"2019-01-31T14:45:52.601Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-31T14:46:42.772Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
