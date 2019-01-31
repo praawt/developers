@@ -1,4 +1,4 @@
-# Security tips
+# How to keep the Write API secure
 
 In this tutorial, you will learn a few security tips
 regarding [Winding Tree Write API](https://github.com/windingtree/wt-write-api)

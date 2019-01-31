@@ -5,8 +5,18 @@
   * [How to publish Inventory](tutorials/how-to-publish-inventory.md)
   * [How to retrieve Inventory](tutorials/how-to-retrieve-inventory.md)
   * [How to setup Winding Tree Write API](tutorials/how-to-setup-write-api.md)
-  * [Security tips](tutorials/security-tips.md)
+  * [How to keep the Write API secure](tutorials/security-tips.md)
+* [APIs](apis.md)
+  * [Write API](apis/write-api.md)
+  * [Read API](apis/read-api.md)
+  * [Book API](apis/book-api.md)
+  * Search API \(experimental\)
+  * Notification API \(experimental\)
+* [Tooling and integrations](tooling.md)
+* [Data Model](data-model.md)
+  * [Hotels](data-model/hotels.md)
+  * [Airlines \(experimental\)](data-model/airline-experimental.md)
+* [Architectural Overview](architectural-overview.md)
+* [Glossary of Terms](glossary-of-terms.md)
 * [FAQ](faq.md)
-
-
 
