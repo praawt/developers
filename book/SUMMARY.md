@@ -11,8 +11,6 @@
 * [APIs](apis.md)
 * [Tooling and integrations](tooling.md)
 * [Data Model](data-model.md)
-  * [Hotels](data-model/hotels.md)
-  * [Airlines \(experimental\)](data-model/airline-experimental.md)
 * [Architectural Overview](architectural-overview.md)
 * [Glossary of Terms](glossary-of-terms.md)
 * [FAQ](faq.md)

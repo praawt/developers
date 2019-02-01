@@ -9,8 +9,9 @@
     "copy-legacy-swagger-ui": "rimraf -r book/swagger-ui/ && cp -r swagger-ui book/",
     "copy-docson": "rimraf -r book/assets/docson/* && cp -r node_modules/docson/public/* book/assets/docson/",
     "build-gitbook": "gitbook build",
-    "build": "./management/build.sh",
-    "dev": "gitbook serve"
+    "clean": "rimraf _book",
+    "build": "npm run clean && ./management/build.sh",
+    "dev": "npm run clean && gitbook serve"
   },
   "repository": {
     "type": "git",

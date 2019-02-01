@@ -2,6 +2,7 @@
 !book/apis/*.html
 !book/apis/specs/*.yaml
 !book/data-model/specs/*.json
+!book/data-model/*.html
 
 # legacy
 !book/swagger-ui/

@@ -3,6 +3,7 @@ book/assets/docson/
 book/apis/*.html
 book/apis/specs/*.yaml
 book/data-model/specs/*.json
+book/data-model/*.html
 node_modules
 
 # legacy

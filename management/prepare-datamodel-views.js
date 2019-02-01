@@ -35,6 +35,32 @@ const list = [
         ref: '#/components/schemas/Availability'
       }
     ]
+  },
+  {
+    name: 'airlines',
+    url: 'https://raw.githubusercontent.com/windingtree/wiki/feat/airlines/airline-data-swagger.yaml',
+    rootModels: [
+      {
+        name: 'On chain data',
+        ref: '#/components/schemas/AirlineOnChain'
+      },
+      {
+        name: 'AirlineDataIndex',
+        ref: '#/components/schemas/AirlineDataIndex'
+      },
+      {
+        name: 'AirlineDescription',
+        ref: '#/components/schemas/AirlineDescription'
+      },
+      {
+        name: 'Flights',
+        ref: '#/components/schemas/Flights'
+      },
+      {
+        name: 'FlightInstances',
+        ref: '#/components/schemas/FlightInstances'
+      }
+    ]
   }
 ];
 
@@ -47,6 +73,8 @@ function downloadFile(url, dest, cb) {
     });
   });
 }
+
+const docsonTemplate = fs.readFileSync(path.resolve(__dirname, './docson.template.html'), { encoding: 'utf-8'});
 
 for(let model of list) {
   const localFilePath = `${tempYamlLocation}/${model.name}.yaml`;
@@ -65,5 +93,7 @@ for(let model of list) {
     };
 
     fs.writeFileSync(`${targetSpecLocation}/${model.name}.json`, JSON.stringify(definitions));
+    const docsonPage = docsonTemplate.replace('<%JSON_SPEC_URL%>', `${targetSpecPrefix}/${model.name}.json`);
+    fs.writeFileSync(`${targetViewerPath}/${model.name}.html`, docsonPage);
   });
 }
