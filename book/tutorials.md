@@ -22,10 +22,8 @@
 - How much gas do I need?
 - Write API
   discover
-  setup
   make discoverable
 - Read APIs
   discover
-  setup
   make discoverable
 -->

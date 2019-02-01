@@ -13,6 +13,6 @@
 * [Tooling and integrations](tooling.md)
 * [Data Model](data-model.md)
 * [Architectural Overview](architectural-overview.md)
-* [Glossary of Terms](glossary-of-terms.md)
+* [Glossary of Terms](GLOSSARY.md)
 * [FAQ](faq.md)
 
