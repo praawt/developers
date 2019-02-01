@@ -82,4 +82,3 @@ one record in Winding Tree Index.**
 ## Where to next
 
 - [How to setup Winding Tree Write API?](how-to-setup-write-api.md)
-

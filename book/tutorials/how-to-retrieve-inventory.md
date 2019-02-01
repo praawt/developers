@@ -7,7 +7,7 @@ published in Winding Tree ecosystem.
 
 - [Winding Tree Read API](https://github.com/windingtree/wt-read-api) URL.
 > ####Info
-> Learn how to [discover](), [setup]() and [make discoverable]()
+> Learn how to [discover](), [setup](how-to-setup-read-api.md) and [make discoverable]()
 the Winding Tree ecosystem APIs.
 
 ## Step by step
