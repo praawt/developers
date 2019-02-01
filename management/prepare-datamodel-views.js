@@ -4,7 +4,7 @@ const path = require('path'),
   https = require('https');
 
 const targetSpecPrefix = '/data-model/specs';
-const tempYamlLocation = path.resolve('/tmp/yamls');
+const tempYamlLocation = path.resolve('/tmp/');
 const targetSpecLocation = path.resolve(__dirname, `../book/${targetSpecPrefix}`);
 const targetViewerPath = path.resolve(__dirname, `../book/data-model`);
 
