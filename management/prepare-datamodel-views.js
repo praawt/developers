@@ -38,7 +38,8 @@ const list = [
   },
   {
     name: 'airlines',
-    url: 'https://raw.githubusercontent.com/windingtree/wiki/feat/airlines/airline-data-swagger.yaml',
+    // TODO change this to local FS reference once swagger docs are npm-ized
+    url: 'https://raw.githubusercontent.com/windingtree/wiki/0d47518e96ba87e018630d2863118ec04c130329/airline-data-swagger.yaml',
     rootModels: [
       {
         name: 'On chain data',
@@ -74,26 +75,15 @@ function downloadFile(url, dest, cb) {
   });
 }
 
-const docsonTemplate = fs.readFileSync(path.resolve(__dirname, './docson.template.html'), { encoding: 'utf-8'});
+const swaggerTemplate = fs.readFileSync(path.resolve(__dirname, './swagger-ui.template.html'), { encoding: 'utf-8'});
 
 for(let model of list) {
   const localFilePath = `${tempYamlLocation}/${model.name}.yaml`;
-  downloadFile(model.url, localFilePath, () => {
-    const result = YAML.load(localFilePath);
-    const definitions = {
-      properties: model.rootModels.reduce((acc, curr) => {
-        acc[curr.name] = {
-          '$ref': curr.ref,
-        };
-        return acc;
-      }, {}),
-      components: {
-        schemas: result.components.schemas,
-      }
-    };
 
-    fs.writeFileSync(`${targetSpecLocation}/${model.name}.json`, JSON.stringify(definitions));
-    const docsonPage = docsonTemplate.replace('<%JSON_SPEC_URL%>', `${targetSpecPrefix}/${model.name}.json`);
-    fs.writeFileSync(`${targetViewerPath}/${model.name}.html`, docsonPage);
+  downloadFile(model.url, localFilePath, () => {
+    const specFile = YAML.load(localFilePath);
+    fs.writeFileSync(`${targetSpecLocation}/${model.name}.yaml`, YAML.stringify(specFile));
+    const swaggerPage = swaggerTemplate.replace('<%YAML_SPEC_URL%>', `${targetSpecPrefix}/${model.name}.yaml`);
+    fs.writeFileSync(`${targetViewerPath}/${model.name}.html`, swaggerPage);
   });
 }
