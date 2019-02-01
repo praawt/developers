@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to get first Ether (ETH) · GitBook</title>
+        <title>How to setup Read API · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="how-to-setup-read-api.html" />
+    <link rel="next" href="../apis.html" />
     
     
-    <link rel="prev" href="how-to-generate-ethereum-wallet.html" />
+    <link rel="prev" href="how-to-get-first-ether.html" />
     
 
     </head>
@@ -189,7 +189,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="how-to-get-first-ether.html">
+        <li class="chapter " data-level="1.2.6" data-path="how-to-get-first-ether.html">
             
                 <a href="how-to-get-first-ether.html">
             
@@ -202,7 +202,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="how-to-setup-read-api.html">
+        <li class="chapter active" data-level="1.2.7" data-path="how-to-setup-read-api.html">
             
                 <a href="how-to-setup-read-api.html">
             
@@ -329,7 +329,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >How to get first Ether (ETH)</a>
+        <a href=".." >How to setup Read API</a>
     </h1>
 </div>
 
@@ -369,71 +369,50 @@
                                 <blockquote>
 <p><em>Last modified: Fri Feb 01 2019 16:18:01 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
-<h1 id="how-to-get-first-ether">How to get first Ether</h1>
-<p>In this tutorial, you will learn about Ether (ETH) and how to get it.
-In addition, you will learn about ERC-20 tokens, such as L&#xCD;F.</p>
+<h1 id="how-to-setup-read-api">How to setup Read API</h1>
+<p>In this tutorial, you will learn
+about <a href="https://github.com/windingtre/wt-read-api" target="_blank">Winding Tree Read API</a> and
+how to set it up and work with it.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li>Ethereum wallet<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p><a href="how-to-generate-ethereum-wallet.html">How do I generate Ethereum wallet?</a></p></div></div>
+<li>Installed and running <a href="https://www.docker.com" target="_blank">Docker</a></li>
+<li>Chosen Winding Tree ecosystem environment<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Which Winding Tree ecosystem environments are available?</p></div></div>
 </li>
 </ul>
 <h2 id="step-by-step">Step by step</h2>
-<p>Ether (ETH) is a cryptotoken native to Ethereum. All transaction costs
-are paid for with it. ETH comes to the world as a reward for those who
-participate in processing new transactions in the network (so called
-miners).</p>
-<h3 id="faucets">Faucets</h3>
-<p>Apart from that, in testing networks (or testnets) of Ethereum, you
-can get free ETH from special addresses that are called faucets.
-ETH is not transferrable between networks, so ETH you get from a faucet
-on a testnet cannot be used in the production network (or mainnet).</p>
-<p>There are multiple testnets, but we will stick to the one called Ropsten.
-Some of the faucets are:</p>
-<ul>
-<li><a href="https://faucet.ropsten.be/" target="_blank">https://faucet.ropsten.be/</a> </li>
-<li><a href="https://faucet.metamask.io/" target="_blank">https://faucet.metamask.io/</a> (Requires MetaMask browser extension)</li>
-<li><a href="https://faucet.kyber.network/" target="_blank">https://faucet.kyber.network/</a> (Requires login through GitHub)</li>
-</ul>
-<p>After you put in your wallet address (such as <code>0xd037ab9025d43f60a31b32a82e10936f07484246</code>),
-the faucet should send you free Ether. To verify that it actually
-happened, you can check transactions associated with your wallet
-in a block explorer, such as <a href="https://ropsten.etherscan.io" target="_blank">Etherscan for Ropsten</a>.
-Just put your address in the search input in the upper right corner.</p>
-<h3 id="mainnet">Mainnet</h3>
-<p>In the main Ethereum network, there are no faucets. From time to
-time you can get paid in ETH for something, but there are two
-main ways how to get ETH.</p>
-<h4 id="mining">Mining</h4>
-<p>Mining is a term used for participating in processign transactions in
-the network. If you want to take part in mining, you will run a node
-(associated with an Ethereum wallet) that tries to be the first to
-come up with the next network block. If the node succeeds in that
-effort, it is rewarded with ETH.</p>
-<p>Nowadays, mining for a standalone separate node does not make
-much economical sense. <!-- TODO links --></p>
-<h4 id="exchanges">Exchanges</h4>
-<p>Very common way of getting ETH is through exchanges. There
-are some where you can buy ETH with USD or EUR (commonly referred
-to as fiat currencies). And there are some where you can get
-ETH in exchange to other cryptotokens.</p>
-<p>It&apos;s up to you which exchange you choose, but you should pick one
-that is well-established, secure and allows you to withdraw your ETH
-funds at any time to a wallet that is not controlled by the exchange.</p>
-<!-- TODO do we want to point to specific exchnages or not? -->
-<h3 id="erc-20-tokens">ERC-20 tokens</h3>
-<p><a href="https://en.wikipedia.org/wiki/ERC-20" target="_blank">ERC-20</a> compatible token is
-a cryptotoken of its own that is built on, operates on and is traded
-on Ethereum network. It is not equal with ETH, for example you are
-not able to pay for transaction costs with them.</p>
-<p>Ther are plenty of ERC-20 tokens, Winding Tree&apos;s
-<a href="http://lif.windingtree.com" target="_blank">L&#xCD;F</a> being one of them. Similarly to ETH,
-you can buy them on exchanges, but there are many models how the tokens
-can be distributed.</p>
-<p>Typical ERC-20 token is tied to a specific use-case or a specific
-application.</p>
+<p>Winding Tree Read API is a REST API that can be used
+to read inventory registered in Winding Tree ecosystem.
+It is a fully stateless and cache-less API that for now
+does not require any prior user authentication.</p>
+<h3 id="running-the-api">Running the API</h3>
+<p>The recommended way of running Winding Tree ecosystem APIs is via
+docker images. You can grab the latest stable version of Read API
+on <a href="https://hub.docker.com/u/windingtree/" target="_blank">Docker Hub</a>.</p>
+<p>First, you need to download the docker image:</p>
+<pre><code class="lang-sh">$ docker pull windingtree/wt-read-api
+</code></pre>
+<p>And then you need to run it with a configuration meant for the
+environment you have chosen:</p>
+<pre><code class="lang-sh">$ docker run -p 8081:3000 <span class="hljs-_">-e</span> WT_CONFIG=playground windingtree/wt-read-api
+</code></pre>
+<p>The Read API is then exposed on port 8081:</p>
+<pre><code class="lang-sh">$ curl localhost:8081
+{
+   <span class="hljs-string">&quot;wtIndexAddress&quot;</span> : <span class="hljs-string">&quot;0xfb562057d613175c850df65e435bb0824b65d319&quot;</span>,
+   <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-string">&quot;0.10.0&quot;</span>,
+   <span class="hljs-string">&quot;ethNetwork&quot;</span> : <span class="hljs-string">&quot;ropsten&quot;</span>,
+   <span class="hljs-string">&quot;docs&quot;</span> : <span class="hljs-string">&quot;https://playground-api.windingtree.com/docs/&quot;</span>,
+   <span class="hljs-string">&quot;info&quot;</span> : <span class="hljs-string">&quot;https://github.com/windingtree/wt-read-api/blob/master/README.md&quot;</span>,
+   <span class="hljs-string">&quot;config&quot;</span> : <span class="hljs-string">&quot;playground&quot;</span>,
+   <span class="hljs-string">&quot;dataFormatVersion&quot;</span> : <span class="hljs-string">&quot;0.2.0&quot;</span>
+}
+</code></pre>
+<p>If you need more control over your setup, you can configure everything with
+environment variables passed to <code>docker run</code> command. Detailed documentation
+can be found in the <a href="https://github.com/windingtree/wt-read-api#running-node-against-ropsten-testnet-contract" target="_blank">source code repository</a>.</p>
 <h2 id="where-to-next">Where to next</h2>
 <ul>
-<li><a href="how-to-publish-inventory.html">How to publish Inventory</a></li>
+<li><a href="how-to-retrieve-inventory.html">How to retrieve inventory</a></li>
 </ul>
 
                                 
@@ -462,12 +441,12 @@ application.</p>
 
             
                 
-                <a href="how-to-generate-ethereum-wallet.html" class="navigation navigation-prev " aria-label="Previous page: How to generate Ethereum wallet">
+                <a href="how-to-get-first-ether.html" class="navigation navigation-prev " aria-label="Previous page: How to get first Ether (ETH)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="how-to-setup-read-api.html" class="navigation navigation-next " aria-label="Next page: How to setup Read API">
+                <a href="../apis.html" class="navigation navigation-next " aria-label="Next page: APIs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -478,7 +457,7 @@ application.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to get first Ether (ETH)","level":"1.2.6","depth":2,"next":{"title":"How to setup Read API","level":"1.2.7","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},"previous":{"title":"How to generate Ethereum wallet","level":"1.2.5","depth":2,"path":"tutorials/how-to-generate-ethereum-wallet.md","ref":"tutorials/how-to-generate-ethereum-wallet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-get-first-ether.md","mtime":"2019-02-01T16:18:01.445Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-01T16:19:02.147Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to setup Read API","level":"1.2.7","depth":2,"next":{"title":"APIs","level":"1.3","depth":1,"path":"apis.md","ref":"apis.md","articles":[]},"previous":{"title":"How to get first Ether (ETH)","level":"1.2.6","depth":2,"path":"tutorials/how-to-get-first-ether.md","ref":"tutorials/how-to-get-first-ether.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-setup-read-api.md","mtime":"2019-02-01T16:18:01.445Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-01T16:19:02.147Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
