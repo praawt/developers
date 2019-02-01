@@ -5,7 +5,11 @@
   "main": "README.md",
   "scripts": {
     "build-oas-views": "node management/prepare-oas-views.js",
-    "build": "npm run build-oas-views && cp -r swagger-ui book && gitbook build",
+    "build-datamodel-views": "node management/prepare-datamodel-views.js",
+    "copy-legacy-swagger-ui": "rimraf -r book/swagger-ui/ && cp -r swagger-ui book/",
+    "copy-docson": "rimraf -r book/assets/docson/* && cp -r node_modules/docson/public/* book/assets/docson/",
+    "build-gitbook": "gitbook build",
+    "build": "./management/build.sh",
     "dev": "gitbook serve"
   },
   "repository": {
@@ -24,10 +28,12 @@
   },
   "homepage": "https://github.com/windingtree/docs#readme",
   "devDependencies": {
+    "docson": "^2.1.0",
     "gitbook-cli": "^2.3.2",
     "gitbook-plugin-callouts": "^0.1.1",
     "gitbook-plugin-insert-logo-link": "^1.0.1",
     "gitbook-plugin-last-modified": "^1.0.0",
+    "rimraf": "^2.6.3",
     "yamljs": "^0.3.0"
   },
   "dependencies": {

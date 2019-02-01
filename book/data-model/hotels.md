@@ -1,0 +1,1 @@
+<script src="/assets/docson/js/widget.js" data-schema="/data-model/specs/hotels.json"></script>

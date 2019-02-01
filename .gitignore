@@ -1,4 +1,9 @@
 _book
+book/assets/docson/
 book/apis/*.html
 book/apis/specs/*.yaml
+book/data-model/specs/*.json
 node_modules
+
+# legacy
+book/swagger-ui/

@@ -74,12 +74,7 @@ for(let api of list) {
   specFile.info.version = packageFile.version;
   specFile.servers = api.servers;
 
-
-  // or use something
   fs.writeFileSync(`${baseTargetSpecPath}/${api.name}.yaml`, YAML.stringify(specFile));
   const swaggerPage = swaggerTemplate.replace('<%YAML_SPEC_URL%>', `${targetSpecPrefix}${api.name}.yaml`);
   fs.writeFileSync(`${baseTargetViewerPath}/${api.name}.html`, swaggerPage);
 }
-
-
-

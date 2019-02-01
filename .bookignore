@@ -1,2 +1,7 @@
+!book/assets/docson/
 !book/apis/*.html
 !book/apis/specs/*.yaml
+!book/data-model/specs/*.json
+
+# legacy
+!book/swagger-ui/
