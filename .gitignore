@@ -1,2 +1,4 @@
 _book
+book/apis/*.html
+book/apis/specs/*.yaml
 node_modules

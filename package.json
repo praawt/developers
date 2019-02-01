@@ -4,7 +4,8 @@
   "description": "Winding Tree developer documentation",
   "main": "README.md",
   "scripts": {
-    "build": "gitbook build",
+    "build-oas-views": "node management/prepare-oas-views.js",
+    "build": "npm run build-oas-views && gitbook build",
     "dev": "gitbook serve"
   },
   "repository": {
@@ -26,6 +27,14 @@
     "gitbook-cli": "^2.3.2",
     "gitbook-plugin-callouts": "^0.1.1",
     "gitbook-plugin-insert-logo-link": "^1.0.1",
-    "gitbook-plugin-last-modified": "^1.0.0"
+    "gitbook-plugin-last-modified": "^1.0.0",
+    "yamljs": "^0.3.0"
+  },
+  "dependencies": {
+    "wt-booking-api": "git+https://git@github.com/windingtree/wt-booking-api.git#v0.3.1",
+    "wt-notification-api": "git+https://git@github.com/windingtree/wt-notification-api.git#v0.3.0",
+    "wt-read-api": "git+https://git@github.com/windingtree/wt-read-api.git#v0.10.0",
+    "wt-search-api": "git+https://git@github.com/windingtree/wt-search-api.git#v0.3.0",
+    "wt-write-api": "git+https://git@github.com/windingtree/wt-write-api.git#v0.11.0"
   }
 }
