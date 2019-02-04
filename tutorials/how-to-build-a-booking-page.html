@@ -1,0 +1,777 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>How to build a Hotel Booking Page · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo-link/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../apis.html" />
+    
+    
+    <link rel="prev" href="how-to-get-first-ether.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../tutorials.html">
+            
+                <a href="../tutorials.html">
+            
+                    
+                    Tutorials
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="how-to-publish-inventory.html">
+            
+                <a href="how-to-publish-inventory.html">
+            
+                    
+                    How to publish Inventory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="how-to-retrieve-inventory.html">
+            
+                <a href="how-to-retrieve-inventory.html">
+            
+                    
+                    How to retrieve Inventory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="how-to-setup-write-api.html">
+            
+                <a href="how-to-setup-write-api.html">
+            
+                    
+                    How to setup Winding Tree Write API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="how-to-secure-write-api.html">
+            
+                <a href="how-to-secure-write-api.html">
+            
+                    
+                    How to keep the Write API secure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="how-to-setup-read-api.html">
+            
+                <a href="how-to-setup-read-api.html">
+            
+                    
+                    How to setup Winding Tree Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="how-to-generate-ethereum-wallet.html">
+            
+                <a href="how-to-generate-ethereum-wallet.html">
+            
+                    
+                    How to generate Ethereum wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="how-to-get-first-ether.html">
+            
+                <a href="how-to-get-first-ether.html">
+            
+                    
+                    How to get first Ether (ETH)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.8" data-path="how-to-build-a-booking-page.html">
+            
+                <a href="how-to-build-a-booking-page.html">
+            
+                    
+                    How to build a Hotel Booking Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../apis.html">
+            
+                <a href="../apis.html">
+            
+                    
+                    APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../tooling.html">
+            
+                <a href="../tooling.html">
+            
+                    
+                    Tooling and integrations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../data-model.html">
+            
+                <a href="../data-model.html">
+            
+                    
+                    Data Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../architectural-overview.html">
+            
+                <a href="../architectural-overview.html">
+            
+                    
+                    Architectural Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../GLOSSARY.html">
+            
+                <a href="../GLOSSARY.html">
+            
+                    
+                    Glossary of Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../faq.html">
+            
+                <a href="../faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >How to build a Hotel Booking Page</a>
+    </h1>
+</div>
+
+  <script type="text/javascript">
+    window.intergramId = "-1001171733386";
+    window.intergramServer = 'https://bot-intergram.windingtree.com';
+    window.intergramCustomizations = {
+      closedStyle: 'button', // button or chat
+      closedChatAvatarUrl: 'https://raw.githubusercontent.com/windingtree/wt-media/master/logo-variants/tree/png/tree--gradient-on-white.png',  // only used if closedStyle is set to 'chat'
+      cookieExpiration: 1, // in days. Once opened, closed chat title will be shown as button (when closedStyle is set to 'chat')
+      titleClosed: 'Ask us anything!',
+      titleOpen: 'Winding Tree tech team',
+      introMessage: 'Feel free to ask anything regarding this documentation!',
+      autoResponse: 'Thank you! We will get back to you as soon as we can.',
+      autoNoResponse: 'Huh... It looks like nobody is listening at the moment. Leave us a more permanent contact (e-mail will do) and somebody will reach out to you.',
+      mainColor: "#18e9a6", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+      alwaysUseFloatingButton: false, // Use the mobile floating button also on large screens
+      displayMessageTime: true, // Show or hide time indicators in the chat window
+      displayBanner: true, // Show or hide banner on the bottom side of the chat window
+      desktopHeight: 500, // Height of the chat window on desktop
+      desktopWidth: 370, // Width of the chat window on desktop
+    };
+  </script>
+  <script id="intergram" type="text/javascript" src="https://bot-intergram.windingtree.com/js/widget.js"></script>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p><em>Last modified: Mon Feb 04 2019 14:55:10 GMT+0000 (Coordinated Universal Time)</em></p>
+</blockquote>
+<h1 id="how-to-build-a-hotel-booking-page">How to build a Hotel Booking page</h1>
+<p>In this tutorial, you will learn how to create a Booking website
+for a single hotel registered in Winding Tree.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Basic knowledge of HTML and Javascript.</li>
+<li>Ethereum address of your selected hotel.<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="how-to-publish-inventory.html">publish inventory</a></p></div></div>
+</li>
+<li><a href="https://github.com/windingtree/wt-read-api" target="_blank">Winding Tree Read API</a> URL.<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="">discover</a>, <a href="how-to-setup-read-api.html">setup</a> and <a href="">make discoverable</a>
+the Winding Tree ecosystem APIs.</p></div></div>
+</li>
+</ul>
+<h2 id="step-by-step">Step by step</h2>
+<p>We will create a single simple HTML page with four parts:</p>
+<ul>
+<li>General description</li>
+<li>Inventory</li>
+<li>Priced offer</li>
+<li>Booking form</li>
+</ul>
+<h3 id="initial-setup">Initial setup</h3>
+<p>Here&apos;s a boilerplate HTML where we will put all of the other code:</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Winding Tree simple sample booking page<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;error&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hotel-description&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hotel-name&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hotel-address&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;stay-details&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;room-types-select&quot;</span>&gt;</span>Select a room<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;room-types-select&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;room-types-select&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;offer&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;offer-price&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;offer-quantity&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="getting-the-hotel-data">Getting the hotel data</h3>
+<p>To make things easy, we will get all of the data in a single <code>GET</code> request.
+This is not the most optimal way, but it will make this tutorial shorter. In a
+real-life application, you would probably load the data about availability and
+prices only when needed. We are also not loading everything, because we want to
+keep the page as simple as possible.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript">
+  (() =&gt;{
+    <span class="hljs-keyword">const</span> errorDiv = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;error&apos;</span>);
+    <span class="hljs-keyword">const</span> wtReadApi = <span class="hljs-string">&apos;https://playground-api.windingtree.com&apos;</span>;
+    <span class="hljs-keyword">const</span> hotelId = <span class="hljs-string">&apos;0xD8b8aF90986174d5c5558aAC0905AA1DB2Ee41ce&apos;</span>;
+    <span class="hljs-keyword">const</span> fields = [
+      <span class="hljs-string">&apos;name&apos;</span>,
+      <span class="hljs-string">&apos;address&apos;</span>,
+      <span class="hljs-string">&apos;currency&apos;</span>,
+      <span class="hljs-string">&apos;cancellationPolicies&apos;</span>,
+      <span class="hljs-string">&apos;defaultCancellationAmount&apos;</span>,
+      <span class="hljs-string">&apos;bookingUri&apos;</span>,
+      <span class="hljs-string">&apos;roomTypes.id&apos;</span>,
+      <span class="hljs-string">&apos;roomTypes.name&apos;</span>,
+      <span class="hljs-string">&apos;roomTypes.occupancy&apos;</span>,
+      <span class="hljs-string">&apos;availability&apos;</span>,
+      <span class="hljs-string">&apos;ratePlans&apos;</span>,
+    ];
+    <span class="hljs-keyword">const</span> displayHotelData = (hotelData) =&gt; {
+      <span class="hljs-built_in">console</span>.log(hotelData);
+    }
+    fetch(<span class="hljs-string">`<span class="hljs-subst">${wtReadApi}</span>/hotels/<span class="hljs-subst">${hotelId}</span>?fields=<span class="hljs-subst">${fields.join(&apos;,&apos;)}</span>`</span>)
+      .then((response) =&gt; {
+        <span class="hljs-keyword">if</span> (response.status &gt; <span class="hljs-number">299</span>) {
+          <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;Bad server response.&apos;</span>);
+        }
+        <span class="hljs-keyword">return</span> response.json();
+      })
+      .then(displayHotelData)
+      .catch((err) =&gt; {
+        errorDiv.innerHTML = err.toString();
+      })
+  })();
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>After adding this code to the <code>script</code> section and refreshing the page in 
+your browser, you should see hotel data in the browser&apos;s console. Of course,
+you can change the <code>hotelId</code> and <code>wtReadApi</code> variables to work with different hotel
+in a different Winding Tree environment.</p>
+<p>We would of course like to show the hotel information to the visitor, so let&apos;s do
+exactly that.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> displayHotelData = (hotelData) =&gt; {
+  <span class="hljs-keyword">const</span> address = <span class="hljs-string">`
+    &lt;span&gt;<span class="hljs-subst">${hotelData.address.line1}</span>,&lt;/span&gt;
+    &lt;span&gt;<span class="hljs-subst">${hotelData.address.city}</span> <span class="hljs-subst">${hotelData.address.postalCode}</span>&lt;/span&gt;
+    &lt;span&gt;<span class="hljs-subst">${hotelData.address.country}</span>&lt;/span&gt;
+  `</span>;
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;hotel-name&apos;</span>).innerHTML = hotelData.name;
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;hotel-address&apos;</span>).innerHTML = address;
+  <span class="hljs-keyword">const</span> roomTypesSelect = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;room-types-select&apos;</span>);
+  hotelData.roomTypes.map((rt) =&gt; {
+    roomTypesSelect.insertAdjacentHTML(<span class="hljs-string">&apos;beforeend&apos;</span>, <span class="hljs-string">`
+      &lt;option id=&quot;rt-<span class="hljs-subst">${rt.id}</span>&quot; value=&quot;<span class="hljs-subst">${rt.id}</span>&quot;&gt;<span class="hljs-subst">${rt.name}</span>&lt;/option&gt;
+    `</span>);
+  });
+};
+</code></pre>
+<p>After this step, you should see the hotel data in the page itself!</p>
+<p><img src="../assets/booking-page-0.png" alt="First checkpoint"></p>
+<h3 id="checking-availability-and-getting-a-price">Checking availability and getting a price</h3>
+<p>Now, this part is tricky! To simplify things a little bit, we will
+consider this to be a <em>personal</em> booking page made for a lovely couple,
+let&apos;s call them Elizabeth and Philip.</p>
+<p>In order to be able to determine availability and price of a particular 
+room type, we will use our open-source Javascript pricing library
+<a href="https://github.com/windingtree/wt-pricing-algorithms" target="_blank">@windingtree/wt-pricing-algorithms</a>
+which we can easily load from <a href="https://unpkg.com" target="_blank">unpkg</a>.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/@windingtree/wt-pricing-algorithms@0.4.2/dist/web/wt-pricing-algorithms.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>This will make it available under <code>window[&apos;wt-pricing-algorithms&apos;]</code>. Make sure to place
+it <em>before</em> our existing Javascript <code>script</code> tag.</p>
+<p>Now, to check availability and compute a price, we need certain informations
+regarding the travellers:</p>
+<ul>
+<li>Date of arrival</li>
+<li>Date of departure</li>
+<li>List of guests - the prices can be based on number of guests and their age</li>
+</ul>
+<p>As said before, to make things a little easier, we will have a list of
+guests hardcoded:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> guests = [
+  {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Elizabeth&quot;</span>, <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Crown&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">25</span>},
+  {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Philip&quot;</span>, <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Crown&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">30</span>},
+];
+</code></pre>
+<p>And for the dates, we will add two user inputs.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;arrival-date&quot;</span>&gt;</span>Date of arrival<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;date&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;arrival-date&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;arrival-date&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;arrival-date&quot;</span>&gt;</span>Date of departure<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;date&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;departure-date&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;departure-date&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>Now we have to put the pricing library to a good use. We will
+do the price computation every time any of the input values change.
+We will also use a <a href="https://github.com/iamkun/dayjs" target="_blank">dayjs</a> library
+to smoothly work with various possible date formats used around the
+world.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> roomTypesSelect = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;room-types-select&apos;</span>);
+<span class="hljs-keyword">const</span> arrivalDateInput = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;arrival-date&apos;</span>);
+<span class="hljs-keyword">const</span> departureDateInput = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;departure-date&apos;</span>);
+<span class="hljs-keyword">const</span> recomputePriceAndAvailability = () =&gt; {
+  <span class="hljs-keyword">const</span> roomType = roomTypesSelect.value;
+  <span class="hljs-keyword">const</span> arrival = dayjs(arrivalDateInput.value);
+  <span class="hljs-keyword">const</span> departure = dayjs(departureDateInput.value);
+  <span class="hljs-comment">// Basic validation</span>
+  <span class="hljs-keyword">if</span> (!roomType ||
+      !arrival.isValid() ||
+      !departure.isValid() ||
+      departure.isBefore(arrival) ||
+      arrival.isBefore(dayjs())
+    ) {
+    <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-keyword">const</span> pc = <span class="hljs-keyword">new</span> <span class="hljs-built_in">window</span>[<span class="hljs-string">&apos;wt-pricing-algorithms&apos;</span>].prices.PriceComputer(
+    hotelDataFromApi.roomTypes,
+    hotelDataFromApi.ratePlans,
+    hotelDataFromApi.currency
+  );
+  <span class="hljs-keyword">const</span> resultingPrice = pc.getBestPrice(
+    <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), <span class="hljs-comment">// Booking date</span>
+    arrival,
+    departure,
+    guests,
+    hotelDataFromApi.currency,
+    roomType
+  )
+    <span class="hljs-comment">// We might not get a price - room is meant for a different number of people or pricing data is not available</span>
+    .filter((p) =&gt; p.id === roomType &amp;&amp; p.prices.length);
+  <span class="hljs-keyword">if</span> (resultingPrice.length) {
+    <span class="hljs-comment">// Different price resolution strategies might return more than one price</span>
+    <span class="hljs-keyword">const</span> actualPrice = resultingPrice[<span class="hljs-number">0</span>].prices[<span class="hljs-number">0</span>];
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;offer-price&apos;</span>).innerHTML = <span class="hljs-string">`Price <span class="hljs-subst">${actualPrice.total.format()}</span> <span class="hljs-subst">${actualPrice.currency}</span>`</span>;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;offer-price&apos;</span>).innerHTML = <span class="hljs-string">&apos;Price unavailable&apos;</span>;
+  }
+}
+roomTypesSelect.addEventListener(<span class="hljs-string">&apos;change&apos;</span>, recomputePriceAndAvailability);
+arrivalDateInput.addEventListener(<span class="hljs-string">&apos;change&apos;</span>, recomputePriceAndAvailability);
+departureDateInput.addEventListener(<span class="hljs-string">&apos;change&apos;</span>, recomputePriceAndAvailability);
+</code></pre>
+<p>If we are lucky, we will get a price. But what about the availability? Well,
+let&apos;s add it to the part where we come up with the price.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> indexedAvailability = <span class="hljs-keyword">new</span> <span class="hljs-built_in">window</span>[<span class="hljs-string">&apos;wt-pricing-algorithms&apos;</span>].availability.indexAvailability(hotelDataFromApi.availability.roomTypes);
+<span class="hljs-keyword">const</span> roomAvailability = <span class="hljs-keyword">new</span> <span class="hljs-built_in">window</span>[<span class="hljs-string">&apos;wt-pricing-algorithms&apos;</span>].availability.computeAvailability(
+  arrival,
+  departure,
+  guests.length,
+  hotelDataFromApi.roomTypes,
+  indexedAvailability
+).filter((ra) =&gt; ra.roomTypeId === roomType &amp;&amp; ra.quantity);
+<span class="hljs-keyword">if</span> (roomAvailability.length) {
+  <span class="hljs-keyword">const</span> actualQuantity = roomAvailability[<span class="hljs-number">0</span>].quantity;
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;offer-quantity&apos;</span>).innerHTML = <span class="hljs-string">`Available: <span class="hljs-subst">${actualQuantity}</span>`</span>;
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-comment">// Room might be sold out, unavailable for arrival or departure on given dates etc.</span>
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;offer-quantity&apos;</span>).innerHTML = <span class="hljs-string">&apos;Unavailable&apos;</span>;
+}
+</code></pre>
+<p>After this last step in this section, the website should look like on the
+screenshot below. You can play around with it to see that the data gets
+recomputed every time the values change.</p>
+<p><img src="../assets/booking-page-1.png" alt="Second checkpoint"></p>
+<h3 id="sending-a-booking-to-the-hotel">Sending a booking to the hotel</h3>
+<p>Now we are almost able to call the <a href="https://github.com/windingtree/wt-booking-api" target="_blank">Booking API</a>.
+But if we check the <a href="https://docs.windingtree.com/apis/wt-booking-api.html" target="_blank">API documentation</a>,
+it&apos;s obvious that we are still missing a few pieces of information.</p>
+<p>First, we need a book button</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">&quot;disabled&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;book-button&quot;</span>&gt;</span>Book a room!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<p>that gets activated when the room is available and we know for how much.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (resultingPrice.length &amp;&amp; roomAvailability.length) {
+  bookButton.removeAttribute(<span class="hljs-string">&apos;disabled&apos;</span>);
+}
+</code></pre>
+<p>So what should happen after the button is clicked? We have to assemble
+all data required for the Booking API. Let&apos;s deal with that one by one.</p>
+<p>First are information on the <code>customer</code>. Since we consider this to be a private
+page, we can hardcode them in.</p>
+<pre><code class="lang-js">bookButton.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> customer = {
+    name: <span class="hljs-string">&apos;Elizabeth&apos;</span>,
+    surname: <span class="hljs-string">&apos;Crown&apos;</span>,
+    email: <span class="hljs-string">&apos;elizabeth@example.com&apos;</span>,
+  };
+});
+</code></pre>
+<p>The <code>booking</code> information needs to be slightly adjusted from what we already
+have.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> booking = {
+  arrival: dayjs(arrivalDateInput.value).format(<span class="hljs-string">&apos;YYYY-MM-DD&apos;</span>),
+  departure: dayjs(departureDateInput.value).format(<span class="hljs-string">&apos;YYYY-MM-DD&apos;</span>),
+  guestInfo: guests.map((g, i) =&gt; <span class="hljs-built_in">Object</span>.assign({id: <span class="hljs-string">`guest-<span class="hljs-subst">${i}</span>`</span>}, g)),
+  rooms: [
+    {
+      id: roomTypesSelect.value,
+      guestInfoIds: [<span class="hljs-string">&apos;guest-0&apos;</span>, <span class="hljs-string">&apos;guest-1&apos;</span>]
+    }
+  ]
+};
+</code></pre>
+<p>The only thing we have not yet encountered are <code>cancellationFees</code> in the
+<code>pricing</code> section. They contain conditions under which the booking can
+actually be cancelled by the customer. Luckily, the pricing library can
+compute them for us. All we have to do is ask for them.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> actualPrice = resultingPrice[<span class="hljs-number">0</span>].prices[<span class="hljs-number">0</span>];
+<span class="hljs-keyword">const</span> pricing = {
+  currency: actualPrice.currency,
+  total: actualPrice.total.value,
+  cancellationFees: <span class="hljs-built_in">window</span>[<span class="hljs-string">&apos;wt-pricing-algorithms&apos;</span>].cancellationFees.computeCancellationFees(
+    <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+    dayjs(arrivalDateInput.value),
+    hotelDataFromApi.cancellationPolicies,
+    hotelDataFromApi.defaultCancellationAmount
+  )
+};
+</code></pre>
+<p>By combining everything together, we will end up with the booking request
+which we can send to the bookingApi declared by the hotel itself.</p>
+<pre><code class="lang-js">fetch(<span class="hljs-string">`<span class="hljs-subst">${hotelDataFromApi.bookingUri}</span>/booking`</span>, {
+  method: <span class="hljs-string">&apos;POST&apos;</span>,
+  body: <span class="hljs-built_in">JSON</span>.stringify({
+    customer: customer,
+    hotelId: hotelId,
+    booking: booking,
+    pricing: pricing,
+  }),
+  headers: {
+    <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+  },
+})
+.then((response) =&gt; {
+  <span class="hljs-keyword">if</span> (response.status &gt; <span class="hljs-number">299</span>) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;Cannot save booking!&apos;</span>);
+  }
+  <span class="hljs-keyword">return</span> response.json();
+})
+.then((data) =&gt; {
+  errorDiv.innerHTML = <span class="hljs-string">`Your booking was accepted with the state <span class="hljs-subst">${data.status}</span> under ID <span class="hljs-subst">${data.id}</span>`</span>;
+})
+.catch((err) =&gt; {
+  errorDiv.innerHTML = err.toString();
+});
+</code></pre>
+<p><img src="../assets/booking-page-2.png" alt="Third checkpoint"></p>
+<p>And that&apos;s it - you can see that the majority of heavy-lifting is done
+by existing tools and libraries and all we had to do is to work with the 
+data in the browser.</p>
+<h2 id="where-to-next">Where to next</h2>
+<ul>
+<li><a href="https://gist.github.com/JirkaChadima/262c06fbd0e0f00235c5a695c567a64b" target="_blank">Full code of this example</a></li>
+<li>How to build a Travel Agency</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="how-to-get-first-ether.html" class="navigation navigation-prev " aria-label="Previous page: How to get first Ether (ETH)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../apis.html" class="navigation navigation-next " aria-label="Next page: APIs">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"How to build a Hotel Booking Page","level":"1.2.8","depth":2,"next":{"title":"APIs","level":"1.3","depth":1,"path":"apis.md","ref":"apis.md","articles":[]},"previous":{"title":"How to get first Ether (ETH)","level":"1.2.7","depth":2,"path":"tutorials/how-to-get-first-ether.md","ref":"tutorials/how-to-get-first-ether.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-build-a-booking-page.md","mtime":"2019-02-04T14:55:10.999Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T14:56:09.592Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
