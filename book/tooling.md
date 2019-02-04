@@ -17,6 +17,8 @@
 * <a href="https://github.com/windingtree/wt-ui" target="_blank">Winding Tree branded CSS framework</a>
 * <a href="https://github.com/windingtree/wt-ui-react" target="_blank">Winding Tree branded React components</a>
 * <a href="https://github.com/windingtree/wt-fixtures" target="_blank">Hand crafted Winding Tree compatible sample data</a>
+* <a href="https://github.com/windingtree/off-chain-adapter-http" target="_blank">Adapter for HTTP storage (Javascript)</a>
+* <a href="https://github.com/windingtree/off-chain-adapter-swarm" target="_blank">Adapter for Swarm storage (Javascript)</a>
 
 ## Smart contracts
 

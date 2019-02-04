@@ -17,6 +17,9 @@ how to set it up and work with it.
 > #### Info
 > - [How do I get my first Ether?](how-to-get-first-ether.md)
 > - How much gas do I need?
+- Chosen data storage
+> #### Info
+> - How do I choose an appropriate off-chain storage?
 
 ## Step by step
 
