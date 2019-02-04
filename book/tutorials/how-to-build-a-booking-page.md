@@ -312,7 +312,7 @@ const booking = {
 The only thing we have not yet encountered are `cancellationFees` in the
 `pricing` section. They contain conditions under which the booking can
 actually be cancelled by the customer. Luckily, the pricing library can
-compute them for us. All we have to do is ask for them.
+compute them for us. All we have to do is ask.
 
 ```js
 const actualPrice = resultingPrice[0].prices[0];
@@ -329,7 +329,7 @@ const pricing = {
 ```
 
 By combining everything together, we will end up with the booking request
-which we can send to the bookingApi declared by the hotel itself.
+which we can send to the Booking API instance declared by the hotel itself.
 
 ```js
 fetch(`${hotelDataFromApi.bookingUri}/booking`, {

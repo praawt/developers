@@ -388,4 +388,4 @@ $ curl 'https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02
 ## Where to next
 
 - Searching for inventory
-- How to calculate prices
+- [How to calculate prices](how-to-build-a-booking-page.md#checking-availability-and-getting-a-price)

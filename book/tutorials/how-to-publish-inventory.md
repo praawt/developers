@@ -235,4 +235,4 @@ Ethereum wallet and noone else can modify the record stored there.
 ## Where to next
 
 - Publishing inventory and availability offering for an entire hotel
-- Building hotel booking page
+- [Building hotel booking page](how-to-build-a-booking-page.md)
