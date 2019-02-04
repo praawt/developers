@@ -380,7 +380,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p><em>Last modified: Mon Feb 04 2019 14:55:10 GMT+0000 (Coordinated Universal Time)</em></p>
+<p><em>Last modified: Mon Feb 04 2019 15:17:32 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
 <h1 id="how-to-build-a-hotel-booking-page">How to build a Hotel Booking page</h1>
 <p>In this tutorial, you will learn how to create a Booking website
@@ -642,7 +642,7 @@ have.</p>
 <p>The only thing we have not yet encountered are <code>cancellationFees</code> in the
 <code>pricing</code> section. They contain conditions under which the booking can
 actually be cancelled by the customer. Luckily, the pricing library can
-compute them for us. All we have to do is ask for them.</p>
+compute them for us. All we have to do is ask.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> actualPrice = resultingPrice[<span class="hljs-number">0</span>].prices[<span class="hljs-number">0</span>];
 <span class="hljs-keyword">const</span> pricing = {
   currency: actualPrice.currency,
@@ -656,7 +656,7 @@ compute them for us. All we have to do is ask for them.</p>
 };
 </code></pre>
 <p>By combining everything together, we will end up with the booking request
-which we can send to the bookingApi declared by the hotel itself.</p>
+which we can send to the Booking API instance declared by the hotel itself.</p>
 <pre><code class="lang-js">fetch(<span class="hljs-string">`<span class="hljs-subst">${hotelDataFromApi.bookingUri}</span>/booking`</span>, {
   method: <span class="hljs-string">&apos;POST&apos;</span>,
   body: <span class="hljs-built_in">JSON</span>.stringify({
@@ -734,7 +734,7 @@ data in the browser.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to build a Hotel Booking Page","level":"1.2.8","depth":2,"next":{"title":"APIs","level":"1.3","depth":1,"path":"apis.md","ref":"apis.md","articles":[]},"previous":{"title":"How to get first Ether (ETH)","level":"1.2.7","depth":2,"path":"tutorials/how-to-get-first-ether.md","ref":"tutorials/how-to-get-first-ether.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-build-a-booking-page.md","mtime":"2019-02-04T14:55:10.999Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T14:56:09.592Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to build a Hotel Booking Page","level":"1.2.8","depth":2,"next":{"title":"APIs","level":"1.3","depth":1,"path":"apis.md","ref":"apis.md","articles":[]},"previous":{"title":"How to get first Ether (ETH)","level":"1.2.7","depth":2,"path":"tutorials/how-to-get-first-ether.md","ref":"tutorials/how-to-get-first-ether.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-build-a-booking-page.md","mtime":"2019-02-04T15:17:32.057Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T15:18:35.864Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
