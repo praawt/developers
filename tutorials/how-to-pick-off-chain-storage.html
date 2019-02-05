@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to generate Ethereum wallet · GitBook</title>
+        <title>How to pick na appropriate off-chain storage · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="how-to-get-first-ether.html" />
+    <link rel="next" href="../apis.html" />
     
     
-    <link rel="prev" href="how-to-setup-read-api.html" />
+    <link rel="prev" href="how-to-build-a-booking-page.html" />
     
 
     </head>
@@ -189,7 +189,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="how-to-generate-ethereum-wallet.html">
+        <li class="chapter " data-level="1.2.6" data-path="how-to-generate-ethereum-wallet.html">
             
                 <a href="how-to-generate-ethereum-wallet.html">
             
@@ -228,7 +228,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.9" data-path="how-to-pick-off-chain-storage.html">
+        <li class="chapter active" data-level="1.2.9" data-path="how-to-pick-off-chain-storage.html">
             
                 <a href="how-to-pick-off-chain-storage.html">
             
@@ -355,7 +355,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >How to generate Ethereum wallet</a>
+        <a href=".." >How to pick na appropriate off-chain storage</a>
     </h1>
 </div>
 
@@ -395,92 +395,78 @@
                                 <blockquote>
 <p><em>Last modified: Tue Feb 05 2019 09:29:33 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
-<h1 id="how-to-generate-ethereum-wallet">How to generate Ethereum wallet?</h1>
-<p>In this tutorial, you will learn what an Ethereum wallet
-is, why do you need it and how to get one.</p>
-<h1 id="step-by-step">Step by step</h1>
-<p><a href="https://ethereum.org/" target="_blank">Ethereum</a> is a blockchain application platform.
-Every participant is identified by a public unique address, such as
-<code>0xd037ab9025d43f60a31b32a82e10936f07484246</code>. This address is sometimes
-called Ethereum wallet. A single person can own many addresses at
-once. And behind some addresses there aren&apos;t even people, but computer code.</p>
-<h2 id="how-do-i-own-a-wallet">How do I own a wallet?</h2>
-<p>Every address is derived from a thing called <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">private key</a>
-and anyone who has access to this private key is in control of the wallet.</p>
-<p><strong>Never share your private key!</strong> If you do, you are risking losing your
-funds. It is like sharing a password. You should never do that.</p>
-<p>When you are in control of a wallet, you can perform (technically correct
-term is sign) transactions with it. Transactions tell Ethereum to do something,
-the usual operation is to transfer <a href="https://www.ethereum.org/ether" target="_blank">Ether (ETH)</a> or
-another <a href="https://en.wikipedia.org/wiki/ERC-20" target="_blank">ERC-20 token</a>.</p>
-<p>Every transaction also costs <em>gas</em> which is paid in ETH and the amount
-spent depends on how complex your transaction is. For example registering
-a hotel in Widing Tree platform will be more expensive than transferring
-ETH from one wallet to another.</p>
-<!-- TODO multisigs -->
-<h2 id="why-do-i-need-a-wallet">Why do I need a wallet?</h2>
-<p>Winding Tree&apos;s core entity is deployed to Ethereum blockchain. It is
-called Winding Tree Index and it&apos;s a registry of hotels, airlines and
-other ecosystem participants.</p>
-<p>In order to register your property to Winding Tree index, you need to perform
-a transaction on Ethereum and that is why you need a wallet with some ETH
-in it. You will also need your wallet to modify the record in Winding Tree
-index.</p>
-<p><strong>The important thing to know is, that only the owner of the record can
-work with it. That means that only the owner of the wallet can work with the
-record.</strong> So don&apos;t throw your wallet away, it&apos;s your key to working with
-your data in Winding Tree ecosystem.</p>
-<h2 id="how-to-create-a-new-wallet">How to create a new wallet?</h2>
-<p>There are many options of how to create a new wallet. Some
-more secure than others.</p>
-<!-- TODO hardware wallets, differentiate between one time interaction with WT and software-based interaction -->
-<p>Since Winding Tree ecosystem is using wallets in the
-<a href="https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition" target="_blank">Web3 Secret Storage</a>
-format, we will show you how to get that one.</p>
-<p>As we said before, you should never share a private key, so
-<strong>never generate a wallet in an online service.</strong> Use a trusted
-software that is running locally and does not expose your secrets.</p>
-<p>One of such tools is <a href="https://download.mycrypto.com/" target="_blank">MyCrypto</a> which
-allows you to generate a Keystore file.</p>
-<p>A Keystore file is a <a href="https://www.json.org/" target="_blank">JSON</a> file that contains
-a private key encrypted by a unique passphrase. If you forget your
-passphrase or lose your Keystore file, you will lose access to
-your wallet. So be careful.</p>
-<p>Upon starting MyCrypto, you can select <em>Create new wallet</em> in the
-left menu. Then you select <em>Generate wallet</em> and finally a <em>Keystore
-file</em>. You will put in your passphrase which encrypts the Keystore file
-and then you can download the file itself. It will look like this:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">3</span>,
-  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;7fe84016-4686-4622-97c9-dc7b47f5f5c6&quot;</span>,
-  <span class="hljs-string">&quot;address&quot;</span>: <span class="hljs-string">&quot;d037ab9025d43f60a31b32a82e10936f07484246&quot;</span>,
-  <span class="hljs-string">&quot;crypto&quot;</span>: {
-    <span class="hljs-string">&quot;ciphertext&quot;</span>: <span class="hljs-string">&quot;ef9dcce915eeb0c4f7aa2bb16b9ae6ce5a4444b4ed8be45d94e6b7fe7f4f9b47&quot;</span>,
-    <span class="hljs-string">&quot;cipherparams&quot;</span>: {
-      <span class="hljs-string">&quot;iv&quot;</span>: <span class="hljs-string">&quot;31b12ef1d308ea1edacc4ab00de80d55&quot;</span>
-    },
-    <span class="hljs-string">&quot;cipher&quot;</span>: <span class="hljs-string">&quot;aes-128-ctr&quot;</span>,
-    <span class="hljs-string">&quot;kdf&quot;</span>: <span class="hljs-string">&quot;scrypt&quot;</span>,
-    <span class="hljs-string">&quot;kdfparams&quot;</span>: {
-      <span class="hljs-string">&quot;dklen&quot;</span>: <span class="hljs-number">32</span>,
-      <span class="hljs-string">&quot;salt&quot;</span>: <span class="hljs-string">&quot;d06ccd5d9c5d75e1a66a81d2076628f5716a3161ca204d92d04a42c057562541&quot;</span>,
-      <span class="hljs-string">&quot;n&quot;</span>: <span class="hljs-number">8192</span>,
-      <span class="hljs-string">&quot;r&quot;</span>: <span class="hljs-number">8</span>,
-      <span class="hljs-string">&quot;p&quot;</span>: <span class="hljs-number">1</span>
-    },
-    <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;2c30bc373c19c5b41385b85ffde14b9ea9f0f609c7812a10fdcb0a565034d9db&quot;</span>
-  }
-}
-</code></pre>
-<p>In addition to the Keystore file, you can save and even print your private key. That&apos;s
-an equivalent to the Keystore file and password combination. Protect it with the same
-care.</p>
-<p>This JSON file can directly be used when <a href="how-to-setup-write-api.html">creating an account in Write API</a>.
-Without ETH associated with this wallet, however, you are not yet able to
-create transactions in the Ethereum network.</p>
-<h1 id="where-to-next">Where to next</h1>
+<h1 id="how-to-pick-na-appropriate-off-chain-storage">How to pick na appropriate off-chain storage</h1>
+<p>In this tutorial, you will learn about storage options in Winding
+Tree ecosystem.</p>
+<h2 id="requirements">Requirements</h2>
 <ul>
-<li><a href="how-to-get-first-ether.html">How do I buy my first Ether?</a></li>
+<li><a href="https://github.com/windingtree/wt-write-api" target="_blank">Winding Tree Write API</a> URL.<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="">discover</a>, <a href="how-to-setup-write-api.html">setup</a> and <a href="">make discoverable</a>
+the Winding Tree ecosystem APIs.</p></div></div>
+</li>
+</ul>
+<h2 id="step-by-step">Step by step</h2>
+<p>When you are uploading inventory to Winding Tree ecosystem, you have
+to pick where your data will be stored. This is due to the nature of
+Ethereum blockchain, where storing large chunks of data is expensive.
+Another problem is, that even the smallest change in data results
+in the need of a transaction which might get costly and kind of slow.</p>
+<p>That&apos;s why the majority of data in Winding Tree is stored elsewhere,
+in a so called <strong>off-chain storage</strong>. And there are multiple options,
+and as it goes each one has its pros and cons.</p>
+<p>Also, because of the <a href="../data-model.html">data model</a> designed as a
+tree of documents interlinked by URIs, you are able to combine
+multiple types of storages: Just pick a different storage for each
+document.</p>
+<p>On the source code level, every storage can be added to Winding Tree
+ecosystem as an adapter. They are used for both reading and writing
+and are typically plugged into both <a href="https://github.com/windingtree/wt-write-api" target="_blank">Write API</a>
+and <a href="https://github.com/windingtree/wt-read-api" target="_blank">Read API</a>.</p>
+<p>On the user level, you have to choose your storage when using the
+Write API. When you are creating an account, you specify storages
+in the <code>uploaders</code> section. A more detailed description can be
+found directly in the 
+<a href="https://github.com/windingtree/wt-write-api#uploaders" target="_blank">Write API documentation</a>.</p>
+<p>For reading, everything should work out of the box and apart from
+telling the Read API to use all of the adapters, there are no
+additional steps needed.</p>
+<h3 id="swarm">Swarm</h3>
+<p><a href="https://swarm-gateways.net/bzz:/theswarm.eth/" target="_blank">Swarm</a> is a decentralized
+storage developed alongside Ethereum. It is still in its alpha stage
+and is quite unstable and highly experimental.</p>
+<p>Its main advantage is the decentralization aspect - you don&apos;t need to 
+manage your own servers. However, there are quite a few disadvantages:</p>
+<ul>
+<li>Still an alpha phase - data can get lost or may become unavailable</li>
+<li>Content hash based addressing - even the smallest change in the data
+means that it will get a new address.</li>
+</ul>
+<p>As the documents in the tree are linked with URIs with each other, every
+change will get propagated upwards and will result into an on-chain
+transaction.</p>
+<p>Swarm is great for rapid prototyping and testing, but due to its alpha
+nature I wouldn&apos;t use it in production just yet. The addressing issue
+can be mitigated by using <a href="https://swarm-guide.readthedocs.io/en/latest/usage.html#feeds" target="_blank">Swarm feeds</a>
+which we want to support eventually.</p>
+<h3 id="https">HTTPS</h3>
+<p>For a more robust storage system, we support serving the documents via
+good old HTTPS. This allows you to even serve the documents dynamically
+from your existing backend. You then only need to make sure that your API
+speaks the proper data format.</p>
+<p>The biggest disadvantage is that you need to host your data somewhere. The
+Write API supports upload to <a href="https://aws.amazon.com/s3/" target="_blank">AWS S3</a> out of the
+box, but the Adapter itself does not contain any HTTPS upload specific code.
+It is up to you.</p>
+<h3 id="more-options">More options</h3>
+<p>There are of course plenty of options available, some more mature than others.
+In our <a href="https://blog.windingtree.com/decentralized-storage-for-winding-tree-f86535bee014" target="_blank">older blogpost</a>,
+we discuss a lot of them and our reasoning for choosing Swarm and HTTPS in more
+detail.</p>
+<p>If you&apos;d like to use a so far unsupported storage option, we welcome and third
+party contribution. Thank you!</p>
+<h2 id="where-to-next">Where to next</h2>
+<ul>
+<li><a href="https://github.com/windingtree/off-chain-adapter-swarm" target="_blank">Adapter for Swarm storage (Javascript)</a></li>
+<li><a href="https://github.com/windingtree/off-chain-adapter-http" target="_blank">Adapter for HTTPS storage (Javascript)</a></li>
 </ul>
 
                                 
@@ -509,12 +495,12 @@ create transactions in the Ethereum network.</p>
 
             
                 
-                <a href="how-to-setup-read-api.html" class="navigation navigation-prev " aria-label="Previous page: How to setup Winding Tree Read API">
+                <a href="how-to-build-a-booking-page.html" class="navigation navigation-prev " aria-label="Previous page: How to build a Hotel Booking Page">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="how-to-get-first-ether.html" class="navigation navigation-next " aria-label="Next page: How to get first Ether (ETH)">
+                <a href="../apis.html" class="navigation navigation-next " aria-label="Next page: APIs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -525,7 +511,7 @@ create transactions in the Ethereum network.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to generate Ethereum wallet","level":"1.2.6","depth":2,"next":{"title":"How to get first Ether (ETH)","level":"1.2.7","depth":2,"path":"tutorials/how-to-get-first-ether.md","ref":"tutorials/how-to-get-first-ether.md","articles":[]},"previous":{"title":"How to setup Winding Tree Read API","level":"1.2.5","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-generate-ethereum-wallet.md","mtime":"2019-02-05T09:29:33.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T09:30:35.847Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to pick na appropriate off-chain storage","level":"1.2.9","depth":2,"next":{"title":"APIs","level":"1.3","depth":1,"path":"apis.md","ref":"apis.md","articles":[]},"previous":{"title":"How to build a Hotel Booking Page","level":"1.2.8","depth":2,"path":"tutorials/how-to-build-a-booking-page.md","ref":"tutorials/how-to-build-a-booking-page.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-pick-off-chain-storage.md","mtime":"2019-02-05T09:29:33.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T09:30:35.847Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

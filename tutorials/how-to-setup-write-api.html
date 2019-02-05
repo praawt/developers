@@ -228,6 +228,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.9" data-path="how-to-pick-off-chain-storage.html">
+            
+                <a href="how-to-pick-off-chain-storage.html">
+            
+                    
+                    How to pick na appropriate off-chain storage
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -380,7 +393,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p><em>Last modified: Mon Feb 04 2019 15:17:32 GMT+0000 (Coordinated Universal Time)</em></p>
+<p><em>Last modified: Tue Feb 05 2019 09:29:33 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
 <h1 id="how-to-setup-winding-tree-write-api">How to setup Winding Tree Write API</h1>
 <p>In this tutorial, you will learn about
@@ -396,10 +409,6 @@ how to set it up and work with it.</p>
 <li>Own enough ETH for transaction gas<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><ul>
 <li><a href="how-to-get-first-ether.html">How do I get my first Ether?</a></li>
 <li>How much gas do I need?</li>
-</ul></div></div>
-</li>
-<li>Chosen data storage<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><ul>
-<li>How do I choose an appropriate off-chain storage?</li>
 </ul></div></div>
 </li>
 </ul>
@@ -467,7 +476,7 @@ wallet is <code>windingtree</code> and we use it accross all of our examples and
 <p>The <code>uploaders</code> part tells the Write API where to store the inventory data.
 For the sake of brevity, we will use <a href="https://swarm-gateways.net/bzz:/theswarm.eth/" target="_blank">Swarm</a>,
 a decentralized file hosting. To check for different storage options, take
-a look at <a href="https://github.com/windingtree/wt-write-api#uploaders" target="_blank">Write API documentation</a>.</p>
+a look at <a href="how-to-pick-off-chain-storage.html">this tutorial</a>.</p>
 <p>To create an account with this setup, you need to do the following call:</p>
 <pre><code class="lang-sh">$ curl -X POST localhost:8000/accounts \
   -H <span class="hljs-string">&apos;Content-Type: application/json&apos;</span> \
@@ -508,6 +517,7 @@ two headers with such request:</p>
 <ul>
 <li><a href="how-to-publish-inventory.html">How to publish inventory</a></li>
 <li><a href="how-to-secure-write-api.html">How to keep the Write API secure</a></li>
+<li><a href="how-to-pick-off-chain-storage.html">How do I pick an appropriate off-chain storage?</a></li>
 </ul>
 
                                 
@@ -552,7 +562,7 @@ two headers with such request:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to setup Winding Tree Write API","level":"1.2.3","depth":2,"next":{"title":"How to keep the Write API secure","level":"1.2.4","depth":2,"path":"tutorials/how-to-secure-write-api.md","ref":"tutorials/how-to-secure-write-api.md","articles":[]},"previous":{"title":"How to retrieve Inventory","level":"1.2.2","depth":2,"path":"tutorials/how-to-retrieve-inventory.md","ref":"tutorials/how-to-retrieve-inventory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-setup-write-api.md","mtime":"2019-02-04T15:17:32.057Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T15:18:35.864Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to setup Winding Tree Write API","level":"1.2.3","depth":2,"next":{"title":"How to keep the Write API secure","level":"1.2.4","depth":2,"path":"tutorials/how-to-secure-write-api.md","ref":"tutorials/how-to-secure-write-api.md","articles":[]},"previous":{"title":"How to retrieve Inventory","level":"1.2.2","depth":2,"path":"tutorials/how-to-retrieve-inventory.md","ref":"tutorials/how-to-retrieve-inventory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-setup-write-api.md","mtime":"2019-02-05T09:29:33.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T09:30:35.847Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
