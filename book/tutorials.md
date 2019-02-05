@@ -13,22 +13,23 @@
 
 <!--
 - Which Winding Tree ecosystem environments are available? - environments
+  discover Write API - environments
+  discover Read API - environments
 - How to integrate property management software to publish inventory + Publishing inventory and availability offering for an entire hotel
-- How to search for inventory - Search API
+- How to search for inventory - Search API (experimental)
+
 
 - How to implement client
     - mock and greenkeeper on
 - How to propose a change to the API Specification
 - How to implement server endpoint based on the API Specification
+  - Booking API
+    setup/implement
+    discover - environments
+    make discoverable
 - How much gas do I need?
 - Write API
-  discover - environments
   make discoverable
 - Read API
-  discover - environments
-  make discoverable
-- Booking API
-  setup/implement
-  discover - environments
   make discoverable
 -->
