@@ -10,6 +10,7 @@
   * [How to generate Ethereum wallet](tutorials/how-to-generate-ethereum-wallet.md) 
   * [How to get first Ether (ETH)](tutorials/how-to-get-first-ether.md)
   * [How to build a Hotel Booking Page](tutorials/how-to-build-a-booking-page.md)
+  * [How to pick na appropriate off-chain storage](tutorials/how-to-pick-off-chain-storage.md)
 * [APIs](apis.md)
 * [Tooling and integrations](tooling.md)
 * [Data Model](data-model.md)

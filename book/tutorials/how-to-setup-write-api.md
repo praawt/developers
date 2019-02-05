@@ -17,9 +17,6 @@ how to set it up and work with it.
 > #### Info
 > - [How do I get my first Ether?](how-to-get-first-ether.md)
 > - How much gas do I need?
-- Chosen data storage
-> #### Info
-> - How do I choose an appropriate off-chain storage?
 
 ## Step by step
 
@@ -106,7 +103,7 @@ wallet is `windingtree` and we use it accross all of our examples and documentat
 The `uploaders` part tells the Write API where to store the inventory data.
 For the sake of brevity, we will use [Swarm](https://swarm-gateways.net/bzz:/theswarm.eth/),
 a decentralized file hosting. To check for different storage options, take
-a look at [Write API documentation](https://github.com/windingtree/wt-write-api#uploaders).
+a look at [this tutorial](how-to-pick-off-chain-storage.md).
 
 To create an account with this setup, you need to do the following call:
 
@@ -163,3 +160,4 @@ $ curl -X DELETE localhost:8000/accounts/aa43edaf8266e8f8 \
 
 - [How to publish inventory](how-to-publish-inventory.md)
 - [How to keep the Write API secure](how-to-secure-write-api.md)
+- [How do I pick an appropriate off-chain storage?](how-to-pick-off-chain-storage.md)

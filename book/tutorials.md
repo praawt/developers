@@ -8,27 +8,27 @@
 * [How to generate Ethereum wallet](tutorials/how-to-generate-ethereum-wallet.md) 
 * [How to get first Ether (ETH)](tutorials/how-to-get-first-ether.md)
 * [How to build a Hotel Booking Page](tutorials/how-to-build-a-booking-page.md)
+* [How to pick na appropriate off-chain storage](tutorials/how-to-pick-off-chain-storage.md)
 
 
 <!--
-- How to select an appropriate data storage?
 - Which Winding Tree ecosystem environments are available? - environments
 - How to integrate property management software to publish inventory + Publishing inventory and availability offering for an entire hotel
+- How to search for inventory - Search API
+
 - How to implement client
     - mock and greenkeeper on
 - How to propose a change to the API Specification
 - How to implement server endpoint based on the API Specification
-- How to search for inventory - Search API
-- How to calculate prices - wt-pricing-algorithms
 - How much gas do I need?
 - Write API
-  discover
+  discover - environments
   make discoverable
 - Read API
-  discover
+  discover - environments
   make discoverable
 - Booking API
-  setup
-  discover
+  setup/implement
+  discover - environments
   make discoverable
 -->
