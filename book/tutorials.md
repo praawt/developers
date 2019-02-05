@@ -10,12 +10,13 @@
 * [How to build a Hotel Booking Page](tutorials/how-to-build-a-booking-page.md)
 * [How to pick na appropriate off-chain storage](tutorials/how-to-pick-off-chain-storage.md)
 * [How to pick an environment](tutorials/how-to-pick-environment.md)
+* [How much does it cost to publish Inventory](tutorials/how-much-does-it-cost.md)
 
 
 <!--
 - How to integrate property management software to publish inventory + Publishing inventory and availability offering for an entire hotel
+- How to build a Travel Agency
 - How to search for inventory - Search API (experimental)
-- How much gas do I need? or How much does it cost to register on Winding Tree Index?
 
 - How to implement client
     - mock and greenkeeper on
@@ -25,7 +26,6 @@
     setup/implement
     discover - environments
     make discoverable
-- How much gas do I need?
 - Write API
   make discoverable
 - Read API

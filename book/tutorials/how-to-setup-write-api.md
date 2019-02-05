@@ -16,7 +16,7 @@ how to set it up and work with it.
 - Own enough ETH for transaction gas
 > #### Info
 > - [How do I get my first Ether?](how-to-get-first-ether.md)
-> - How much gas do I need?
+> - [How much gas do I need?](how-much-does-it-cost.md)
 
 ## Step by step
 

@@ -12,6 +12,7 @@
   * [How to build a Hotel Booking Page](tutorials/how-to-build-a-booking-page.md)
   * [How to pick na appropriate off-chain storage](tutorials/how-to-pick-off-chain-storage.md)
   * [How to pick an environment](tutorials/how-to-pick-environment.md)
+  * [How much does it cost to publish Inventory](tutorials/how-much-does-it-cost.md)
 * [APIs](apis.md)
 * [Tooling and integrations](tooling.md)
 * [Data Model](data-model.md)
