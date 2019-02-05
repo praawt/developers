@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to get first Ether (ETH) · GitBook</title>
+        <title>How to pick an environment · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="how-to-build-a-booking-page.html" />
+    <link rel="next" href="../apis.html" />
     
     
-    <link rel="prev" href="how-to-generate-ethereum-wallet.html" />
+    <link rel="prev" href="how-to-pick-off-chain-storage.html" />
     
 
     </head>
@@ -202,7 +202,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.7" data-path="how-to-get-first-ether.html">
+        <li class="chapter " data-level="1.2.7" data-path="how-to-get-first-ether.html">
             
                 <a href="how-to-get-first-ether.html">
             
@@ -241,7 +241,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.10" data-path="how-to-pick-environment.html">
+        <li class="chapter active" data-level="1.2.10" data-path="how-to-pick-environment.html">
             
                 <a href="how-to-pick-environment.html">
             
@@ -368,7 +368,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >How to get first Ether (ETH)</a>
+        <a href=".." >How to pick an environment</a>
     </h1>
 </div>
 
@@ -419,71 +419,70 @@
                                 <blockquote>
 <p><em>Last modified: Tue Feb 05 2019 14:48:05 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
-<h1 id="how-to-get-first-ether">How to get first Ether</h1>
-<p>In this tutorial, you will learn about Ether (ETH) and how to get it.
-In addition, you will learn about ERC-20 tokens, such as L&#xCD;F.</p>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li>Ethereum wallet<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p><a href="how-to-generate-ethereum-wallet.html">How do I generate Ethereum wallet?</a></p></div></div>
-</li>
-</ul>
+<h1 id="how-to-pick-an-environment">How to pick an environment</h1>
+<p>Winding Tree is currently operating several environments. In this
+tutorial, you will learn what these are and which one to pick.</p>
 <h2 id="step-by-step">Step by step</h2>
-<p>Ether (ETH) is a cryptotoken native to Ethereum. All transaction costs
-are paid for with it. ETH comes to the world as a reward for those who
-participate in processing new transactions in the network (so called
-miners).</p>
-<h3 id="faucets">Faucets</h3>
-<p>Apart from that, in testing networks (or testnets) of Ethereum, you
-can get free ETH from special addresses that are called faucets.
-ETH is not transferrable between networks, so ETH you get from a faucet
-on a testnet cannot be used in the production network (or mainnet).</p>
-<p>There are multiple testnets, but we will stick to the one called Ropsten.
-Some of the faucets are:</p>
+<h3 id="what-is-an-environment">What is an environment</h3>
+<p>Every Winding Tree environment&apos;s centerpoint is a Smart contract
+called Winding Tree Index. It serves as a decentralized registry of
+participating service providers (hotels, airlines) and the rest of
+the tooling is configured to use it.</p>
+<p>The tooling typically consists of one or more REST APIs operated
+either as a service or on-premise - it typically depends on the
+necessary security measures. But as the ecosystem is intentionally
+very open, you can swap our implementation and architecture with
+something completely different that makes more sense to you.</p>
+<h3 id="active-environments">Active environments</h3>
+<p>Winding Tree is still in an experimental phase and we are currently
+running two environments for testing. They are usually identical
+in versions, but they use a separate Winding Tree Index.</p>
+<p>Both environments are using the Ropsten Ethereum testnet, so you
+don&apos;t need to have real ETH or L&#xCD;F to play with it.</p>
+<p><strong>Notice</strong>: Both environments are for demonstration purposes only
+and a deployment for production use would be different. Typically,
+the Write API is not recommended to be available directly from the
+internet.</p>
+<h4 id="playground">Playground</h4>
 <ul>
-<li><a href="https://faucet.ropsten.be/" target="_blank">https://faucet.ropsten.be/</a> </li>
-<li><a href="https://faucet.metamask.io/" target="_blank">https://faucet.metamask.io/</a> (Requires MetaMask browser extension)</li>
-<li><a href="https://faucet.kyber.network/" target="_blank">https://faucet.kyber.network/</a> (Requires login through GitHub)</li>
+<li>Index: <a href="https://ropsten.etherscan.io/address/0xfb562057d613175c850df65e435bb0824b65d319" target="_blank">0xfb562057d613175c850df65e435bb0824b65d319</a></li>
+<li>Read API: <a href="https://playground-api.windingtree.com" target="_blank">https://playground-api.windingtree.com</a></li>
+<li>Write API: <a href="https://playground-write-api.windingtree.com" target="_blank">https://playground-write-api.windingtree.com</a></li>
+<li>Notification API: <a href="https://playground-notification-api.windingtree.com" target="_blank">https://playground-notification-api.windingtree.com</a></li>
+<li>Search API: <a href="https://playground-search-api.windingtree.com" target="_blank">https://playground-search-api.windingtree.com</a></li>
+<li>Hotel explorer: <a href="https://hotel-explorer-playground.windingtree.com" target="_blank">https://hotel-explorer-playground.windingtree.com</a></li>
 </ul>
-<p>After you put in your wallet address (such as <code>0xd037ab9025d43f60a31b32a82e10936f07484246</code>),
-the faucet should send you free Ether. To verify that it actually
-happened, you can check transactions associated with your wallet
-in a block explorer, such as <a href="https://ropsten.etherscan.io" target="_blank">Etherscan for Ropsten</a>.
-Just put your address in the search input in the upper right corner.</p>
-<h3 id="mainnet">Mainnet</h3>
-<p>In the main Ethereum network, there are no faucets. From time to
-time you can get paid in ETH for something, but there are two
-main ways how to get ETH.</p>
-<h4 id="mining">Mining</h4>
-<p>Mining is a term used for participating in processign transactions in
-the network. If you want to take part in mining, you will run a node
-(associated with an Ethereum wallet) that tries to be the first to
-come up with the next network block. If the node succeeds in that
-effort, it is rewarded with ETH.</p>
-<p>Nowadays, mining for a standalone separate node does not make
-much economical sense. <!-- TODO links --></p>
-<h4 id="exchanges">Exchanges</h4>
-<p>Very common way of getting ETH is through exchanges. There
-are some where you can buy ETH with USD or EUR (commonly referred
-to as fiat currencies). And there are some where you can get
-ETH in exchange to other cryptotokens.</p>
-<p>It&apos;s up to you which exchange you choose, but you should pick one
-that is well-established, secure and allows you to withdraw your ETH
-funds at any time to a wallet that is not controlled by the exchange.</p>
-<!-- TODO do we want to point to specific exchnages or not? -->
-<h3 id="erc-20-tokens">ERC-20 tokens</h3>
-<p><a href="https://en.wikipedia.org/wiki/ERC-20" target="_blank">ERC-20</a> compatible token is
-a cryptotoken of its own that is built on, operates on and is traded
-on Ethereum network. It is not equal with ETH, for example you are
-not able to pay for transaction costs with them.</p>
-<p>Ther are plenty of ERC-20 tokens, Winding Tree&apos;s
-<a href="http://lif.windingtree.com" target="_blank">L&#xCD;F</a> being one of them. Similarly to ETH,
-you can buy them on exchanges, but there are many models how the tokens
-can be distributed.</p>
-<p>Typical ERC-20 token is tied to a specific use-case or a specific
-application.</p>
+<p>We are populating the Playground environment with curated data
+from <a href="https://github.com/windingtree/wt-fixtures" target="_blank">wt-fixtures</a>.
+Availability data gets updated monthly, so it should make sense at
+all times.</p>
+<h4 id="demo">Demo</h4>
+<ul>
+<li>Index: <a href="https://ropsten.etherscan.io/address/0xa433590275a3a1ebca247a230076d2d281f46a49" target="_blank">0xa433590275a3a1ebca247a230076d2d281f46a49</a></li>
+<li>Read API: <a href="https://demo-api.windingtree.com" target="_blank">https://demo-api.windingtree.com</a></li>
+<li>Write API: <a href="https://demo-write-api.windingtree.com" target="_blank">https://demo-write-api.windingtree.com</a></li>
+<li>Search API: <a href="https://demo-search-api.windingtree.com" target="_blank">https://demo-search-api.windingtree.com</a></li>
+<li>Hotel explorer: <a href="https://hotel-explorer-demo.windingtree.com" target="_blank">https://hotel-explorer-demo.windingtree.com</a></li>
+</ul>
+<p>We are populating the Demo environment with curated data
+from <a href="https://github.com/windingtree/wt-fixtures" target="_blank">wt-fixtures</a>.
+Availability data gets updated monthly, so it should make sense at
+all times.</p>
+<p>Notification API is not deployed for Demo environment, because it is
+actually environment agnostic. You can reuse the Playground deployment
+if need be.</p>
+<h2 id="how-to-run-another-environment">How to run another environment?</h2>
+<p>If you, for some reason, need to run a fresh and separate environment,
+the key to do it is to deploy your own Winding Tree Index and run all
+of the necessary tools with the appropriate configuration.</p>
+<h2 id="how-to-reset-an-existing-environment">How to reset an existing environment</h2>
+<p>Since you are not able to delete any data on behalf of the users,
+the only way to reset an environment is to deploy a new Winding Tree
+Index and reconfigure every other tool to point to the new location.</p>
 <h2 id="where-to-next">Where to next</h2>
 <ul>
-<li><a href="how-to-publish-inventory.html">How to publish Inventory</a></li>
+<li><a href="how-to-setup-read-api.html">How to setup Read API</a></li>
+<li><a href="how-to-setup-write-api.html">How to setup Write API</a></li>
 </ul>
 
                                 
@@ -512,12 +511,12 @@ application.</p>
 
             
                 
-                <a href="how-to-generate-ethereum-wallet.html" class="navigation navigation-prev " aria-label="Previous page: How to generate Ethereum wallet">
+                <a href="how-to-pick-off-chain-storage.html" class="navigation navigation-prev " aria-label="Previous page: How to pick na appropriate off-chain storage">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="how-to-build-a-booking-page.html" class="navigation navigation-next " aria-label="Next page: How to build a Hotel Booking Page">
+                <a href="../apis.html" class="navigation navigation-next " aria-label="Next page: APIs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -528,7 +527,7 @@ application.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to get first Ether (ETH)","level":"1.2.7","depth":2,"next":{"title":"How to build a Hotel Booking Page","level":"1.2.8","depth":2,"path":"tutorials/how-to-build-a-booking-page.md","ref":"tutorials/how-to-build-a-booking-page.md","articles":[]},"previous":{"title":"How to generate Ethereum wallet","level":"1.2.6","depth":2,"path":"tutorials/how-to-generate-ethereum-wallet.md","ref":"tutorials/how-to-generate-ethereum-wallet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-get-first-ether.md","mtime":"2019-02-05T14:48:05.185Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T14:49:10.420Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to pick an environment","level":"1.2.10","depth":2,"next":{"title":"APIs","level":"1.3","depth":1,"path":"apis.md","ref":"apis.md","articles":[]},"previous":{"title":"How to pick na appropriate off-chain storage","level":"1.2.9","depth":2,"path":"tutorials/how-to-pick-off-chain-storage.md","ref":"tutorials/how-to-pick-off-chain-storage.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-pick-environment.md","mtime":"2019-02-05T14:48:05.185Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T14:49:10.420Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
