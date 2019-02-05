@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to generate Ethereum wallet · GitBook</title>
+        <title>How much does it cost to publish Inventory · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="how-to-get-first-ether.html" />
+    <link rel="next" href="../apis.html" />
     
     
-    <link rel="prev" href="how-to-setup-read-api.html" />
+    <link rel="prev" href="how-to-pick-environment.html" />
     
 
     </head>
@@ -189,7 +189,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="how-to-generate-ethereum-wallet.html">
+        <li class="chapter " data-level="1.2.6" data-path="how-to-generate-ethereum-wallet.html">
             
                 <a href="how-to-generate-ethereum-wallet.html">
             
@@ -254,7 +254,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.11" data-path="how-much-does-it-cost.html">
+        <li class="chapter active" data-level="1.2.11" data-path="how-much-does-it-cost.html">
             
                 <a href="how-much-does-it-cost.html">
             
@@ -381,7 +381,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >How to generate Ethereum wallet</a>
+        <a href=".." >How much does it cost to publish Inventory</a>
     </h1>
 </div>
 
@@ -432,92 +432,67 @@
                                 <blockquote>
 <p><em>Last modified: Tue Feb 05 2019 15:51:44 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
-<h1 id="how-to-generate-ethereum-wallet">How to generate Ethereum wallet?</h1>
-<p>In this tutorial, you will learn what an Ethereum wallet
-is, why do you need it and how to get one.</p>
-<h1 id="step-by-step">Step by step</h1>
-<p><a href="https://ethereum.org/" target="_blank">Ethereum</a> is a blockchain application platform.
-Every participant is identified by a public unique address, such as
-<code>0xd037ab9025d43f60a31b32a82e10936f07484246</code>. This address is sometimes
-called Ethereum wallet. A single person can own many addresses at
-once. And behind some addresses there aren&apos;t even people, but computer code.</p>
-<h2 id="how-do-i-own-a-wallet">How do I own a wallet?</h2>
-<p>Every address is derived from a thing called <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">private key</a>
-and anyone who has access to this private key is in control of the wallet.</p>
-<p><strong>Never share your private key!</strong> If you do, you are risking losing your
-funds. It is like sharing a password. You should never do that.</p>
-<p>When you are in control of a wallet, you can perform (technically correct
-term is sign) transactions with it. Transactions tell Ethereum to do something,
-the usual operation is to transfer <a href="https://www.ethereum.org/ether" target="_blank">Ether (ETH)</a> or
-another <a href="https://en.wikipedia.org/wiki/ERC-20" target="_blank">ERC-20 token</a>.</p>
-<p>Every transaction also costs <em>gas</em> which is paid in ETH and the amount
-spent depends on how complex your transaction is. For example registering
-a hotel in Widing Tree platform will be more expensive than transferring
-ETH from one wallet to another.</p>
-<!-- TODO multisigs -->
-<h2 id="why-do-i-need-a-wallet">Why do I need a wallet?</h2>
-<p>Winding Tree&apos;s core entity is deployed to Ethereum blockchain. It is
-called Winding Tree Index and it&apos;s a registry of hotels, airlines and
-other ecosystem participants.</p>
-<p>In order to register your property to Winding Tree index, you need to perform
-a transaction on Ethereum and that is why you need a wallet with some ETH
-in it. You will also need your wallet to modify the record in Winding Tree
-index.</p>
-<p><strong>The important thing to know is, that only the owner of the record can
-work with it. That means that only the owner of the wallet can work with the
-record.</strong> So don&apos;t throw your wallet away, it&apos;s your key to working with
-your data in Winding Tree ecosystem.</p>
-<h2 id="how-to-create-a-new-wallet">How to create a new wallet?</h2>
-<p>There are many options of how to create a new wallet. Some
-more secure than others.</p>
-<!-- TODO hardware wallets, differentiate between one time interaction with WT and software-based interaction -->
-<p>Since Winding Tree ecosystem is using wallets in the
-<a href="https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition" target="_blank">Web3 Secret Storage</a>
-format, we will show you how to get that one.</p>
-<p>As we said before, you should never share a private key, so
-<strong>never generate a wallet in an online service.</strong> Use a trusted
-software that is running locally and does not expose your secrets.</p>
-<p>One of such tools is <a href="https://download.mycrypto.com/" target="_blank">MyCrypto</a> which
-allows you to generate a Keystore file.</p>
-<p>A Keystore file is a <a href="https://www.json.org/" target="_blank">JSON</a> file that contains
-a private key encrypted by a unique passphrase. If you forget your
-passphrase or lose your Keystore file, you will lose access to
-your wallet. So be careful.</p>
-<p>Upon starting MyCrypto, you can select <em>Create new wallet</em> in the
-left menu. Then you select <em>Generate wallet</em> and finally a <em>Keystore
-file</em>. You will put in your passphrase which encrypts the Keystore file
-and then you can download the file itself. It will look like this:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">3</span>,
-  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;7fe84016-4686-4622-97c9-dc7b47f5f5c6&quot;</span>,
-  <span class="hljs-string">&quot;address&quot;</span>: <span class="hljs-string">&quot;d037ab9025d43f60a31b32a82e10936f07484246&quot;</span>,
-  <span class="hljs-string">&quot;crypto&quot;</span>: {
-    <span class="hljs-string">&quot;ciphertext&quot;</span>: <span class="hljs-string">&quot;ef9dcce915eeb0c4f7aa2bb16b9ae6ce5a4444b4ed8be45d94e6b7fe7f4f9b47&quot;</span>,
-    <span class="hljs-string">&quot;cipherparams&quot;</span>: {
-      <span class="hljs-string">&quot;iv&quot;</span>: <span class="hljs-string">&quot;31b12ef1d308ea1edacc4ab00de80d55&quot;</span>
-    },
-    <span class="hljs-string">&quot;cipher&quot;</span>: <span class="hljs-string">&quot;aes-128-ctr&quot;</span>,
-    <span class="hljs-string">&quot;kdf&quot;</span>: <span class="hljs-string">&quot;scrypt&quot;</span>,
-    <span class="hljs-string">&quot;kdfparams&quot;</span>: {
-      <span class="hljs-string">&quot;dklen&quot;</span>: <span class="hljs-number">32</span>,
-      <span class="hljs-string">&quot;salt&quot;</span>: <span class="hljs-string">&quot;d06ccd5d9c5d75e1a66a81d2076628f5716a3161ca204d92d04a42c057562541&quot;</span>,
-      <span class="hljs-string">&quot;n&quot;</span>: <span class="hljs-number">8192</span>,
-      <span class="hljs-string">&quot;r&quot;</span>: <span class="hljs-number">8</span>,
-      <span class="hljs-string">&quot;p&quot;</span>: <span class="hljs-number">1</span>
-    },
-    <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;2c30bc373c19c5b41385b85ffde14b9ea9f0f609c7812a10fdcb0a565034d9db&quot;</span>
-  }
-}
-</code></pre>
-<p>In addition to the Keystore file, you can save and even print your private key. That&apos;s
-an equivalent to the Keystore file and password combination. Protect it with the same
-care.</p>
-<p>This JSON file can directly be used when <a href="how-to-setup-write-api.html">creating an account in Write API</a>.
-Without ETH associated with this wallet, however, you are not yet able to
-create transactions in the Ethereum network.</p>
-<h1 id="where-to-next">Where to next</h1>
+<h1 id="how-much-does-it-cost-to-publish-inventory">How much does it cost to publish Inventory?</h1>
+<p>In this tutorial, you will learn about transaction costs on Ethereum
+and how big are they in Winding Tree ecosystem.</p>
+<h2 id="requirements">Requirements</h2>
 <ul>
-<li><a href="how-to-get-first-ether.html">How do I buy my first Ether?</a></li>
+<li>Ethereum wallet with ETH<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><ul>
+<li><a href="how-to-generate-ethereum-wallet.html">How do I generate Ethereum wallet?</a></li>
+<li><a href="how-to-get-first-ether.html">How do I get my first Ether?</a></li>
+</ul></div></div>
+</li>
+</ul>
+<h2 id="step-by-step">Step by step</h2>
+<p>You pay certain amount of ETH for every Ethereum transaction. In order
+to use Winding Tree ecosystem, you need to create a transaction at two
+possible occasions - registering and updating an inventory.</p>
+<p>Transaction cost in Ethereum is based directly on how much computational
+power your transaction needs and how much data it is storing on the
+network. For every operation there is a fee specified in the
+<a href="https://ethereum.github.io/yellowpaper/paper.pdf" target="_blank">Ethereum Yellow Paper</a>
+(Appendix G).</p>
+<p>Every time you post a transaction, you tell Ethereum what&apos;s the maximum
+amount of gas you are willing to spend (<em>gas limit</em>) and how much ETH you are
+willing to pay for a unit of gas (<em>gas price</em>). This determines how much
+ETH a miner will get for that transaction when they process it.</p>
+<p>Although the total amount of gas that a transaction needs is
+deterministic, it may differ between Ethereum networks due to experiments
+and slight variations. After all, testnet is for testing.</p>
+<p>Another factor coming into play is the gas price. As it directly influences
+how much ETH the miners will get, the transactions that will reward more ETH
+usually get mined first. This can spiral up the gas price when the network is
+overloaded. On the other hand, during times with low traffic, you can get away
+with minimal gas price.</p>
+<p>As such, all numbers here are purely orientational. It heavily depends on
+current state of the network, current exchange rate of ETH to fiat currencies,
+current implementation of Winding Tree Index and amount of data you are storing.</p>
+<p><strong>Notice</strong>: Ether has many sub-units, just like USD has cents. One of them is
+<em>Gwei</em> and is usually used when talking about gas prices. 1 Ether consists of
+a billion Gweis, i. e. 1 Ether = 1,000,000,000 Gwei (10<sup>9</sup>).</p>
+<h3 id="registering-new-inventory">Registering new inventory</h3>
+<p>From experience, <a href="https://ropsten.etherscan.io/tx/0x8c7a601df329d6a8c59240438445c4941fd4f9f0ff7681101f8f473dd290b2e9" target="_blank">registering a hotel</a>
+on Ropsten network costs around 575000 gas. Depending on the network load, it
+may be anywhere between 0.0143758 (gas price 25 Gwei) and 0.000575 ETH
+(gas price 1 Gwei).</p>
+<p>Depending on the ETH to USD rate, it might be anywhere between 16 USD
+(based on <a href="https://www.investing.com/crypto/ethereum/eth-usd-historical-data" target="_blank">average price from January 2018</a>)
+and USD 0.06 (<a href="https://www.investing.com/crypto/ethereum/eth-usd-historical-data" target="_blank">average based on price from January 2019</a>).</p>
+<h3 id="updating-an-existing-inventory">Updating an existing inventory</h3>
+<p>You need to update the inventory essentially only when something stored
+on-chain changes which in the right setup should be virtually never.</p>
+<p>But from experience, <a href="https://ropsten.etherscan.io/tx/0x097541d24ca6b20946f9e82c0190c63a2efe2f7978270a8c7cd65f2bf87ee920" target="_blank">updating a hotel</a>
+on Ropsten network costs around 52000 gas. Depending on the network load, it
+may be anywhere between 0.0013008 (gas price 25 Gwei) and 0.000052 ETH
+(gas price 1 Gwei).</p>
+<p>Depending on the ETH to USD rate, it might be anywhere between 1.46 USD
+(based on <a href="https://www.investing.com/crypto/ethereum/eth-usd-historical-data" target="_blank">average price from January 2018</a>)
+and USD 0.006 (<a href="https://www.investing.com/crypto/ethereum/eth-usd-historical-data" target="_blank">average based on price from January 2019</a>).</p>
+<h2 id="where-to-next">Where to next</h2>
+<ul>
+<li><a href="https://blockgeeks.com/guides/ethereum-gas-step-by-step-guide/" target="_blank">What is Ethereum Gas: Step-By-Step Guide (blockgeeks.com)</a></li>
+<li><a href="https://ethgasstation.info/" target="_blank">What is current status of gas on Ethereum mainnet? (ethgasstation.info)</a></li>
+<li><a href="how-to-publish-inventory.html">How to publish inventory</a></li>
 </ul>
 
                                 
@@ -546,12 +521,12 @@ create transactions in the Ethereum network.</p>
 
             
                 
-                <a href="how-to-setup-read-api.html" class="navigation navigation-prev " aria-label="Previous page: How to setup Winding Tree Read API">
+                <a href="how-to-pick-environment.html" class="navigation navigation-prev " aria-label="Previous page: How to pick an environment">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="how-to-get-first-ether.html" class="navigation navigation-next " aria-label="Next page: How to get first Ether (ETH)">
+                <a href="../apis.html" class="navigation navigation-next " aria-label="Next page: APIs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -562,7 +537,7 @@ create transactions in the Ethereum network.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to generate Ethereum wallet","level":"1.2.6","depth":2,"next":{"title":"How to get first Ether (ETH)","level":"1.2.7","depth":2,"path":"tutorials/how-to-get-first-ether.md","ref":"tutorials/how-to-get-first-ether.md","articles":[]},"previous":{"title":"How to setup Winding Tree Read API","level":"1.2.5","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-generate-ethereum-wallet.md","mtime":"2019-02-05T15:51:44.547Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T15:52:43.140Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How much does it cost to publish Inventory","level":"1.2.11","depth":2,"next":{"title":"APIs","level":"1.3","depth":1,"path":"apis.md","ref":"apis.md","articles":[]},"previous":{"title":"How to pick an environment","level":"1.2.10","depth":2,"path":"tutorials/how-to-pick-environment.md","ref":"tutorials/how-to-pick-environment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-much-does-it-cost.md","mtime":"2019-02-05T15:51:44.547Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T15:52:43.140Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
