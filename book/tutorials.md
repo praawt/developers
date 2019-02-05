@@ -9,15 +9,13 @@
 * [How to get first Ether (ETH)](tutorials/how-to-get-first-ether.md)
 * [How to build a Hotel Booking Page](tutorials/how-to-build-a-booking-page.md)
 * [How to pick na appropriate off-chain storage](tutorials/how-to-pick-off-chain-storage.md)
+* [How to pick an environment](tutorials/how-to-pick-environment.md)
 
 
 <!--
-- Which Winding Tree ecosystem environments are available? - environments
-  discover Write API - environments
-  discover Read API - environments
 - How to integrate property management software to publish inventory + Publishing inventory and availability offering for an entire hotel
 - How to search for inventory - Search API (experimental)
-
+- How much gas do I need? or How much does it cost to register on Winding Tree Index?
 
 - How to implement client
     - mock and greenkeeper on

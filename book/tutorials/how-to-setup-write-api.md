@@ -9,7 +9,7 @@ how to set it up and work with it.
 - Installed and running [Docker](https://www.docker.com)
 - Chosen Winding Tree ecosystem environment
 > #### Info
-> Which Winding Tree ecosystem environments are available?
+> [Which Winding Tree ecosystem environments are available?](how-to-pick-environment.md)
 - Ethereum wallet
 > #### Info
 > [How do I generate Ethereum wallet?](how-to-generate-ethereum-wallet.md)

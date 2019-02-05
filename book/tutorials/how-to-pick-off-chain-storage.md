@@ -7,7 +7,7 @@ Tree ecosystem.
 
 - [Winding Tree Write API](https://github.com/windingtree/wt-write-api) URL.
 > ####Info
-> Learn how to [discover](), [setup](how-to-setup-write-api.md) and [make discoverable]()
+> Learn how to [discover](how-to-pick-environment.md), [setup](how-to-setup-write-api.md) and [make discoverable]()
 the Winding Tree ecosystem APIs.
 
 ## Step by step
@@ -88,5 +88,5 @@ party contribution. Thank you!
 
 ## Where to next
 
-* <a href="https://github.com/windingtree/off-chain-adapter-swarm" target="_blank">Adapter for Swarm storage (Javascript)</a>
-* <a href="https://github.com/windingtree/off-chain-adapter-http" target="_blank">Adapter for HTTPS storage (Javascript)</a>
+- <a href="https://github.com/windingtree/off-chain-adapter-swarm" target="_blank">Adapter for Swarm storage (Javascript)</a>
+- <a href="https://github.com/windingtree/off-chain-adapter-http" target="_blank">Adapter for HTTPS storage (Javascript)</a>

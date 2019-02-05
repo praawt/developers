@@ -11,6 +11,7 @@
   * [How to get first Ether (ETH)](tutorials/how-to-get-first-ether.md)
   * [How to build a Hotel Booking Page](tutorials/how-to-build-a-booking-page.md)
   * [How to pick na appropriate off-chain storage](tutorials/how-to-pick-off-chain-storage.md)
+  * [How to pick an environment](tutorials/how-to-pick-environment.md)
 * [APIs](apis.md)
 * [Tooling and integrations](tooling.md)
 * [Data Model](data-model.md)

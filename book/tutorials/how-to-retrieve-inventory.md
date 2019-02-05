@@ -7,7 +7,7 @@ published in Winding Tree ecosystem.
 
 - [Winding Tree Read API](https://github.com/windingtree/wt-read-api) URL.
 > ####Info
-> Learn how to [discover](), [setup](how-to-setup-read-api.md) and [make discoverable]()
+> Learn how to [discover](how-to-pick-environment.md), [setup](how-to-setup-read-api.md) and [make discoverable]()
 the Winding Tree ecosystem APIs.
 
 ## Step by step
@@ -387,5 +387,5 @@ $ curl 'https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02
 
 ## Where to next
 
-- Searching for inventory
 - [How to calculate prices](how-to-build-a-booking-page.md#checking-availability-and-getting-a-price)
+- Searching for inventory

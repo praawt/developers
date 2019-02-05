@@ -8,7 +8,7 @@ possible: Your apartment for a period of your vacation.
 <!-- TODO reword -->
 - [Winding Tree Write API](https://github.com/windingtree/wt-write-api) URL.
 > ####Info
-> Learn how to [discover](), [setup](how-to-setup-write-api.md) and [make discoverable]()
+> Learn how to [discover](how-to-pick-environment.md), [setup](how-to-setup-write-api.md) and [make discoverable]()
 the Winding Tree ecosystem APIs.
 
 ## Step by step
@@ -234,5 +234,5 @@ Ethereum wallet and noone else can modify the record stored there.
 
 ## Where to next
 
-- Publishing inventory and availability offering for an entire hotel
 - [Building hotel booking page](how-to-build-a-booking-page.md)
+- Publishing inventory and availability offering for an entire hotel

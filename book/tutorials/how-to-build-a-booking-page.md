@@ -11,7 +11,7 @@ for a single hotel registered in Winding Tree.
 > Learn how to [publish inventory](how-to-publish-inventory.md)
 - [Winding Tree Read API](https://github.com/windingtree/wt-read-api) URL.
 > ####Info
-> Learn how to [discover](), [setup](how-to-setup-read-api.md) and [make discoverable]()
+> Learn how to [discover](how-to-pick-environment.md), [setup](how-to-setup-read-api.md) and [make discoverable]()
 the Winding Tree ecosystem APIs.
 
 ## Step by step
