@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>How to keep the Write API secure · GitBook</title>
+        <title>How to accept bookings? · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="how-to-setup-read-api.html" />
+    <link rel="next" href="../apis.html" />
     
     
-    <link rel="prev" href="how-to-setup-write-api.html" />
+    <link rel="prev" href="how-to-publish-many-hotels.html" />
     
 
     </head>
@@ -163,7 +163,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="how-to-secure-write-api.html">
+        <li class="chapter " data-level="1.2.4" data-path="how-to-secure-write-api.html">
             
                 <a href="how-to-secure-write-api.html">
             
@@ -293,7 +293,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.14" data-path="how-to-accept-bookings.html">
+        <li class="chapter active" data-level="1.2.14" data-path="how-to-accept-bookings.html">
             
                 <a href="how-to-accept-bookings.html">
             
@@ -420,7 +420,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >How to keep the Write API secure</a>
+        <a href=".." >How to accept bookings?</a>
     </h1>
 </div>
 
@@ -471,68 +471,143 @@
                                 <blockquote>
 <p><em>Last modified: Wed Feb 06 2019 13:49:15 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
-<h1 id="how-to-keep-the-write-api-secure">How to keep the Write API secure</h1>
-<p>In this tutorial, you will learn a few security tips
-regarding <a href="https://github.com/windingtree/wt-write-api" target="_blank">Winding Tree Write API</a>
-and wallet management.</p>
+<h1 id="how-to-accept-bookings">How to accept bookings?</h1>
+<p>In this tutorial, you will learn about the booking process
+in Winding Tree ecosystem.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li>Ethereum wallet<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p><a href="how-to-generate-ethereum-wallet.html">How do I generate Ethereum wallet?</a></p></div></div>
+<li>Working with the Write API<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="how-to-publish-inventory.html">publish inventory</a></p></div></div>
 </li>
 </ul>
 <h2 id="step-by-step">Step by step</h2>
-<p>Ethereum&apos;s best practice is to sign every transaction locally,
-in a way that your private key never leaves your computer.
-But in an environment where you need to issue many transactions,
-it is just not feasible to sign everything by hand.</p>
-<p>Another best practice is to protect the private key by a passphrase.
-That&apos;s exactly what the wallet in a
-<a href="https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition" target="_blank">Web3 Secret Storage format</a>
-enables us. But this wallet file has to inevitably be stored in
-a software, in our case Write API.</p>
-<p>And it is also inevitable that you have to decrypt the wallet
-file to extract the private key when you need to sign a transaction.</p>
-<p>The Write API design tries to at least decouple the wallet
-and the passphrase as much as possible. That&apos;s why you
-have to provide your wallet passphrase with every request. The
-private keys are only exposed in-memory for the shortest time possible.</p>
-<p>Here are some more tips on how to make your Write API instance
-as secure as possible.</p>
-<h3 id="network-isolation">Network isolation</h3>
-<p>Since the Write API stores an Ethereum wallet for every account
-and it can possibly hold dozens or hundreds of accounts and
-therefore wallets, it can easily become an attacker&apos;s target.</p>
-<p>By design, an attacker can try to crack the passphrases totally
-offline with as much computing power as she can.</p>
-<p><strong>That is why we recommend to run the Write API in a secure
-isolated network and prevent access to it from the public
-internet.</strong></p>
-<h3 id="funds">Funds</h3>
-<p>Because you can never be sure that your wallets from Write
-API are totally safe, you should take an extra measure and
-keep the amount of ETH in them limited only to cover the
-necessary costs.</p>
-<p>If you hold large amounts of ETH, you should never make
-them available in a wallet stored in any software.</p>
-<p><strong>That is why we recommend to keep the ETH funds assigned
-to each wallet to a bare minimum.</strong></p>
-<!-- TODO mulitsigs -->
-<h3 id="data-isolation">Data isolation</h3>
-<p>Write API allows you to control many records in Winding Tree
-Index under a single Ethereum wallet. That means that
-such wallet is an owner of all of the records in Winding Tree
-Index and if it gets compromised, an attacker will get control
-of all of these records.</p>
-<p>It is a best practice to have every record managed by a different
-Ethereum wallet. This also brings you performance gains as it 
-will allow you to publish changes for multiple records to the 
-same Ethereum block.</p>
-<p><strong>That is why we recommend to associate a particular wallet
-with only one Write API account and use that account to manage only
-one record in Winding Tree Index.</strong></p>
+<p>Booking in Winding Tree ecosystem is done in a decentralized way.
+Every hotel should advertise a <code>bookingUri</code> in its data published
+through Write API. This <code>bookingUri</code> should be pointing to REST
+API which is implementing the booking protocol.</p>
+<h3 id="booking-protocol">Booking protocol</h3>
+<p>The booking protocol is really just a description of the REST API.
+It currently contains an endpoint to create new booking and an
+endpoint to cancel an existing one.</p>
+<p>Because this booking scheme is totally decentralized, stateless
+and may be quite disconnected in time from the actual offer published
+on Winding Tree, the booking request should contain all of the data that
+the traveller and the provider agree on.</p>
+<p>First, it contains information about the customer itself. Optional fields
+include a postal <code>address</code> and <code>phone</code>. It is absolutely necessary that
+the provider gets a means of contact with the actual customer.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;customer&quot;</span>: {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Elizabeth&quot;</span>,
+    <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Crown&quot;</span>,
+    <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;elizabeth@example.com&quot;</span>
+  }
+}
+</code></pre>
+<p>Then there&apos;s the information about the booking itself. It contains mainly
+information about the guests and which rooms were booked. It is even ready
+for allocating guests into particular rooms.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;booking&quot;</span>: {
+    <span class="hljs-string">&quot;arrival&quot;</span>: <span class="hljs-string">&quot;2019-02-03&quot;</span>,
+    <span class="hljs-string">&quot;departure&quot;</span>: <span class="hljs-string">&quot;2019-02-10&quot;</span>,
+    <span class="hljs-string">&quot;guestInfo&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;guest-0&quot;</span>, <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Elizabeth&quot;</span>, <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Crown&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">25</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;guest-1&quot;</span>, <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Philip&quot;</span>, <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Crown&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">30</span>
+      }
+    ],
+    <span class="hljs-string">&quot;rooms&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;room-1&quot;</span>,
+        <span class="hljs-string">&quot;guestInfoIds&quot;</span>: [<span class="hljs-string">&quot;guest-0&quot;</span>, <span class="hljs-string">&quot;guest-1&quot;</span>]
+      }
+    ]
+  }
+}
+</code></pre>
+<p>And finally the information about the price that the guest is proposing to the
+hotel. Apart from the total price, this also contains information about
+possible cancellation fees. A hotel can refuse to accept the booking if the
+submitted price is just not acceptable.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;pricing&quot;</span>: {
+    <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;EUR&quot;</span>,
+    <span class="hljs-string">&quot;total&quot;</span>: <span class="hljs-number">100</span>,
+    <span class="hljs-string">&quot;cancellationFees&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;from&quot;</span>: <span class="hljs-string">&quot;2019-02-01&quot;</span>,
+        <span class="hljs-string">&quot;to&quot;</span>: <span class="hljs-string">&quot;2019-02-03&quot;</span>,
+        <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">50</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<p>All of this information combined (also with the appropriate <code>hotelId</code> and an
+optional textual note) will be sent to the appropriate endpoint on the
+declared <code>bookingUri</code>.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;customer&quot;</span>: {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Elizabeth&quot;</span>,
+    <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Crown&quot;</span>,
+    <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;elizabeth@example.com&quot;</span>
+  },
+  <span class="hljs-string">&quot;booking&quot;</span>: {
+    <span class="hljs-string">&quot;arrival&quot;</span>: <span class="hljs-string">&quot;2019-02-03&quot;</span>,
+    <span class="hljs-string">&quot;departure&quot;</span>: <span class="hljs-string">&quot;2019-02-10&quot;</span>,
+    <span class="hljs-string">&quot;guestInfo&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;guest-0&quot;</span>, <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Elizabeth&quot;</span>, <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Crown&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">25</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;guest-1&quot;</span>, <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Philip&quot;</span>, <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Crown&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">30</span>
+      }
+    ],
+    <span class="hljs-string">&quot;rooms&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;room-1&quot;</span>,
+        <span class="hljs-string">&quot;guestInfoIds&quot;</span>: [<span class="hljs-string">&quot;guest-0&quot;</span>, <span class="hljs-string">&quot;guest-1&quot;</span>]
+      }
+    ]
+  },
+  <span class="hljs-string">&quot;pricing&quot;</span>: {
+    <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;EUR&quot;</span>,
+    <span class="hljs-string">&quot;total&quot;</span>: <span class="hljs-number">100</span>,
+    <span class="hljs-string">&quot;cancellationFees&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;from&quot;</span>: <span class="hljs-string">&quot;2019-02-01&quot;</span>,
+        <span class="hljs-string">&quot;to&quot;</span>: <span class="hljs-string">&quot;2019-02-03&quot;</span>,
+        <span class="hljs-string">&quot;amount&quot;</span>: <span class="hljs-number">50</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<pre><code class="lang-sh">$ curl -X POST https://hotel-booking.com/booking \
+  -H <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span> \
+  --data @booking.json
+
+{
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;some-booking-reference&quot;</span>,
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;confirmed&quot;</span>
+}
+</code></pre>
+<p>The booking server should of course validate all of the incoming data
+and if the proposed conditions are OK with the hotel, it should accept
+the booking. It can either make it <code>confirmed</code> or just <code>pending</code> which
+means that there might be another process in place.</p>
+<h3 id="sample-booking-api">Sample Booking API</h3>
+<p>We have a <a href="https://github.com/windingtree/wt-booking-api" target="_blank">sample implementation</a>
+in NodeJS alongside the Booking protocol specification. <em>It is definitely
+not meant for any production use</em>, but merely as a demonstration of what
+should be going on in a custom implementation of Booking API.</p>
+<p>If you already have a Booking system, it should be only a matter of implementing
+a data format adapter.</p>
 <h2 id="where-to-next">Where to next</h2>
 <ul>
-<li><a href="how-to-setup-write-api.html">How to setup Winding Tree Write API?</a></li>
+<li><a href="how-to-build-a-booking-page.html">How to build a Booking page</a></li>
 </ul>
 
                                 
@@ -561,12 +636,12 @@ one record in Winding Tree Index.</strong></p>
 
             
                 
-                <a href="how-to-setup-write-api.html" class="navigation navigation-prev " aria-label="Previous page: How to setup Winding Tree Write API">
+                <a href="how-to-publish-many-hotels.html" class="navigation navigation-prev " aria-label="Previous page: How to publish inventory for many hotels">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="how-to-setup-read-api.html" class="navigation navigation-next " aria-label="Next page: How to setup Winding Tree Read API">
+                <a href="../apis.html" class="navigation navigation-next " aria-label="Next page: APIs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -577,7 +652,7 @@ one record in Winding Tree Index.</strong></p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to keep the Write API secure","level":"1.2.4","depth":2,"next":{"title":"How to setup Winding Tree Read API","level":"1.2.5","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},"previous":{"title":"How to setup Winding Tree Write API","level":"1.2.3","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-secure-write-api.md","mtime":"2019-02-06T13:49:15.884Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-06T13:50:12.291Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to accept bookings?","level":"1.2.14","depth":2,"next":{"title":"APIs","level":"1.3","depth":1,"path":"apis.md","ref":"apis.md","articles":[]},"previous":{"title":"How to publish inventory for many hotels","level":"1.2.13","depth":2,"path":"tutorials/how-to-publish-many-hotels.md","ref":"tutorials/how-to-publish-many-hotels.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"callouts":{},"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-accept-bookings.md","mtime":"2019-02-06T13:49:15.880Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-06T13:50:12.291Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
