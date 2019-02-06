@@ -18,6 +18,7 @@
 <!--
 - How to accept bookings
   setup/implement Booking API
+
 - How to build a Travel Agency
 - How to search for inventory - Search API (experimental)
 
