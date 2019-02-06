@@ -13,12 +13,9 @@
 * [How much does it cost to publish Inventory](tutorials/how-much-does-it-cost.md)
 * [How to publish inventory for an entire hotel](tutorials/how-to-publish-entire-hotel.md)
 * [How to publish inventory for many hotels](tutorials/how-to-publish-many-hotels.md)
-
+* [How to accept bookings?](tutorials/how-to-accept-bookings.md)
 
 <!--
-- How to accept bookings
-  setup/implement Booking API
-
 - How to build a Travel Agency
 - How to search for inventory - Search API (experimental)
 
