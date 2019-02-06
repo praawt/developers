@@ -11,10 +11,13 @@
 * [How to pick na appropriate off-chain storage](tutorials/how-to-pick-off-chain-storage.md)
 * [How to pick an environment](tutorials/how-to-pick-environment.md)
 * [How much does it cost to publish Inventory](tutorials/how-much-does-it-cost.md)
+* [How to publish inventory for an entire hotel](tutorials/how-to-publish-entire-hotel.md)
+* [How to publish inventory for many hotels](tutorials/how-to-publish-many-hotels.md)
 
 
 <!--
-- How to integrate property management software to publish inventory + Publishing inventory and availability offering for an entire hotel
+- How to accept bookings
+  setup/implement Booking API
 - How to build a Travel Agency
 - How to search for inventory - Search API (experimental)
 
@@ -24,8 +27,6 @@
 - How to implement server endpoint based on the API Specification
   - Booking API
     setup/implement
-    discover - environments
-    make discoverable
 - Write API
   make discoverable
 - Read API

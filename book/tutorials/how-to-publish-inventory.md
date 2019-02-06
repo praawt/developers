@@ -234,5 +234,8 @@ Ethereum wallet and noone else can modify the record stored there.
 
 ## Where to next
 
+<!-- TODO how to accept bookings -->
 - [Building hotel booking page](how-to-build-a-booking-page.md)
-- Publishing inventory and availability offering for an entire hotel
+- [Publishing inventory and availability offering for an entire hotel](how-to-publish-entire-hotel.md)
+- [Publishing inventory and availability offering for many hotels](how-to-publish-many-hotels.md)
+<!-- TODO Notification API -->
