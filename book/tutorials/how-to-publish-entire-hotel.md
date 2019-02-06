@@ -328,5 +328,5 @@ $ curl -X PUT https://playground-write-api.windingtree.com/hotels/0xA603FF7EA9A1
 
 ## Where to next
 
-<!-- TODO how to accept bookings -->
 - [Publishing inventory and availability offering for many hotels](how-to-publish-many-hotels.md)
+- [How to accept bookings?](how-to-accept-bookings.md)
