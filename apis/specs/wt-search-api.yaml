@@ -3,7 +3,7 @@ servers:
     - {description: Playground, url: 'https://playground-search-api.windingtree.com'}
 info:
     description: 'API for access to filterable and sortable cached collection of WT hotels.'
-    version: 0.3.0
+    version: 0.4.0
     title: 'WT search API'
 paths:
     /: {get: {summary: 'API info', responses: {'200': {description: 'Basic information about this API instance.', content: {application/json: {schema: {type: object, properties: {docs: {type: string, description: 'Link to the API documentation.'}, info: {type: string, description: 'Link to more information about the API.'}, version: {type: string, description: 'Deployed API version number.'}, config: {type: string, description: 'Which config is the API using.'}}}}}}}}}
