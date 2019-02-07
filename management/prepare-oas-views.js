@@ -10,8 +10,8 @@ const baseTargetViewerPath = path.resolve(__dirname, `../book${targetViewerPrefi
 const list = [
   {
     name: 'wt-write-api',
-    docs: 'wt-write-api/docs/swagger.yaml',
-    package: 'wt-write-api/package.json',
+    docs: '@windingtree/wt-write-api/docs/swagger.yaml',
+    package: '@windingtree/wt-write-api/package.json',
     servers: [
       {
         description: 'Playground',
@@ -21,8 +21,8 @@ const list = [
   },
   {
     name: 'wt-read-api',
-    docs: 'wt-read-api/docs/swagger.yaml',
-    package: 'wt-read-api/package.json',
+    docs: '@windingtree/wt-read-api/docs/swagger.yaml',
+    package: '@windingtree/wt-read-api/package.json',
     servers: [
       {
         description: 'Playground',
@@ -32,8 +32,8 @@ const list = [
   },
   {
     name: 'wt-booking-api',
-    docs: 'wt-booking-api/docs/swagger.yaml',
-    package: 'wt-booking-api/package.json',
+    docs: '@windingtree/wt-booking-api/docs/swagger.yaml',
+    package: '@windingtree/wt-booking-api/package.json',
     servers: [
       {
         description: 'Mazurka test hotel',
@@ -43,8 +43,8 @@ const list = [
   },
   {
     name: 'wt-search-api',
-    docs: 'wt-search-api/docs/swagger.yaml',
-    package: 'wt-search-api/package.json',
+    docs: '@windingtree/wt-search-api/docs/swagger.yaml',
+    package: '@windingtree/wt-search-api/package.json',
     servers: [
       {
         description: 'Playground',
@@ -54,8 +54,8 @@ const list = [
   },
   {
     name: 'wt-notification-api',
-    docs: 'wt-notification-api/docs/swagger.yaml',
-    package: 'wt-notification-api/package.json',
+    docs: '@windingtree/wt-notification-api/docs/swagger.yaml',
+    package: '@windingtree/wt-notification-api/package.json',
     servers: [
       {
         description: 'Playground',

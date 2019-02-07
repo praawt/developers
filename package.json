@@ -36,10 +36,10 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "wt-booking-api": "git+https://git@github.com/windingtree/wt-booking-api.git#v0.3.1",
-    "wt-notification-api": "git+https://git@github.com/windingtree/wt-notification-api.git#v0.3.0",
-    "wt-read-api": "git+https://git@github.com/windingtree/wt-read-api.git#v0.10.0",
-    "wt-search-api": "git+https://git@github.com/windingtree/wt-search-api.git#v0.3.0",
-    "wt-write-api": "git+https://git@github.com/windingtree/wt-write-api.git#v0.11.0"
+    "@windingtree/wt-booking-api": "^0.4.0",
+    "@windingtree/wt-notification-api": "^0.4.2",
+    "@windingtree/wt-read-api": "^0.11.0",
+    "@windingtree/wt-search-api": "^0.4.0",
+    "@windingtree/wt-write-api": "^0.12.0"
   }
 }
