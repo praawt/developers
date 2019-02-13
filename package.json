@@ -40,6 +40,6 @@
     "@windingtree/wt-notification-api": "^0.4.2",
     "@windingtree/wt-read-api": "^0.11.0",
     "@windingtree/wt-search-api": "^0.4.0",
-    "@windingtree/wt-write-api": "^0.12.0"
+    "@windingtree/wt-write-api": "^0.13.0"
   }
 }
