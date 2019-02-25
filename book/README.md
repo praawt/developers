@@ -14,10 +14,10 @@ Winding Tree core team maintains [reference open-source implementation of API Se
 
 ## Platform Functionality
 
-* [Publishing](https://docs.windingtree.com/apis/wt-write-api.html#/default/post_hotels), [retreiving](https://docs.windingtree.com/apis/wt-read-api.html#/default/get_hotels__hotelId_) and [updating](https://docs.windingtree.com/apis/wt-write-api.html#/default/patch_hotels__hotelAddress_) accomodation provider details, inventory and availability
-* [Booking](https://docs.windingtree.com/apis/wt-booking-api.html#/default/post_booking) accommodation products
-* [Querying](https://docs.windingtree.com/apis/wt-search-api.html#/default/get_hotels) accommodation by geolocation
-* [Subscribing](https://docs.windingtree.com/apis/wt-notification-api.html#/default/post_subscriptions) to the event stream and listening to the data updates in the platform
+* [Publishing](https://developers.windingtree.com/apis/wt-write-api.html#/default/post_hotels), [retreiving](https://developers.windingtree.com/apis/wt-read-api.html#/default/get_hotels__hotelId_) and [updating](https://developers.windingtree.com/apis/wt-write-api.html#/default/patch_hotels__hotelAddress_) accomodation provider details, inventory and availability
+* [Booking](https://developers.windingtree.com/apis/wt-booking-api.html#/default/post_booking) accommodation products
+* [Querying](https://developers.windingtree.com/apis/wt-search-api.html#/default/get_hotels) accommodation by geolocation
+* [Subscribing](https://developers.windingtree.com/apis/wt-notification-api.html#/default/post_subscriptions) to the event stream and listening to the data updates in the platform
 
 ## Architectural Overview
 
