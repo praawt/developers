@@ -11,7 +11,7 @@ script:
 - npm run build
 deploy:
   provider: pages
-  fqdn: docs.windingtree.com
+  fqdn: developers.windingtree.com
   local-dir: _book
   skip-cleanup: true
   github-token: $GH_PAGES_DEPLOY_TOKEN  # Set in the settings page of your repository, as a secure variable
