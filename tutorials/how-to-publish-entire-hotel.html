@@ -470,21 +470,36 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p><em>Last modified: Mon Feb 25 2019 07:43:08 GMT+0000 (Coordinated Universal Time)</em></p>
+<p><em>Last modified: Mon Feb 25 2019 08:18:29 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
 <h1 id="how-to-publish-bulk-inventory-for-an-entire-hotel">How to publish bulk inventory for an entire hotel</h1>
-<p>In this slightly contrived example you will learn about<br>additional data that you can publish to Winding Tree<br>ecosystem when you are managing an entire hotel.</p>
+<p>In this slightly contrived example you will learn about
+additional data that you can publish to Winding Tree
+ecosystem when you are managing an entire hotel.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>Working with the Write API<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="how-to-publish-inventory.html">publish inventory</a></p></div></div>
 </li>
 </ul>
 <h2 id="step-by-step">Step by step</h2>
-<p>There is no big difference between<br><a href="how-to-publish-inventory.html">publishing a single apartment</a><br>and an entire hotel in terms of the process. What is probably<br>a little different is how rich the provided data will have to be<br>and how many options of the Winding Tree ecosystem the hotel will<br>use. We will also cover how to update the ever-changing data such<br>as prices.</p>
+<p>There is no big difference between
+<a href="how-to-publish-inventory.html">publishing a single apartment</a>
+and an entire hotel in terms of the process. What is probably
+a little different is how rich the provided data will have to be
+and how many options of the Winding Tree ecosystem the hotel will
+use. We will also cover how to update the ever-changing data such
+as prices.</p>
 <h3 id="preparing-the-data">Preparing the data</h3>
 <h4 id="general-description">General description</h4>
-<p>In addition to the basics covered in <a href="how-to-publish-inventory.html">this tutorial</a>,<br>you can add more information to the general description.</p>
-<p>In the field <code>images</code>, you are able to list URLs leading<br>to images describing your hotels which can later be displayed<br>on the Travel agency website. There is currently no restriction<br>as to where to host your pictures, but we recommend to make them<br>accessible via HTTP. We also recommend to use HD pictures<br>that look well on modern devices. It should be up to the data<br>consumer to adjust the sizes of these pictures.</p>
+<p>In addition to the basics covered in <a href="how-to-publish-inventory.html">this tutorial</a>,
+you can add more information to the general description.</p>
+<p>In the field <code>images</code>, you are able to list URLs leading
+to images describing your hotels which can later be displayed
+on the Travel agency website. There is currently no restriction
+as to where to host your pictures, but we recommend to make them
+accessible via HTTP. We also recommend to use HD pictures
+that look well on modern devices. It should be up to the data
+consumer to adjust the sizes of these pictures.</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;images&quot;</span>: [
     <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/ac9ee64f4324f20e89d7ea219954184f357c9a10ba4de4e1d238053d5f86a9b0&quot;</span>,
@@ -493,7 +508,9 @@
   ]
 }
 </code></pre>
-<p>You are also able to list hotel-wide <code>amenities</code>. So far, it&apos;s<br>a free text, but we plan to change it in the future to make it<br>easily searchable across many hotels.</p>
+<p>You are also able to list hotel-wide <code>amenities</code>. So far, it&apos;s
+a free text, but we plan to change it in the future to make it
+easily searchable across many hotels.</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;amenities&quot;</span>: [
     <span class="hljs-string">&quot;restaurant&quot;</span>,
@@ -502,8 +519,12 @@
   ]
 }
 </code></pre>
-<p>The most complicated part are the cancellation policies. In any case,<br>you have to specify <code>defaultCancellationAmount</code> which is the cost<br>of cancellation in percents of the total price. 0 means everything<br>is returned back to the customer, 100 means non-refundable.</p>
-<p>Anything more complicated is optional and you can specify multiple<br>cancellation policies that may differ in the following:</p>
+<p>The most complicated part are the cancellation policies. In any case,
+you have to specify <code>defaultCancellationAmount</code> which is the cost
+of cancellation in percents of the total price. 0 means everything
+is returned back to the customer, 100 means non-refundable.</p>
+<p>Anything more complicated is optional and you can specify multiple
+cancellation policies that may differ in the following:</p>
 <ul>
 <li>When are they applicable - for example you may have different policies
 in winter and summer</li>
@@ -511,7 +532,8 @@ in winter and summer</li>
 may return smaller amount the closer you are to the date of arrival. We
 call this <code>deadline</code>.</li>
 </ul>
-<p>This information is important as a list of cancellation fees is part<br>of the Winding Tree&apos;s Booking protocol.</p>
+<p>This information is important as a list of cancellation fees is part
+of the Winding Tree&apos;s Booking protocol.</p>
 <p>The following specification means <em>for the traveller</em> that:</p>
 <ul>
 <li>If you cancel between January 1 and June 30<ul>
@@ -551,7 +573,8 @@ call this <code>deadline</code>.</li>
 }
 </code></pre>
 <h4 id="inventory">Inventory</h4>
-<p>You can specify images and amenities also for your room types<br>in the same way as for the whole hotel.</p>
+<p>You can specify images and amenities also for your room types
+in the same way as for the whole hotel.</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;images&quot;</span>: [
     <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/ac9ee64f4324f20e89d7ea219954184f357c9a10ba4de4e1d238053d5f86a9b0&quot;</span>,
@@ -567,8 +590,13 @@ call this <code>deadline</code>.</li>
 </code></pre>
 <h4 id="prices">Prices</h4>
 <p>There are also many more options in pricing design.</p>
-<p>Apart from using a single, primary currency on the hotel level,<br>you are able to specify a <code>currency</code> for every rate plan. With<br>this feature, you are able to declare prices in multiple currencies<br>as well. Winding Tree at this moment does not provide any conversion<br>rates.</p>
-<p>You can also easily restrict when the rate plan can be applied. You<br>have three options how to do it. You can declare when the rate plan can be used:</p>
+<p>Apart from using a single, primary currency on the hotel level,
+you are able to specify a <code>currency</code> for every rate plan. With
+this feature, you are able to declare prices in multiple currencies
+as well. Winding Tree at this moment does not provide any conversion
+rates.</p>
+<p>You can also easily restrict when the rate plan can be applied. You
+have three options how to do it. You can declare when the rate plan can be used:</p>
 <ul>
 <li>based on the date of the booking (<code>availableForReservation</code>),</li>
 <li>based on the date of stay (<code>availableForTravel</code>),</li>
@@ -578,8 +606,16 @@ call this <code>deadline</code>.</li>
 </ul>
 </li>
 </ul>
-<p>Last but not least, you can modify the base price of every rate plan when<br>certain conditions (<code>modifiers</code>), such as minimal number of guests, age or length of stay,<br>are met. These come in handy for example when a second person<br>in the room gets a huge discount.</p>
-<p>The following example (when added to the required fields of a rate plan) means,<br>that the price is in EUR, can be used for bookings that happen in year 2018 and<br>book rooms for the first half of 2019. If a single person is travelling, she will<br>pay 100 EUR. If two people are coming, they will also pay 100 EUR (two times<br>half the price). If three people are coming, they will pay each 50% of base price<br>or 150 EUR.</p>
+<p>Last but not least, you can modify the base price of every rate plan when
+certain conditions (<code>modifiers</code>), such as minimal number of guests, age or length of stay,
+are met. These come in handy for example when a second person
+in the room gets a huge discount.</p>
+<p>The following example (when added to the required fields of a rate plan) means,
+that the price is in EUR, can be used for bookings that happen in year 2018 and
+book rooms for the first half of 2019. If a single person is travelling, she will
+pay 100 EUR. If two people are coming, they will also pay 100 EUR (two times
+half the price). If three people are coming, they will pay each 50% of base price
+or 150 EUR.</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;price&quot;</span>: <span class="hljs-number">100</span>,
   <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;EUR&quot;</span>,
@@ -602,7 +638,9 @@ call this <code>deadline</code>.</li>
 }
 </code></pre>
 <h4 id="availability">Availability</h4>
-<p>For availability, you can gain a bit more control with the concept<br>called <code>restrictions</code>. They basically declare that on certain days,<br>it&apos;s not possible to arrive or depart.</p>
+<p>For availability, you can gain a bit more control with the concept
+called <code>restrictions</code>. They basically declare that on certain days,
+it&apos;s not possible to arrive or depart.</p>
 <p>The example is telling the world that it is:</p>
 <ul>
 <li>Possible to arrive on December 23</li>
@@ -644,21 +682,33 @@ call this <code>deadline</code>.</li>
 ]
 </code></pre>
 <h3 id="uploading-the-data">Uploading the data</h3>
-<p>There is no difference in registering your inventory, so in order<br>to list your hotel offering, we will call the Write API&apos;s <code>/hotels</code><br>endpoint. To be able to do that, you need to have your Write API<br><a href="how-to-setup-write-api.html">account ready and configured</a>.</p>
+<p>There is no difference in registering your inventory, so in order
+to list your hotel offering, we will call the Write API&apos;s <code>/hotels</code>
+endpoint. To be able to do that, you need to have your Write API
+<a href="how-to-setup-write-api.html">account ready and configured</a>.</p>
 <pre><code class="lang-sh">$ curl -X POST https://playground-write-api.windingtree.com/hotels \
   -H <span class="hljs-string">&apos;Content-Type: application/json&apos;</span> \
   -H <span class="hljs-string">&apos;X-Access-Key: write-api-account-access-key&apos;</span> \
   -H <span class="hljs-string">&apos;X-Wallet-Password: ethereum-wallet-password&apos;</span> \
   --data @hotel.json
 </code></pre>
-<p>In the response, you will get an Ethereum address where your hotel<br>is registered. That address belongs only to the holder of the used<br>Ethereum wallet and noone else can modify the record stored there.</p>
+<p>In the response, you will get an Ethereum address where your hotel
+is registered. That address belongs only to the holder of the used
+Ethereum wallet and noone else can modify the record stored there.</p>
 <pre><code class="lang-json">{<span class="hljs-string">&quot;address&quot;</span>:<span class="hljs-string">&quot;0xA603FF7EA9A1B81FB45EF6AeC92A323a88211f40&quot;</span>}
 </code></pre>
 <h3 id="updating-the-data">Updating the data</h3>
-<p>As your hotel gets some traffic, you will probably become in need<br>of updating your inventory, prices or availability.<br>If you are using Write API, you have two options.</p>
+<p>As your hotel gets some traffic, you will probably become in need
+of updating your inventory, prices or availability.
+If you are using Write API, you have two options.</p>
 <h4 id="partial-updates">Partial updates</h4>
-<p>As we&apos;ve shown before, when communicating with Write API the data<br>is separated into three sections: <code>description</code>, <code>ratePlans</code> and <code>availability</code>.<br>Due to the nature of Winding Tree&apos;s ecosystem storage design, you<br>can only update a section as a whole. It is intentionally not possible to<br>partially change a single field with a single API call.</p>
-<p>So, in order to update the price from 100 EUR to 200 EUR, the workflow with<br>Write API looks like this:</p>
+<p>As we&apos;ve shown before, when communicating with Write API the data
+is separated into three sections: <code>description</code>, <code>ratePlans</code> and <code>availability</code>.
+Due to the nature of Winding Tree&apos;s ecosystem storage design, you
+can only update a section as a whole. It is intentionally not possible to
+partially change a single field with a single API call.</p>
+<p>So, in order to update the price from 100 EUR to 200 EUR, the workflow with
+Write API looks like this:</p>
 <ol>
 <li><p>Prepare the data into <code>update.json</code> file.</p>
 <pre><code class="lang-json"> {
@@ -697,7 +747,8 @@ call this <code>deadline</code>.</li>
 </li>
 </ol>
 <h4 id="full-reupload">Full reupload</h4>
-<p>If you for some reason need to change all of the data at the same time,<br>you can. Just use <code>PUT</code> method instead of <code>PATCH</code>.</p>
+<p>If you for some reason need to change all of the data at the same time,
+you can. Just use <code>PUT</code> method instead of <code>PATCH</code>.</p>
 <pre><code class="lang-sh">$ curl -X PUT https://playground-write-api.windingtree.com/hotels/0xA603FF7EA9A1B81FB45EF6AeC92A323a88211f40 \
   -H <span class="hljs-string">&apos;Content-Type: application/json&apos;</span> \
   -H <span class="hljs-string">&apos;X-Access-Key: write-api-account-access-key&apos;</span> \
@@ -752,7 +803,7 @@ call this <code>deadline</code>.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Publishing bulk inventory for an entire hotel","level":"1.7.2","depth":2,"next":{"title":"Publishing bulk inventory for multiple hotels","level":"1.7.3","depth":2,"path":"tutorials/how-to-publish-many-hotels.md","ref":"tutorials/how-to-publish-many-hotels.md","articles":[]},"previous":{"title":"Setting up Winding Tree Write API","level":"1.7.1","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"last-modified":{},"callouts":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-publish-entire-hotel.md","mtime":"2019-02-25T07:43:08.274Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T07:44:29.835Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Publishing bulk inventory for an entire hotel","level":"1.7.2","depth":2,"next":{"title":"Publishing bulk inventory for multiple hotels","level":"1.7.3","depth":2,"path":"tutorials/how-to-publish-many-hotels.md","ref":"tutorials/how-to-publish-many-hotels.md","articles":[]},"previous":{"title":"Setting up Winding Tree Write API","level":"1.7.1","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"last-modified":{},"callouts":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-publish-entire-hotel.md","mtime":"2019-02-25T08:18:29.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T08:19:34.852Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

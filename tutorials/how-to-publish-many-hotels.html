@@ -470,25 +470,39 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p><em>Last modified: Mon Feb 25 2019 07:43:08 GMT+0000 (Coordinated Universal Time)</em></p>
+<p><em>Last modified: Mon Feb 25 2019 08:18:29 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
 <h1 id="how-to-publish-bulk-inventory-for-multiple-hotels">How to publish bulk inventory for multiple hotels</h1>
-<p>Do you manage a system that represents many hotels or properties?<br>In this tutorial, you will learn how you might integrate with<br>Winding Tree ecosystem with the existing tooling.</p>
+<p>Do you manage a system that represents many hotels or properties?
+In this tutorial, you will learn how you might integrate with
+Winding Tree ecosystem with the existing tooling.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li><a href="https://github.com/windingtree/wt-write-api" target="_blank">Winding Tree Write API</a> URL.<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="how-to-pick-environment.html">discover</a>, <a href="how-to-setup-write-api.html">setup</a> and <a href="">make discoverable</a><br>the Winding Tree ecosystem APIs.</p></div></div>
+<li><a href="https://github.com/windingtree/wt-write-api" target="_blank">Winding Tree Write API</a> URL.<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="how-to-pick-environment.html">discover</a>, <a href="how-to-setup-write-api.html">setup</a> and <a href="">make discoverable</a>
+the Winding Tree ecosystem APIs.</p></div></div>
 </li>
 <li>Maintaining data for an entire hotel<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="how-to-publish-entire-hotel.html">publish inventory for an entire hotel</a></p></div></div>
 </li>
 </ul>
 <h2 id="step-by-step">Step by step</h2>
-<p>Winding Tree&apos;s goal is proper data ownership. That is why every hotel can be<br>manipulated only by the holder of it&apos;s owner&apos;s Ethereum wallet.</p>
-<p>There are multiple ways of managing more than one hotel in a single system. We<br>will try to give you some advice and recommendations here for such setup.</p>
+<p>Winding Tree&apos;s goal is proper data ownership. That is why every hotel can be
+manipulated only by the holder of it&apos;s owner&apos;s Ethereum wallet.</p>
+<p>There are multiple ways of managing more than one hotel in a single system. We
+will try to give you some advice and recommendations here for such setup.</p>
 <h3 id="write-api-setup">Write API setup</h3>
-<p>Write API is ready to handle multiple hotels at once. It is also capable<br>of working with multiple separate accounts tied to multiple separate<br>Ethereum wallets.</p>
-<p>We recommend to set up your system in a way where <strong>one Ethereum wallet =<br>one Write API account = one hotel</strong>. This is the most secure and most<br>performant solution. It may be a little bit challenging to distribute ETH<br>to all of these wallets but you can for example pre-allocate wallets etc.</p>
-<p>If multiple hotels would share a wallet, it would mean that they will be<br>effectively owned by the same entity. It would also mean that you would not<br>be able to update them simultaneously due to limitations in transaction<br>concurrency on Ethereum.</p>
-<p>In any case, it would be wise to run Write API on-premise and not expose<br>it to the public internet.</p>
+<p>Write API is ready to handle multiple hotels at once. It is also capable
+of working with multiple separate accounts tied to multiple separate 
+Ethereum wallets.</p>
+<p>We recommend to set up your system in a way where <strong>one Ethereum wallet =
+one Write API account = one hotel</strong>. This is the most secure and most
+performant solution. It may be a little bit challenging to distribute ETH
+to all of these wallets but you can for example pre-allocate wallets etc.</p>
+<p>If multiple hotels would share a wallet, it would mean that they will be
+effectively owned by the same entity. It would also mean that you would not
+be able to update them simultaneously due to limitations in transaction
+concurrency on Ethereum.</p>
+<p>In any case, it would be wise to run Write API on-premise and not expose
+it to the public internet.</p>
 <h2 id="where-to-next">Where to next</h2>
 <ul>
 <li><a href="how-to-secure-write-api.html">How to keep the Write API secure</a></li>
@@ -536,7 +550,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Publishing bulk inventory for multiple hotels","level":"1.7.3","depth":2,"next":{"title":"How to setup Winding Tree Read API","level":"1.7.4","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},"previous":{"title":"Publishing bulk inventory for an entire hotel","level":"1.7.2","depth":2,"path":"tutorials/how-to-publish-entire-hotel.md","ref":"tutorials/how-to-publish-entire-hotel.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"last-modified":{},"callouts":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-publish-many-hotels.md","mtime":"2019-02-25T07:43:08.274Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T07:44:29.835Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Publishing bulk inventory for multiple hotels","level":"1.7.3","depth":2,"next":{"title":"How to setup Winding Tree Read API","level":"1.7.4","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},"previous":{"title":"Publishing bulk inventory for an entire hotel","level":"1.7.2","depth":2,"path":"tutorials/how-to-publish-entire-hotel.md","ref":"tutorials/how-to-publish-entire-hotel.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"insert-logo-link":{"src":"https://docs.windingtree.com/assets/logo.svg","url":"https://docs.windingtree.com/"},"last-modified":{},"callouts":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-publish-many-hotels.md","mtime":"2019-02-25T08:18:29.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T08:19:34.852Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
