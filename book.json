@@ -1,6 +1,6 @@
 {
     "root": "book",
-    "plugins": ["insert-logo-link", "last-modified", "callouts"],
+    "plugins": ["insert-logo-link", "last-modified", "callouts", "-sharing"],
     "pluginsConfig": {
         "insert-logo-link": {
             "src": "https://docs.windingtree.com/assets/logo.svg",

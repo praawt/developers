@@ -1,4 +1,4 @@
-# APIs
+# Winding Tree Platform API Specifications
 
 * <a href="apis/wt-write-api.html" target="_blank">Write API</a>
 * <a href="apis/wt-read-api.html" target="_blank">Read API</a>

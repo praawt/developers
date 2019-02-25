@@ -1,4 +1,4 @@
-# How to retrieve inventory
+# How to query inventory listings
 
 In this tutorial, you will learn how to obtain offerings
 published in Winding Tree ecosystem.

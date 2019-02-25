@@ -1,19 +1,25 @@
-# Winding Tree Documentation
+# Getting started with Winding Tree
 
-Welcome to [Winding Tree](https://windingtree.com)'s documentation portal.
-Here, you will find [tutorials](/tutorials.md) and [FAQ](/faq.md) that
-should help you understand how Winding Tree ecosystem works from the
-operator's perspective, and what is necessary to Join us.
+Winding Tree platform is an open-source ecosystem of interoperable API standards and harmonized data structures enabling decentralized distribution and discovery of travel products on top of Ethereum blockchain, distributed databases and web technologies.
 
-If you find any typo, you don't understand something or have a suggestion
-on how to improve this site, please file an [issue](https://github.com/windingtree/docs/issues/new)
-or submit a [Pull Request](https://github.com/windingtree/docs/compare) on
-[GitHub](https://github.com/windingtree/docs). Thank you!
+Winding Tree core team maintains [reference open-source implementation of API Servers](/tooling.md) you can run yourself for convenience access to the platform data in the [runtime environments](/tutorials/how-to-pick-environment.md).
 
-If you have any questions, we are more than happy to help you on one of these
-channels: [Gitter](https://gitter.im/windingtree/),
-[Google Group](https://groups.google.com/forum/#!forum/windingtree),
-[Telegram](https://t.me/windingtree).
+![shell code](assets/carbon.png)
 
-If you are interested in a more technical deep dive, head to our
-older [wiki](https://github.com/windingtree/wiki).
+**Learn more**
+
+* [How to Publish Inventory Listing](/tutorials/how-to-publish-inventory.md)
+* [How to Query Listings](/tutorials/how-to-retrieve-inventory.md)
+* [How to Book Accommodation](/tutorials/booking-stay.md)
+
+## Platform Functionality
+
+* [Publishing](https://docs.windingtree.com/apis/wt-write-api.html#/default/post_hotels), [retreiving](https://docs.windingtree.com/apis/wt-read-api.html#/default/get_hotels__hotelId_) and [updating](https://docs.windingtree.com/apis/wt-write-api.html#/default/patch_hotels__hotelAddress_) accomodation provider details, inventory and availability
+* [Booking](https://docs.windingtree.com/apis/wt-booking-api.html#/default/post_booking) accommodation products
+* [Querying](https://docs.windingtree.com/apis/wt-search-api.html#/default/get_hotels) accommodation by geolocation
+* [Subscribing](https://docs.windingtree.com/apis/wt-notification-api.html#/default/post_subscriptions) to the event stream and listening to the data updates in the platform
+
+## Architectural Overview
+
+![architecture](assets/architecture.png)For a more technical deep dive, head to our [wiki](https://github.com/windingtree/wiki).
+

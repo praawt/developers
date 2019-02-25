@@ -1,3 +1,5 @@
+# Winding Tree Platform Tooling and Integrations
+
 ## API Servers
 
 * <a href="https://github.com/windingtree/wt-read-api" target="_blank">Read API</a>
@@ -25,7 +27,8 @@
 * <a href="https://github.com/windingtree/lif-token" target="_blank">Líf Token</a>
 * <a href="https://github.com/windingtree/wt-contracts" target="_blank">Winding Tree smart contracts</a>
 
-## 3rd party integrations
+## 3rd party and community contributed 
 
 * <a href="https://github.com/wurducius/wt-net" target="_blank">.NET SDK</a>
 * <a href="https://github.com/ieggleton/windingtee-java-eth-api" target="_blank">Java API</a>
+* ** *[Add yours!](https://github.com/windingtree/docs/blob/master/book/tooling.md)* **
