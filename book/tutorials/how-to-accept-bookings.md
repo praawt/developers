@@ -18,7 +18,7 @@ API which is implementing the booking protocol.
 
 ### Booking protocol
 
-The booking protocol is really just a description of the REST API.
+The booking protocol is really just a [description of the REST API](https://developers.windingtree.com/apis/wt-booking-api.html).
 It currently contains an endpoint to create new booking and an
 endpoint to cancel an existing one.
 

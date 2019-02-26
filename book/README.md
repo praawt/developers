@@ -10,7 +10,7 @@ Winding Tree core team maintains [reference open-source implementation of API Se
 
 * [How to Publish Inventory Listing](/tutorials/how-to-publish-inventory.md)
 * [How to Query Listings](/tutorials/how-to-retrieve-inventory.md)
-* [How to Book Accommodation](/tutorials/booking-stay.md)
+* [How to Book Accommodation](/tutorials/how-to-book-a-stay.md)
 
 ## Platform Functionality
 

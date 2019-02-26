@@ -5,7 +5,6 @@ possible: Your apartment for a period of your vacation.
 
 ## Requirements
 
-<!-- TODO reword -->
 - [Winding Tree Write API](https://github.com/windingtree/wt-write-api) URL.
 > ####Info
 > Learn how to [discover](how-to-pick-environment.md), [setup](how-to-setup-write-api.md) and [make discoverable]()

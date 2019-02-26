@@ -3,7 +3,7 @@
 * [Getting started](README.md)
   * [Publish Inventory](tutorials/how-to-publish-inventory.md)
   * [Query Listings](tutorials/how-to-retrieve-inventory.md)
-  * [Book a Stay](tutorials/booking-stay.md)
+  * [Book a Stay](tutorials/how-to-book-a-stay.md)
 * [Tooling and Integrations](tooling.md)
 * [API Specifications](apis.md)
 * [Data Model](data-model.md)
