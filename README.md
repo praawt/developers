@@ -16,3 +16,5 @@ where you can observe your changes live.
 ## Specifics
 
 - Intergram bot - see https://github.com/windingtree/internal-documents/blob/master/telegram-bots.md#tech-support-chat
+- Links to `apis` and `data-model` has to be done with plain HTML with `target="_blank"`, otherwise gitbook does not
+pick them up for some reason when they are domain-agnostic.
