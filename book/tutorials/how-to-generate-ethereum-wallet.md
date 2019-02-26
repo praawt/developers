@@ -63,7 +63,7 @@ As we said before, you should never share a private key, so
 software that is running locally and does not expose your secrets.
 
 One of such tools is [MyCrypto](https://download.mycrypto.com/) which
-allows you to generate a Keystore file.
+[allows you to generate a Keystore file](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html).
 
 A Keystore file is a [JSON](https://www.json.org/) file that contains
 a private key encrypted by a unique passphrase. If you forget your
