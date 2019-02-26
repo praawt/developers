@@ -1,10 +1,16 @@
 {
     "root": "book",
-    "plugins": ["insert-logo-link", "last-modified", "callouts", "-sharing"],
+    "plugins": ["insert-logo-link", "last-modified", "callouts", "-sharing", "link-checker"],
     "pluginsConfig": {
         "insert-logo-link": {
             "src": "https://developers.windingtree.com/assets/logo.svg",
             "url": "https://developers.windingtree.com/"
+        },
+        "link-checker": {
+            "fqdn": [
+              "developers.windingtree.com"
+            ],
+            "dieOnError": true
         }
     }
 }

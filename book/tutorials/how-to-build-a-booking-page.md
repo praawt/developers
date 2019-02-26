@@ -260,7 +260,7 @@ recomputed every time the values change.
 ### Sending a booking to the hotel
 
 Now we are almost able to call the [Booking API](https://github.com/windingtree/wt-booking-api).
-But if we check the [API documentation](https://developers.windingtree.com/apis/wt-booking-api.html),
+But if we check the <a href="/apis/wt-booking-api.html" target="_blank">API documentation</a>,
 it's obvious that we are still missing a few pieces of information.
 
 First, we need a book button
