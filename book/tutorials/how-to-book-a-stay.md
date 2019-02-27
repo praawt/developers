@@ -14,7 +14,8 @@ the Winding Tree ecosystem APIs.
 Booking in Winding Tree ecosystem is done in a decentralized way.
 Every hotel should advertise a `bookingUri` in its data published
 through Write API. This `bookingUri` should be pointing to REST
-API which is implementing [the booking protocol](https://developers.windingtree.com/apis/wt-booking-api.html).
+API which is implementing
+<a href="/apis/wt-booking-api.html" target="_blank">the booking protocol</a>.
 
 **Note**: The URI is not the booking endpoint itself. For example,
 the Booking API is running on `https://example.com` (that's the `bookingUri`),
