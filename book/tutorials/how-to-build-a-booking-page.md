@@ -366,5 +366,5 @@ data in the browser.
 
 ## Where to next
 
-- [Full code of this example](https://gist.github.com/JirkaChadima/262c06fbd0e0f00235c5a695c567a64b)
+- [Full code of this example](https://gist.github.com/JirkaChadima/262c06fbd0e0f00235c5a695c567a64b/fd447c9b25c5f9fac7c665a6625dd05a49c56b2b)
 - How to build a Travel Agency
