@@ -5,6 +5,7 @@ book/apis/specs/*.yaml
 book/data-model/specs/*.yaml
 book/data-model/*.html
 node_modules
+.DS_Store
 
 # legacy
 book/swagger-ui/
