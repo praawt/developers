@@ -7,6 +7,7 @@
 * [Tooling and Integrations](tooling.md)
 * [API Specifications](apis.md)
 * [Data Model](data-model.md)
+* [Data Validation](data-validation/data-validation.md)
 * [Runtime Environments](tutorials/how-to-pick-environment.md)
 * [Off-chain adapters for large data](tutorials/how-to-pick-off-chain-storage.md)
 * [Advanced Tutorials](advanced-tutorials.md)
