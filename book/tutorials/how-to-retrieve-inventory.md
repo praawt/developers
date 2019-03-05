@@ -21,8 +21,8 @@ no authorization or registration needed.
 The basic call to the API will give you back only the basic information.
 You can limit the amount of returned results with `limit` query parameter.
 The next page (if there is one) is linked in the `next` field. The `items`
-field contains the information itself. The `warnings` and `errors` fields contains eventual
-errors that might occur when retrieving the data from various external
+field contains the information itself. The `warnings` and `errors` fields contains
+possible events that might occur when retrieving the data from various external
 storages or data that failed [validation](../data-validation/data-validation.md).
 
 ```sh
