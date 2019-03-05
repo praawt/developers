@@ -2,7 +2,7 @@
 
 The centerpoint of Winding Tree platform runtime environment is the Ethereum Smart contract called Winding Tree Index. It serves as a decentralized registry of participating service providers \(hotels, airlines\) and the tooling is configured to use it.
 
-The tooling for the environment consists of one or more [REST APIs ](../apis.md)operated either as a service or on-premise - it typically depends on the necessary security measures. The ecosystem is intentionally open, so you can swap Winding Tree reference implementation and architecture with something completely different that suites your particular use case better.
+The tooling for the environment consists of one or more [REST APIs ](/apis.md)operated either as a service or on-premise - it typically depends on the necessary security measures. The ecosystem is intentionally open, so you can swap Winding Tree reference implementation and architecture with something completely different that suites your particular use case better.
 
 ### Active environments
 
