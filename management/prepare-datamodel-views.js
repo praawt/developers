@@ -12,7 +12,7 @@ const list = [
   {
     name: 'hotels',
     // TODO change this to local FS reference once swagger docs are npm-ized
-    url: 'https://raw.githubusercontent.com/windingtree/wiki/868b5d2685b1cd70647020978141be820ddccd30/hotel-data-swagger.yaml',
+    url: 'https://raw.githubusercontent.com/windingtree/wiki/c068b5bd24f8e547b30bd58eea5eb804bc351332/hotel-data-swagger.yaml',
     rootModels: [
       {
         name: 'On chain data',
