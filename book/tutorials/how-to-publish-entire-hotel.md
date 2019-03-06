@@ -75,27 +75,17 @@ For legal reasons, it's also a good idea to add information on the hotel's
 ```
 
 You are able to tell a lot more details about your property with
-the use of `amenities`, `properties` and `tags`. Eventhough they
-might look simliar, they each have a specific semantics.
+the use of `amenities`, and `tags`. Eventhough they
+might look similar, they each have a specific semantics.
 
-Amenities are yes/no services provided by free and we have an enumeration
+Amenities are yes/no services provided by the hotel and we have an enumeration
 of possible values. Tags are on the other hand totally free and you can
 fill in whatever you'd like.
-
-Properties describe some objective qualities of the hotel that can be
-quantifiable, such as pool size. The properties names are also limited
-by an enumeration to make them easily searchable.
 
 ```json
 {
   "amenities": [
     "dry cleaning", "free parking", "free wi-fi", "restaurant"
-  ],
-  "properties": [
-    {
-      "name": "pool size",
-      "value": "300 square feet"
-    }
   ],
   "tags": [
     "luxury", "fine dining"
@@ -158,8 +148,8 @@ The following specification means _for the traveller_ that:
 
 #### Inventory
 
-You can specify category, images, amenities, properties and
-tags also for your room types in the same way as for the whole hotel.
+You can specify category, images, amenities and tags also for your room types
+in the same way as for the whole hotel.
 
 ```json
 {
@@ -173,12 +163,6 @@ tags also for your room types in the same way as for the whole hotel.
     "tv",
     "crib",
     "hairdryer"
-  ],
-  "properties": [
-    {
-      "name": "room area",
-      "value": 42
-    }
   ],
   "tags": [
     "pink walls"
