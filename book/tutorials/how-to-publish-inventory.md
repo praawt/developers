@@ -1,6 +1,6 @@
 # How to publish inventory
 
-In this tutorial, you will learn how tu publish the simplest offering
+In this tutorial, you will learn how to publish the simplest offering
 possible: Your apartment for a period of your vacation.
 
 ## Requirements
@@ -12,14 +12,14 @@ the Winding Tree ecosystem APIs.
 
 ## Step by step
 
-Let's say your name is Frank, you are accidentaly living
+Let's say your name is Frank, you are accidentally living
 in NASA offices in Washington, DC and you are going out of town
-for a weekend. That's a great moment to offer your apartment to
+for the weekend. That's a great moment to offer your apartment to
 other travellers.
 
 ### Preparing the data
 
-In Winding Tree ecosystem, data is divided into the following
+In the Winding Tree ecosystem, data is divided into the following
 groups:
 
   - general description
@@ -28,7 +28,7 @@ groups:
   - availability
 
 We are going to construct the data document necessary to register
-your apartment in Winding Tree ecosystem and offer it to the world.
+your apartment in the Winding Tree ecosystem and offer it to the world.
 
 #### General description
 
