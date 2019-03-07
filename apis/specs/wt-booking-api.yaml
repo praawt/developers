@@ -3,7 +3,7 @@ servers:
     - {description: 'Mazurka test hotel', url: 'https://mazurka-booking.windingtree.com'}
 info:
     description: 'Winding Tree booking interface.'
-    version: 0.4.0
+    version: 0.4.1
     title: 'WT booking API'
 paths:
     /: {get: {summary: 'API info', responses: {'200': {description: 'Basic information about this API instance.', content: {application/json: {schema: {type: object, required: [version], properties: {docs: {type: string, description: 'Link to the API documentation.'}, info: {type: string, description: 'Link to more information about the API.'}, version: {type: string, description: 'Deployed API version number.'}, config: {type: string, description: 'Which config is the API using.'}}}}}}}}}
