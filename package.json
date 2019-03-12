@@ -1,5 +1,5 @@
 {
-  "name": "@windingtree/docs",
+  "name": "@windingtree/developers",
   "version": "0.0.0",
   "description": "Winding Tree developer documentation",
   "main": "README.md",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/windingtree/docs.git"
+    "url": "git+https://github.com/windingtree/developers.git"
   },
   "keywords": [
     "winding",
@@ -24,9 +24,9 @@
   "author": "Winding Tree Developers <dev@windingtree.com>",
   "license": "CC-BY-SA-3.0",
   "bugs": {
-    "url": "https://github.com/windingtree/docs/issues"
+    "url": "https://github.com/windingtree/developers/issues"
   },
-  "homepage": "https://github.com/windingtree/docs#readme",
+  "homepage": "https://github.com/windingtree/developers#readme",
   "devDependencies": {
     "gitbook-cli": "^2.3.2",
     "gitbook-plugin-callouts": "^0.1.1",
