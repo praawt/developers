@@ -37,7 +37,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "@windingtree/wt-booking-api": "^0.5.0",
+    "@windingtree/wt-booking-api": "^0.6.0",
     "@windingtree/wt-notification-api": "^0.4.3",
     "@windingtree/wt-read-api": "^0.12.0",
     "@windingtree/wt-search-api": "^0.5.0",
