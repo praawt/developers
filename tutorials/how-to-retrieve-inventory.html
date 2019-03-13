@@ -194,7 +194,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="how-to-pick-environment.html">
+        <li class="chapter " data-level="1.5" data-path="../data-validation/data-validation.html">
+            
+                <a href="../data-validation/data-validation.html">
+            
+                    
+                    Data Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="how-to-pick-environment.html">
             
                 <a href="how-to-pick-environment.html">
             
@@ -207,7 +220,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="how-to-pick-off-chain-storage.html">
+        <li class="chapter " data-level="1.7" data-path="how-to-pick-off-chain-storage.html">
             
                 <a href="how-to-pick-off-chain-storage.html">
             
@@ -220,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../advanced-tutorials.html">
+        <li class="chapter " data-level="1.8" data-path="../advanced-tutorials.html">
             
                 <a href="../advanced-tutorials.html">
             
@@ -234,7 +247,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="how-to-setup-write-api.html">
+        <li class="chapter " data-level="1.8.1" data-path="how-to-setup-write-api.html">
             
                 <a href="how-to-setup-write-api.html">
             
@@ -247,7 +260,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="how-to-publish-entire-hotel.html">
+        <li class="chapter " data-level="1.8.2" data-path="how-to-publish-entire-hotel.html">
             
                 <a href="how-to-publish-entire-hotel.html">
             
@@ -260,7 +273,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="how-to-publish-many-hotels.html">
+        <li class="chapter " data-level="1.8.3" data-path="how-to-publish-many-hotels.html">
             
                 <a href="how-to-publish-many-hotels.html">
             
@@ -273,7 +286,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="how-to-setup-read-api.html">
+        <li class="chapter " data-level="1.8.4" data-path="how-to-setup-read-api.html">
             
                 <a href="how-to-setup-read-api.html">
             
@@ -286,7 +299,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="how-to-accept-bookings.html">
+        <li class="chapter " data-level="1.8.5" data-path="how-to-accept-bookings.html">
             
                 <a href="how-to-accept-bookings.html">
             
@@ -299,7 +312,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="how-to-build-a-booking-page.html">
+        <li class="chapter " data-level="1.8.6" data-path="how-to-build-a-booking-page.html">
             
                 <a href="how-to-build-a-booking-page.html">
             
@@ -317,7 +330,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../faq.html">
+        <li class="chapter " data-level="1.9" data-path="../faq.html">
             
                 <a href="../faq.html">
             
@@ -331,7 +344,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="how-much-does-it-cost.html">
+        <li class="chapter " data-level="1.9.1" data-path="how-much-does-it-cost.html">
             
                 <a href="how-much-does-it-cost.html">
             
@@ -344,7 +357,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="how-to-generate-ethereum-wallet.html">
+        <li class="chapter " data-level="1.9.2" data-path="how-to-generate-ethereum-wallet.html">
             
                 <a href="how-to-generate-ethereum-wallet.html">
             
@@ -357,7 +370,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="how-to-get-first-ether.html">
+        <li class="chapter " data-level="1.9.3" data-path="how-to-get-first-ether.html">
             
                 <a href="how-to-get-first-ether.html">
             
@@ -370,7 +383,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="how-to-secure-write-api.html">
+        <li class="chapter " data-level="1.9.4" data-path="how-to-secure-write-api.html">
             
                 <a href="how-to-secure-write-api.html">
             
@@ -470,7 +483,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p><em>Last modified: Tue Mar 12 2019 15:08:38 GMT+0000 (Coordinated Universal Time)</em></p>
+<p><em>Last modified: Wed Mar 13 2019 12:32:40 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
 <h1 id="how-to-query-inventory-listings">How to query inventory listings</h1>
 <p>In this tutorial, you will learn how to obtain offerings
@@ -485,14 +498,13 @@ the Winding Tree ecosystem APIs.</p></div></div>
 <p>Retrieving information from Winding Tree ecosystem is as easy
 as calling a common REST API can be. At this time, there is
 no authorization or registration needed.</p>
-<!-- TODO information about versions, errors, warnings? -->
 <h3 id="list-hotels">List hotels</h3>
 <p>The basic call to the API will give you back only the basic information.
 You can limit the amount of returned results with <code>limit</code> query parameter.
 The next page (if there is one) is linked in the <code>next</code> field. The <code>items</code>
-field contains the information itself. The <code>error</code> fields contains eventual
-errors that might occur when retrieving the data from various external
-storages.</p>
+field contains the information itself. The <code>warnings</code> and <code>errors</code> fields contains
+possible events that might occur when retrieving the data from various external
+storages or data that failed <a href="../data-validation/data-validation.html">validation</a>.</p>
 <pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels?limit=2&apos;</span>
 
 {
@@ -514,6 +526,7 @@ storages.</p>
       <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x79C5dD88b385e6822C80aC02461A69d4a04A6703&quot;</span>
     }
   ],
+  <span class="hljs-string">&quot;warnings&quot;</span>: [],
   <span class="hljs-string">&quot;errors&quot;</span>: [],
   <span class="hljs-string">&quot;next&quot;</span>: <span class="hljs-string">&quot;https://playground-api.windingtree.com/hotels?limit=2&amp;fields=id,location,name&amp;startWith=0xFfC10871d7d8c5648b386E1F6778d132c02Eea33&quot;</span>
 }
@@ -528,11 +541,11 @@ dot notation, such as <code>location.latitude</code>. The <code>id</code> field 
     {
       <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Central Hill Apartments&quot;</span>,
       <span class="hljs-string">&quot;address&quot;</span>: {
-        <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;Park Lane 554&quot;</span>,
-        <span class="hljs-string">&quot;line2&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
-        <span class="hljs-string">&quot;postalCode&quot;</span>: <span class="hljs-string">&quot;33317&quot;</span>,
+        <span class="hljs-string">&quot;road&quot;</span>: <span class="hljs-string">&quot;Park Lane&quot;</span>,
+        <span class="hljs-string">&quot;houseNumber&quot;</span>: <span class="hljs-string">&quot;554&quot;</span>,
+        <span class="hljs-string">&quot;postcode&quot;</span>: <span class="hljs-string">&quot;33317&quot;</span>,
         <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Dragolm&quot;</span>,
-        <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
+        <span class="hljs-string">&quot;countryCode&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
       },
       <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
       <span class="hljs-string">&quot;location&quot;</span>: {
@@ -543,11 +556,11 @@ dot notation, such as <code>location.latitude</code>. The <code>id</code> field 
     {
       <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Guest House One Eyed Badger&quot;</span>,
       <span class="hljs-string">&quot;address&quot;</span>: {
-        <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;Oak street 77&quot;</span>,
-        <span class="hljs-string">&quot;line2&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
-        <span class="hljs-string">&quot;postalCode&quot;</span>: <span class="hljs-string">&quot;33313&quot;</span>,
+        <span class="hljs-string">&quot;road&quot;</span>: <span class="hljs-string">&quot;Oak street&quot;</span>,
+        <span class="hljs-string">&quot;houseNumber&quot;</span>: <span class="hljs-string">&quot;77&quot;</span>,
+        <span class="hljs-string">&quot;postcode&quot;</span>: <span class="hljs-string">&quot;33313&quot;</span>,
         <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Dragolm&quot;</span>,
-        <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
+        <span class="hljs-string">&quot;countryCode&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
       },
       <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
       <span class="hljs-string">&quot;location&quot;</span>: {
@@ -556,6 +569,7 @@ dot notation, such as <code>location.latitude</code>. The <code>id</code> field 
       <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x79C5dD88b385e6822C80aC02461A69d4a04A6703&quot;</span>
     }
   ],
+  <span class="hljs-string">&quot;warnings&quot;</span>: [],
   <span class="hljs-string">&quot;errors&quot;</span>: [],
   <span class="hljs-string">&quot;next&quot;</span>: <span class="hljs-string">&quot;https://playground-api.windingtree.com/hotels?limit=2&amp;fields=name,address,currency,location.latitude&amp;startWith=0xFfC10871d7d8c5648b386E1F6778d132c02Eea33&quot;</span>
 }
@@ -582,11 +596,11 @@ with its blockchain address, called <code>id</code> in the data.</p>
     }
   },
   <span class="hljs-string">&quot;address&quot;</span>: {
-    <span class="hljs-string">&quot;line1&quot;</span>: <span class="hljs-string">&quot;Oak street 77&quot;</span>,
-    <span class="hljs-string">&quot;line2&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
-    <span class="hljs-string">&quot;postalCode&quot;</span>: <span class="hljs-string">&quot;33313&quot;</span>,
+    <span class="hljs-string">&quot;road&quot;</span>: <span class="hljs-string">&quot;Oak street&quot;</span>,
+    <span class="hljs-string">&quot;houseNumber&quot;</span>: <span class="hljs-string">&quot;77&quot;</span>,
+    <span class="hljs-string">&quot;postcode&quot;</span>: <span class="hljs-string">&quot;33313&quot;</span>,
     <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Dragolm&quot;</span>,
-    <span class="hljs-string">&quot;country&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
+    <span class="hljs-string">&quot;countryCode&quot;</span>: <span class="hljs-string">&quot;RO&quot;</span>
   },
   <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
   <span class="hljs-string">&quot;images&quot;</span>: [
@@ -613,53 +627,58 @@ with its blockchain address, called <code>id</code> in the data.</p>
   <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0x79C5dD88b385e6822C80aC02461A69d4a04A6703&quot;</span>
 }
 </code></pre>
+<p>Similarily to <code>warnings</code> and <code>errors</code> for lists, when calling a detail endpoint a <code>x-data-validation-warning</code> response header informs the client of <a href="../data-validation/data-validation.html">data validation</a> errors.</p>
 <h3 id="get-hotels-inventory">Get hotel&apos;s inventory</h3>
 <p>There is a special endpoint for listing hotel&apos;s inventory. The <code>fields</code>
 query parameter does not work here.</p>
 <pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/roomTypes&apos;</span>
 
-[
-  {
-    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
-    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Room with a single bed&quot;</span>,
-    <span class="hljs-string">&quot;totalQuantity&quot;</span>: 8,
-    <span class="hljs-string">&quot;occupancy&quot;</span>: {
-      <span class="hljs-string">&quot;min&quot;</span>: 1,
-      <span class="hljs-string">&quot;max&quot;</span>: 1
+{
+  <span class="hljs-string">&quot;items&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
+      <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Room with a single bed&quot;</span>,
+      <span class="hljs-string">&quot;totalQuantity&quot;</span>: 8,
+      <span class="hljs-string">&quot;occupancy&quot;</span>: {
+        <span class="hljs-string">&quot;min&quot;</span>: 1,
+        <span class="hljs-string">&quot;max&quot;</span>: 1
+      },
+      <span class="hljs-string">&quot;amenities&quot;</span>: [
+        <span class="hljs-string">&quot;ashtray&quot;</span>,
+        <span class="hljs-string">&quot;minibar&quot;</span>,
+        <span class="hljs-string">&quot;TV&quot;</span>
+      ],
+      <span class="hljs-string">&quot;images&quot;</span>: [
+        <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/29996d00d7b2b9e882ea1ae28ce221a873322de42eeadd5c38bf6a1c5173e7a4&quot;</span>,
+        <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/49608659632835abf7cb83c068628e13ec39163da5e263c5d3843a1ca4d110d8&quot;</span>
+      ],
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+      <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
     },
-    <span class="hljs-string">&quot;amenities&quot;</span>: [
-      <span class="hljs-string">&quot;ashtray&quot;</span>,
-      <span class="hljs-string">&quot;minibar&quot;</span>,
-      <span class="hljs-string">&quot;TV&quot;</span>
-    ],
-    <span class="hljs-string">&quot;images&quot;</span>: [
-      <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/29996d00d7b2b9e882ea1ae28ce221a873322de42eeadd5c38bf6a1c5173e7a4&quot;</span>,
-      <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/49608659632835abf7cb83c068628e13ec39163da5e263c5d3843a1ca4d110d8&quot;</span>
-    ],
-    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
-  },
-  {
-    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Twin bed&quot;</span>,
-    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Room with a twin bed&quot;</span>,
-    <span class="hljs-string">&quot;totalQuantity&quot;</span>: 4,
-    <span class="hljs-string">&quot;occupancy&quot;</span>: {
-      <span class="hljs-string">&quot;min&quot;</span>: 2,
-      <span class="hljs-string">&quot;max&quot;</span>: 2
-    },
-    <span class="hljs-string">&quot;amenities&quot;</span>: [
-      <span class="hljs-string">&quot;ashtray&quot;</span>,
-      <span class="hljs-string">&quot;minibar&quot;</span>,
-      <span class="hljs-string">&quot;TV&quot;</span>
-    ],
-    <span class="hljs-string">&quot;images&quot;</span>: [
-      <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/29996d00d7b2b9e882ea1ae28ce221a873322de42eeadd5c38bf6a1c5173e7a4&quot;</span>,
-      <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/49608659632835abf7cb83c068628e13ec39163da5e263c5d3843a1ca4d110d8&quot;</span>
-    ],
-    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
-  }
-]
+    {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Twin bed&quot;</span>,
+      <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Room with a twin bed&quot;</span>,
+      <span class="hljs-string">&quot;totalQuantity&quot;</span>: 4,
+      <span class="hljs-string">&quot;occupancy&quot;</span>: {
+        <span class="hljs-string">&quot;min&quot;</span>: 2,
+        <span class="hljs-string">&quot;max&quot;</span>: 2
+      },
+      <span class="hljs-string">&quot;amenities&quot;</span>: [
+        <span class="hljs-string">&quot;ashtray&quot;</span>,
+        <span class="hljs-string">&quot;minibar&quot;</span>,
+        <span class="hljs-string">&quot;TV&quot;</span>
+      ],
+      <span class="hljs-string">&quot;images&quot;</span>: [
+        <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/29996d00d7b2b9e882ea1ae28ce221a873322de42eeadd5c38bf6a1c5173e7a4&quot;</span>,
+        <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/49608659632835abf7cb83c068628e13ec39163da5e263c5d3843a1ca4d110d8&quot;</span>
+      ],
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
+      <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+    }
+  ],
+  <span class="hljs-string">&quot;warnings&quot;</span>: [],
+  <span class="hljs-string">&quot;errors&quot;</span>: []
+}
 </code></pre>
 <p>You can also get a single room type on a special endpoint. You would use
 the <code>id</code> property to address that.</p>
@@ -691,30 +710,36 @@ the <code>id</code> property to address that.</p>
 of rate plans and you can retrieve them for the whole hotel.</p>
 <pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/ratePlans&apos;</span>
 
-[
-  {
-    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
-    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per night for a standard single room.&quot;</span>,
-    <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
-    <span class="hljs-string">&quot;price&quot;</span>: 158,
-    <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
-      <span class="hljs-string">&quot;single-room&quot;</span>
-    ],
-    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
-  },
-  {
-    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Twin bed&quot;</span>,
-    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per person per night for a twin bed room.&quot;</span>,
-    <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
-    <span class="hljs-string">&quot;price&quot;</span>: 257,
-    <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
-      <span class="hljs-string">&quot;twin-bed&quot;</span>
-    ],
-    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
-  }
-]
+{
+  <span class="hljs-string">&quot;items&quot;</span>: [
+    [
+      {
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
+        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per night for a standard single room.&quot;</span>,
+        <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+        <span class="hljs-string">&quot;price&quot;</span>: 158,
+        <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+          <span class="hljs-string">&quot;single-room&quot;</span>
+        ],
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Twin bed&quot;</span>,
+        <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per person per night for a twin bed room.&quot;</span>,
+        <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+        <span class="hljs-string">&quot;price&quot;</span>: 257,
+        <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+          <span class="hljs-string">&quot;twin-bed&quot;</span>
+        ],
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;twin-bed&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+      }
+    ]
+  ],
+  <span class="hljs-string">&quot;warnings&quot;</span>: [],
+  <span class="hljs-string">&quot;errors&quot;</span>: []
+}
 </code></pre>
 <p>You can get a particular rate plan as well by using the <code>id</code> property in the
 URL.</p>
@@ -736,15 +761,21 @@ URL.</p>
 <pre><code class="lang-sh">curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/roomTypes/single-room/ratePlans&apos;</span>
 
 {
-  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
-  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per night for a standard single room.&quot;</span>,
-  <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
-  <span class="hljs-string">&quot;price&quot;</span>: 158,
-  <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
-    <span class="hljs-string">&quot;single-room&quot;</span>
+  <span class="hljs-string">&quot;items&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Single room&quot;</span>,
+      <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Price per night for a standard single room.&quot;</span>,
+      <span class="hljs-string">&quot;currency&quot;</span>: <span class="hljs-string">&quot;RON&quot;</span>,
+      <span class="hljs-string">&quot;price&quot;</span>: 158,
+      <span class="hljs-string">&quot;roomTypeIds&quot;</span>: [
+        <span class="hljs-string">&quot;single-room&quot;</span>
+      ],
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
+      <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+    }
   ],
-  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
-  <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
+  <span class="hljs-string">&quot;warnings&quot;</span>: [],
+  <span class="hljs-string">&quot;errors&quot;</span>: []
 }
 </code></pre>
 <h3 id="get-hotels-availability">Get hotel&apos;s availability</h3>
@@ -754,7 +785,7 @@ any other additional logic has to performed by the API client.</p>
 <pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/availability&apos;</span>
 
 {
-  <span class="hljs-string">&quot;roomTypes&quot;</span>: [
+  <span class="hljs-string">&quot;items&quot;</span>: [
     {
       <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
       <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-24&quot;</span>,
@@ -786,6 +817,8 @@ any other additional logic has to performed by the API client.</p>
       <span class="hljs-string">&quot;quantity&quot;</span>: 0
     }
   ],
+  <span class="hljs-string">&quot;warnings&quot;</span>: [],
+  <span class="hljs-string">&quot;errors&quot;</span>: [],
   <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
 }
 </code></pre>
@@ -793,7 +826,7 @@ any other additional logic has to performed by the API client.</p>
 <pre><code class="lang-sh">$ curl <span class="hljs-string">&apos;https://playground-api.windingtree.com/hotels/0x79C5dD88b385e6822C80aC02461A69d4a04A6703/roomTypes/single-room/availability&apos;</span>
 
 {
-  <span class="hljs-string">&quot;roomTypes&quot;</span>: [
+  <span class="hljs-string">&quot;items&quot;</span>: [
     {
       <span class="hljs-string">&quot;roomTypeId&quot;</span>: <span class="hljs-string">&quot;single-room&quot;</span>,
       <span class="hljs-string">&quot;date&quot;</span>: <span class="hljs-string">&quot;2018-12-24&quot;</span>,
@@ -810,6 +843,8 @@ any other additional logic has to performed by the API client.</p>
       <span class="hljs-string">&quot;quantity&quot;</span>: 0
     }
   ],
+  <span class="hljs-string">&quot;warnings&quot;</span>: [],
+  <span class="hljs-string">&quot;errors&quot;</span>: [],
   <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2019-01-23T09:40:19.626Z&quot;</span>
 }
 </code></pre>
@@ -861,7 +896,7 @@ any other additional logic has to performed by the API client.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Query Listings","level":"1.1.2","depth":2,"next":{"title":"Book a Stay","level":"1.1.3","depth":2,"path":"tutorials/how-to-book-a-stay.md","ref":"tutorials/how-to-book-a-stay.md","articles":[]},"previous":{"title":"Publish Inventory","level":"1.1.1","depth":2,"path":"tutorials/how-to-publish-inventory.md","ref":"tutorials/how-to-publish-inventory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing","link-checker"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"link-checker":{"fqdn":["developers.windingtree.com"],"dieOnError":true},"callouts":{},"insert-logo-link":{"src":"https://developers.windingtree.com/assets/logo.svg","url":"https://developers.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-retrieve-inventory.md","mtime":"2019-03-12T15:08:38.292Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T15:09:45.573Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Query Listings","level":"1.1.2","depth":2,"next":{"title":"Book a Stay","level":"1.1.3","depth":2,"path":"tutorials/how-to-book-a-stay.md","ref":"tutorials/how-to-book-a-stay.md","articles":[]},"previous":{"title":"Publish Inventory","level":"1.1.1","depth":2,"path":"tutorials/how-to-publish-inventory.md","ref":"tutorials/how-to-publish-inventory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing","link-checker"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"link-checker":{"fqdn":["developers.windingtree.com"],"dieOnError":true},"callouts":{},"insert-logo-link":{"src":"https://developers.windingtree.com/assets/logo.svg","url":"https://developers.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-retrieve-inventory.md","mtime":"2019-03-13T12:32:40.148Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T12:33:48.481Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

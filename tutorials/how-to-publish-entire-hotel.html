@@ -194,7 +194,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="how-to-pick-environment.html">
+        <li class="chapter " data-level="1.5" data-path="../data-validation/data-validation.html">
+            
+                <a href="../data-validation/data-validation.html">
+            
+                    
+                    Data Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="how-to-pick-environment.html">
             
                 <a href="how-to-pick-environment.html">
             
@@ -207,7 +220,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="how-to-pick-off-chain-storage.html">
+        <li class="chapter " data-level="1.7" data-path="how-to-pick-off-chain-storage.html">
             
                 <a href="how-to-pick-off-chain-storage.html">
             
@@ -220,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../advanced-tutorials.html">
+        <li class="chapter " data-level="1.8" data-path="../advanced-tutorials.html">
             
                 <a href="../advanced-tutorials.html">
             
@@ -234,7 +247,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="how-to-setup-write-api.html">
+        <li class="chapter " data-level="1.8.1" data-path="how-to-setup-write-api.html">
             
                 <a href="how-to-setup-write-api.html">
             
@@ -247,7 +260,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2" data-path="how-to-publish-entire-hotel.html">
+        <li class="chapter active" data-level="1.8.2" data-path="how-to-publish-entire-hotel.html">
             
                 <a href="how-to-publish-entire-hotel.html">
             
@@ -260,7 +273,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="how-to-publish-many-hotels.html">
+        <li class="chapter " data-level="1.8.3" data-path="how-to-publish-many-hotels.html">
             
                 <a href="how-to-publish-many-hotels.html">
             
@@ -273,7 +286,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="how-to-setup-read-api.html">
+        <li class="chapter " data-level="1.8.4" data-path="how-to-setup-read-api.html">
             
                 <a href="how-to-setup-read-api.html">
             
@@ -286,7 +299,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="how-to-accept-bookings.html">
+        <li class="chapter " data-level="1.8.5" data-path="how-to-accept-bookings.html">
             
                 <a href="how-to-accept-bookings.html">
             
@@ -299,7 +312,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="how-to-build-a-booking-page.html">
+        <li class="chapter " data-level="1.8.6" data-path="how-to-build-a-booking-page.html">
             
                 <a href="how-to-build-a-booking-page.html">
             
@@ -317,7 +330,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../faq.html">
+        <li class="chapter " data-level="1.9" data-path="../faq.html">
             
                 <a href="../faq.html">
             
@@ -331,7 +344,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="how-much-does-it-cost.html">
+        <li class="chapter " data-level="1.9.1" data-path="how-much-does-it-cost.html">
             
                 <a href="how-much-does-it-cost.html">
             
@@ -344,7 +357,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="how-to-generate-ethereum-wallet.html">
+        <li class="chapter " data-level="1.9.2" data-path="how-to-generate-ethereum-wallet.html">
             
                 <a href="how-to-generate-ethereum-wallet.html">
             
@@ -357,7 +370,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="how-to-get-first-ether.html">
+        <li class="chapter " data-level="1.9.3" data-path="how-to-get-first-ether.html">
             
                 <a href="how-to-get-first-ether.html">
             
@@ -370,7 +383,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="how-to-secure-write-api.html">
+        <li class="chapter " data-level="1.9.4" data-path="how-to-secure-write-api.html">
             
                 <a href="how-to-secure-write-api.html">
             
@@ -470,7 +483,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p><em>Last modified: Tue Mar 12 2019 15:08:38 GMT+0000 (Coordinated Universal Time)</em></p>
+<p><em>Last modified: Wed Mar 13 2019 12:32:40 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
 <h1 id="how-to-publish-bulk-inventory-for-an-entire-hotel">How to publish bulk inventory for an entire hotel</h1>
 <p>In this slightly contrived example you will learn about
@@ -499,7 +512,9 @@ on the Travel agency website. There is currently no restriction
 as to where to host your pictures, but we recommend to make them
 accessible via HTTP. We also recommend to use HD pictures
 that look well on modern devices. It should be up to the data
-consumer to adjust the sizes of these pictures.</p>
+consumer to adjust the sizes of these pictures. Also, since there&apos;s no
+metadata available, we recommend to list the most important picture as
+the first one.</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;images&quot;</span>: [
     <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/ac9ee64f4324f20e89d7ea219954184f357c9a10ba4de4e1d238053d5f86a9b0&quot;</span>,
@@ -508,14 +523,40 @@ consumer to adjust the sizes of these pictures.</p>
   ]
 }
 </code></pre>
-<p>You are also able to list hotel-wide <code>amenities</code>. So far, it&apos;s
-a free text, but we plan to change it in the future to make it
-easily searchable across many hotels.</p>
+<p>We also offer a way of putting a hotel into certain <code>category</code> for better
+search possibilities. Available categories are described in the
+<a href="../data-model/hotels.html" target="_blank">data model</a>.</p>
+<p>For legal reasons, it&apos;s also a good idea to add information on the hotel&apos;s
+<code>operator</code>, a legal entity responsible for running the property.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;operator&quot;</span>: {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Example hotels Ltd.&quot;</span>,
+    <span class="hljs-string">&quot;address&quot;</span>: {
+      <span class="hljs-string">&quot;road&quot;</span>: <span class="hljs-string">&quot;E. Street SW&quot;</span>,
+      <span class="hljs-string">&quot;houseNumber&quot;</span>: <span class="hljs-string">&quot;300&quot;</span>,
+      <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Washington&quot;</span>,
+      <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;DC&quot;</span>,
+      <span class="hljs-string">&quot;postcode&quot;</span>: <span class="hljs-string">&quot;20546&quot;</span>,
+      <span class="hljs-string">&quot;countryCode&quot;</span>: <span class="hljs-string">&quot;US&quot;</span>
+    },
+    <span class="hljs-string">&quot;contact&quot;</span>: {
+      <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;operator@example-hotel.com&quot;</span>
+    }
+  }
+}
+</code></pre>
+<p>You are able to tell a lot more details about your property with
+the use of <code>amenities</code>, and <code>tags</code>. Eventhough they
+might look similar, they each have a specific semantics.</p>
+<p>Amenities are yes/no services provided by the hotel and we have an enumeration
+of possible values. Tags are on the other hand totally free and you can
+fill in whatever you&apos;d like.</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;amenities&quot;</span>: [
-    <span class="hljs-string">&quot;restaurant&quot;</span>,
-    <span class="hljs-string">&quot;vending machine&quot;</span>,
-    <span class="hljs-string">&quot;parking&quot;</span>
+    <span class="hljs-string">&quot;dry cleaning&quot;</span>, <span class="hljs-string">&quot;free parking&quot;</span>, <span class="hljs-string">&quot;free wi-fi&quot;</span>, <span class="hljs-string">&quot;restaurant&quot;</span>
+  ],
+  <span class="hljs-string">&quot;tags&quot;</span>: [
+    <span class="hljs-string">&quot;luxury&quot;</span>, <span class="hljs-string">&quot;fine dining&quot;</span>
   ]
 }
 </code></pre>
@@ -573,18 +614,22 @@ of the Winding Tree&apos;s Booking protocol.</p>
 }
 </code></pre>
 <h4 id="inventory">Inventory</h4>
-<p>You can specify images and amenities also for your room types
+<p>You can specify category, images, amenities and tags also for your room types
 in the same way as for the whole hotel.</p>
 <pre><code class="lang-json">{
+  <span class="hljs-string">&quot;category&quot;</span>: <span class="hljs-string">&quot;teepee&quot;</span>,
   <span class="hljs-string">&quot;images&quot;</span>: [
     <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/ac9ee64f4324f20e89d7ea219954184f357c9a10ba4de4e1d238053d5f86a9b0&quot;</span>,
     <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/d71ca677b699764d378ebf15851ce7bc0161067b44ca8d628760d88d92870941&quot;</span>,
     <span class="hljs-string">&quot;https://swarm.windingtree.com:443/bzz-raw:/50cbcd7c03d66e0c7be4e76d2e36254494366d7e80d66b9839d588af96a237ff&quot;</span>
   ],
   <span class="hljs-string">&quot;amenities&quot;</span>: [
-    <span class="hljs-string">&quot;TV&quot;</span>,
-    <span class="hljs-string">&quot;phone&quot;</span>,
-    <span class="hljs-string">&quot;internet&quot;</span>
+    <span class="hljs-string">&quot;tv&quot;</span>,
+    <span class="hljs-string">&quot;crib&quot;</span>,
+    <span class="hljs-string">&quot;hairdryer&quot;</span>
+  ],
+  <span class="hljs-string">&quot;tags&quot;</span>: [
+    <span class="hljs-string">&quot;pink walls&quot;</span>
   ]
 }
 </code></pre>
@@ -609,7 +654,8 @@ have three options how to do it. You can declare when the rate plan can be used:
 <p>Last but not least, you can modify the base price of every rate plan when
 certain conditions (<code>modifiers</code>), such as minimal number of guests, age or length of stay,
 are met. These come in handy for example when a second person
-in the room gets a huge discount.</p>
+in the room gets a huge discount. We support the modification either based on percents
+or as an absolute amount.</p>
 <p>The following example (when added to the required fields of a rate plan) means,
 that the price is in EUR, can be used for bookings that happen in year 2018 and
 book rooms for the first half of 2019. If a single person is travelling, she will
@@ -630,6 +676,7 @@ or 150 EUR.</p>
   <span class="hljs-string">&quot;modifiers&quot;</span>: [
     {
       <span class="hljs-string">&quot;adjustment&quot;</span>: <span class="hljs-number">-50</span>,
+      <span class="hljs-string">&quot;unit&quot;</span>: <span class="hljs-string">&quot;percentage&quot;</span>,
       <span class="hljs-string">&quot;conditions&quot;</span>: {
         <span class="hljs-string">&quot;minOccupants&quot;</span>: <span class="hljs-number">2</span>
       }
@@ -727,6 +774,7 @@ Write API looks like this:</p>
        <span class="hljs-string">&quot;modifiers&quot;</span>: [
          {
            <span class="hljs-string">&quot;adjustment&quot;</span>: <span class="hljs-number">-50</span>,
+           <span class="hljs-string">&quot;unit&quot;</span>: <span class="hljs-string">&quot;percentage&quot;</span>,
            <span class="hljs-string">&quot;conditions&quot;</span>: {
              <span class="hljs-string">&quot;minOccupants&quot;</span>: <span class="hljs-number">2</span>
            }
@@ -803,7 +851,7 @@ you can. Just use <code>PUT</code> method instead of <code>PATCH</code>.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Publishing bulk inventory for an entire hotel","level":"1.7.2","depth":2,"next":{"title":"Publishing bulk inventory for multiple hotels","level":"1.7.3","depth":2,"path":"tutorials/how-to-publish-many-hotels.md","ref":"tutorials/how-to-publish-many-hotels.md","articles":[]},"previous":{"title":"Setting up Winding Tree Write API","level":"1.7.1","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing","link-checker"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"link-checker":{"fqdn":["developers.windingtree.com"],"dieOnError":true},"callouts":{},"insert-logo-link":{"src":"https://developers.windingtree.com/assets/logo.svg","url":"https://developers.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-publish-entire-hotel.md","mtime":"2019-03-12T15:08:38.292Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T15:09:45.573Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Publishing bulk inventory for an entire hotel","level":"1.8.2","depth":2,"next":{"title":"Publishing bulk inventory for multiple hotels","level":"1.8.3","depth":2,"path":"tutorials/how-to-publish-many-hotels.md","ref":"tutorials/how-to-publish-many-hotels.md","articles":[]},"previous":{"title":"Setting up Winding Tree Write API","level":"1.8.1","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing","link-checker"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"link-checker":{"fqdn":["developers.windingtree.com"],"dieOnError":true},"callouts":{},"insert-logo-link":{"src":"https://developers.windingtree.com/assets/logo.svg","url":"https://developers.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-publish-entire-hotel.md","mtime":"2019-03-13T12:32:40.148Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T12:33:48.481Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

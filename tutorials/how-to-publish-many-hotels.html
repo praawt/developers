@@ -194,7 +194,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="how-to-pick-environment.html">
+        <li class="chapter " data-level="1.5" data-path="../data-validation/data-validation.html">
+            
+                <a href="../data-validation/data-validation.html">
+            
+                    
+                    Data Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="how-to-pick-environment.html">
             
                 <a href="how-to-pick-environment.html">
             
@@ -207,7 +220,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="how-to-pick-off-chain-storage.html">
+        <li class="chapter " data-level="1.7" data-path="how-to-pick-off-chain-storage.html">
             
                 <a href="how-to-pick-off-chain-storage.html">
             
@@ -220,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../advanced-tutorials.html">
+        <li class="chapter " data-level="1.8" data-path="../advanced-tutorials.html">
             
                 <a href="../advanced-tutorials.html">
             
@@ -234,7 +247,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="how-to-setup-write-api.html">
+        <li class="chapter " data-level="1.8.1" data-path="how-to-setup-write-api.html">
             
                 <a href="how-to-setup-write-api.html">
             
@@ -247,7 +260,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="how-to-publish-entire-hotel.html">
+        <li class="chapter " data-level="1.8.2" data-path="how-to-publish-entire-hotel.html">
             
                 <a href="how-to-publish-entire-hotel.html">
             
@@ -260,7 +273,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.3" data-path="how-to-publish-many-hotels.html">
+        <li class="chapter active" data-level="1.8.3" data-path="how-to-publish-many-hotels.html">
             
                 <a href="how-to-publish-many-hotels.html">
             
@@ -273,7 +286,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="how-to-setup-read-api.html">
+        <li class="chapter " data-level="1.8.4" data-path="how-to-setup-read-api.html">
             
                 <a href="how-to-setup-read-api.html">
             
@@ -286,7 +299,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="how-to-accept-bookings.html">
+        <li class="chapter " data-level="1.8.5" data-path="how-to-accept-bookings.html">
             
                 <a href="how-to-accept-bookings.html">
             
@@ -299,7 +312,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="how-to-build-a-booking-page.html">
+        <li class="chapter " data-level="1.8.6" data-path="how-to-build-a-booking-page.html">
             
                 <a href="how-to-build-a-booking-page.html">
             
@@ -317,7 +330,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../faq.html">
+        <li class="chapter " data-level="1.9" data-path="../faq.html">
             
                 <a href="../faq.html">
             
@@ -331,7 +344,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="how-much-does-it-cost.html">
+        <li class="chapter " data-level="1.9.1" data-path="how-much-does-it-cost.html">
             
                 <a href="how-much-does-it-cost.html">
             
@@ -344,7 +357,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="how-to-generate-ethereum-wallet.html">
+        <li class="chapter " data-level="1.9.2" data-path="how-to-generate-ethereum-wallet.html">
             
                 <a href="how-to-generate-ethereum-wallet.html">
             
@@ -357,7 +370,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="how-to-get-first-ether.html">
+        <li class="chapter " data-level="1.9.3" data-path="how-to-get-first-ether.html">
             
                 <a href="how-to-get-first-ether.html">
             
@@ -370,7 +383,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="how-to-secure-write-api.html">
+        <li class="chapter " data-level="1.9.4" data-path="how-to-secure-write-api.html">
             
                 <a href="how-to-secure-write-api.html">
             
@@ -470,7 +483,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <blockquote>
-<p><em>Last modified: Tue Mar 12 2019 15:08:38 GMT+0000 (Coordinated Universal Time)</em></p>
+<p><em>Last modified: Wed Mar 13 2019 12:32:40 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
 <h1 id="how-to-publish-bulk-inventory-for-multiple-hotels">How to publish bulk inventory for multiple hotels</h1>
 <p>Do you manage a system that represents many hotels or properties?
@@ -503,6 +516,61 @@ be able to update them simultaneously due to limitations in transaction
 concurrency on Ethereum.</p>
 <p>In any case, it would be wise to run Write API on-premise and not expose
 it to the public internet.</p>
+<h3 id="hosting-data-on-your-own-infrastructure">Hosting data on your own infrastructure</h3>
+<p>There is quite a big chance that when you are managing many hotels, you
+already have some system in place, maybe even a public API that your
+consumer facing applications are using.</p>
+<p>In order to host the data by yourself, you just need to expose an API
+which talks with data that conforms to Winding Tree&apos;s
+<a href="../data-model.html">data model</a>. In such setup, it of course does not make
+sense to publish all of the data via Write API.</p>
+<p>For such cases, the Write API offers a shorthand method for registering
+hotels by submitting only the entrypoint URI stored on blockchain. The
+initial setup is the same as in the <a href="how-to-publish-inventory">ordinary case</a>
+&#x2014; you need to create an <a href="how-to-setup-write-api.html">account</a> in Write API.
+However, you don&apos;t need to specify any uploaders in this case.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;wallet&quot;</span>: {<span class="hljs-string">&quot;version&quot;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;7fe84016-4686-4622-97c9-dc7b47f5f5c6&quot;</span>,<span class="hljs-string">&quot;crypto&quot;</span>:{<span class="hljs-string">&quot;ciphertext&quot;</span>:<span class="hljs-string">&quot;ef9dcce915eeb0c4f7aa2bb16b9ae6ce5a4444b4ed8be45d94e6b7fe7f4f9b47&quot;</span>,<span class="hljs-string">&quot;cipherparams&quot;</span>:{<span class="hljs-string">&quot;iv&quot;</span>:<span class="hljs-string">&quot;31b12ef1d308ea1edacc4ab00de80d55&quot;</span>},<span class="hljs-string">&quot;cipher&quot;</span>:<span class="hljs-string">&quot;aes-128-ctr&quot;</span>,<span class="hljs-string">&quot;kdf&quot;</span>:<span class="hljs-string">&quot;scrypt&quot;</span>,<span class="hljs-string">&quot;kdfparams&quot;</span>:{<span class="hljs-string">&quot;dklen&quot;</span>:<span class="hljs-number">32</span>,<span class="hljs-string">&quot;salt&quot;</span>:<span class="hljs-string">&quot;d06ccd5d9c5d75e1a66a81d2076628f5716a3161ca204d92d04a42c057562541&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>:<span class="hljs-number">8192</span>,<span class="hljs-string">&quot;r&quot;</span>:<span class="hljs-number">8</span>,<span class="hljs-string">&quot;p&quot;</span>:<span class="hljs-number">1</span>},<span class="hljs-string">&quot;mac&quot;</span>:<span class="hljs-string">&quot;2c30bc373c19c5b41385b85ffde14b9ea9f0f609c7812a10fdcb0a565034d9db&quot;</span>}},
+  <span class="hljs-string">&quot;uploaders&quot;</span>: {}
+}
+</code></pre>
+<pre><code class="lang-sh">$ curl -X POST localhost:8000/accounts \
+  -H <span class="hljs-string">&apos;Content-Type: application/json&apos;</span> \
+  --data @account.json
+
+<span class="hljs-comment"># accountId and accessKey are generated and will be different every time</span>
+{<span class="hljs-string">&quot;accountId&quot;</span>:<span class="hljs-string">&quot;aa43edaf8266e8f8&quot;</span>,<span class="hljs-string">&quot;accessKey&quot;</span>:<span class="hljs-string">&quot;usgq6tSBW+wDYA/MBF367HnNp4tGKaCTRPy3JHPEqJmFBuxq1sA7UhFOpuV80ngC&quot;</span>}
+</code></pre>
+<p>Then, you prepare the data document, which in this case, is much shorter.
+We will save this file under <code>hotelWithoutData.json</code>. The <code>dataUri</code> value
+should be pointing to your own service which responds with the data
+entrypoint (<a href="../data-model/hotels.html" target="_blank">Hotel data index</a>)
+for given hotel.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;dataUri&quot;</span>: <span class="hljs-string">&quot;https://my-custom-api.example.com/hotel-12345&quot;</span>
+}
+</code></pre>
+<p>And then with a simple request with that data, we register the hotel
+in Winding Tree ecosystem.</p>
+<pre><code class="lang-sh">$ curl -X POST https://playground-write-api.windingtree.com/hotels \
+  -H <span class="hljs-string">&apos;Content-Type: application/json&apos;</span> \
+  -H <span class="hljs-string">&apos;X-Access-Key: write-api-account-access-key&apos;</span> \
+  -H <span class="hljs-string">&apos;X-Wallet-Password: ethereum-wallet-password&apos;</span> \
+  --data @hotelWithoutData.json
+</code></pre>
+<p>In the response, you will get an Ethereum address where your hotel
+is registered. That address belongs only to the holder of the used
+Ethereum wallet and noone else can modify the record stored there.</p>
+<pre><code class="lang-json">{<span class="hljs-string">&quot;address&quot;</span>:<span class="hljs-string">&quot;0xA603FF7EA9A1B81FB45EF6AeC92A323a88211f40&quot;</span>}
+</code></pre>
+<p>In order to update the dataUri, you just issue a <code>PATCH</code> request with
+the same data structure.</p>
+<pre><code class="lang-sh">$ curl -X PATCH https://playground-write-api.windingtree.com/hotels/0xA603FF7EA9A1B81FB45EF6AeC92A323a88211f40 \
+  -H <span class="hljs-string">&apos;Content-Type: application/json&apos;</span> \
+  -H <span class="hljs-string">&apos;X-Access-Key: write-api-account-access-key&apos;</span> \
+  -H <span class="hljs-string">&apos;X-Wallet-Password: ethereum-wallet-password&apos;</span> \
+  --data @hotelWithoutData.json
+</code></pre>
 <h2 id="where-to-next">Where to next</h2>
 <ul>
 <li><a href="how-to-secure-write-api.html">How to keep the Write API secure</a></li>
@@ -550,7 +618,7 @@ it to the public internet.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Publishing bulk inventory for multiple hotels","level":"1.7.3","depth":2,"next":{"title":"How to setup Winding Tree Read API","level":"1.7.4","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},"previous":{"title":"Publishing bulk inventory for an entire hotel","level":"1.7.2","depth":2,"path":"tutorials/how-to-publish-entire-hotel.md","ref":"tutorials/how-to-publish-entire-hotel.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing","link-checker"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"link-checker":{"fqdn":["developers.windingtree.com"],"dieOnError":true},"callouts":{},"insert-logo-link":{"src":"https://developers.windingtree.com/assets/logo.svg","url":"https://developers.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-publish-many-hotels.md","mtime":"2019-03-12T15:08:38.292Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T15:09:45.573Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Publishing bulk inventory for multiple hotels","level":"1.8.3","depth":2,"next":{"title":"How to setup Winding Tree Read API","level":"1.8.4","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},"previous":{"title":"Publishing bulk inventory for an entire hotel","level":"1.8.2","depth":2,"path":"tutorials/how-to-publish-entire-hotel.md","ref":"tutorials/how-to-publish-entire-hotel.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing","link-checker"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"link-checker":{"fqdn":["developers.windingtree.com"],"dieOnError":true},"callouts":{},"insert-logo-link":{"src":"https://developers.windingtree.com/assets/logo.svg","url":"https://developers.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-publish-many-hotels.md","mtime":"2019-03-13T12:32:40.148Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T12:33:48.481Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
