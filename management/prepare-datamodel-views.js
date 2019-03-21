@@ -4,6 +4,7 @@ const path = require('path'),
   https = require('https');
 
 const targetSpecPrefix = '/data-model/specs';
+const baseSourcePath = path.resolve(__dirname, '../node_modules/');
 const tempYamlLocation = path.resolve('/tmp/');
 const targetSpecLocation = path.resolve(__dirname, `../book/${targetSpecPrefix}`);
 const targetViewerPath = path.resolve(__dirname, `../book/data-model`);
@@ -11,8 +12,7 @@ const targetViewerPath = path.resolve(__dirname, `../book/data-model`);
 const list = [
   {
     name: 'hotels',
-    // TODO change this to local FS reference once swagger docs are npm-ized
-    url: 'https://raw.githubusercontent.com/windingtree/wiki/c068b5bd24f8e547b30bd58eea5eb804bc351332/hotel-data-swagger.yaml',
+    docs: '@windingtree/wt-hotel-schemas/dist/swagger.yaml',
     rootModels: [
       {
         name: 'On chain data',
@@ -38,8 +38,7 @@ const list = [
   },
   {
     name: 'airlines',
-    // TODO change this to local FS reference once swagger docs are npm-ized
-    url: 'https://raw.githubusercontent.com/windingtree/wiki/868b5d2685b1cd70647020978141be820ddccd30/airline-data-swagger.yaml',
+    docs: '@windingtree/wt-airline-schemas/dist/swagger.yaml',
     rootModels: [
       {
         name: 'On chain data',
@@ -78,12 +77,8 @@ function downloadFile(url, dest, cb) {
 const swaggerTemplate = fs.readFileSync(path.resolve(__dirname, './swagger-ui.template.html'), { encoding: 'utf-8'});
 
 for(let model of list) {
-  const localFilePath = `${tempYamlLocation}/${model.name}.yaml`;
-
-  downloadFile(model.url, localFilePath, () => {
-    const specFile = YAML.load(localFilePath);
-    fs.writeFileSync(`${targetSpecLocation}/${model.name}.yaml`, YAML.stringify(specFile));
-    const swaggerPage = swaggerTemplate.replace('<%YAML_SPEC_URL%>', `${targetSpecPrefix}/${model.name}.yaml`);
-    fs.writeFileSync(`${targetViewerPath}/${model.name}.html`, swaggerPage);
-  });
+  const specFile = YAML.load(`${baseSourcePath}/${model.docs}`);
+  fs.writeFileSync(`${targetSpecLocation}/${model.name}.yaml`, YAML.stringify(specFile));
+  const swaggerPage = swaggerTemplate.replace('<%YAML_SPEC_URL%>', `${targetSpecPrefix}/${model.name}.yaml`);
+  fs.writeFileSync(`${targetViewerPath}/${model.name}.html`, swaggerPage);
 }
