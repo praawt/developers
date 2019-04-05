@@ -38,11 +38,11 @@
   },
   "dependencies": {
     "@windingtree/wt-airline-schemas": "^0.6.6",
-    "@windingtree/wt-booking-api": "^0.6.1",
+    "@windingtree/wt-booking-api": "^0.7.1",
     "@windingtree/wt-hotel-schemas": "^0.6.6",
     "@windingtree/wt-notification-api": "^0.4.3",
-    "@windingtree/wt-read-api": "^0.12.0",
-    "@windingtree/wt-search-api": "^0.5.0",
-    "@windingtree/wt-write-api": "^0.14.0"
+    "@windingtree/wt-read-api": "^0.13.1",
+    "@windingtree/wt-search-api": "^0.6.1",
+    "@windingtree/wt-write-api": "^0.15.1"
   }
 }
