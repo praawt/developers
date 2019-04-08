@@ -1,4 +1,4 @@
-# How to pick na appropriate off-chain storage
+# How to pick an appropriate off-chain storage
 
 In this tutorial, you will learn about storage options in Winding
 Tree ecosystem.
