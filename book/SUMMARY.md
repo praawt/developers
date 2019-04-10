@@ -1,6 +1,7 @@
 # Summary
 
-* [Getting started](README.md)
+* [Platform Overview](README.md)
+* [Getting Started](getting-started.md)
   * [Publish Inventory](tutorials/how-to-publish-inventory.md)
   * [Query Listings](tutorials/how-to-retrieve-inventory.md)
   * [Book a Stay](tutorials/how-to-book-a-stay.md)
@@ -22,4 +23,3 @@
   * [How do I generate my own Ethereum wallet](tutorials/how-to-generate-ethereum-wallet.md)
   * [How do I get  the first Ether \(ETH\)](tutorials/how-to-get-first-ether.md)
   * [How do I keep the Write API secure](tutorials/how-to-secure-write-api.md)
-
