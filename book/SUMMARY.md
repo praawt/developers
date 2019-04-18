@@ -12,6 +12,7 @@
 * [Off-chain adapters for large data](tutorials/how-to-pick-off-chain-storage.md)
 * [Advanced Tutorials](advanced-tutorials.md)
   * [Setting up Winding Tree Write API](tutorials/how-to-setup-write-api.md)
+  * [How to setup AWS S3](tutorials/how-to-setup-aws-s3.md)
   * [Publishing bulk inventory for an entire hotel](tutorials/how-to-publish-entire-hotel.md)
   * [Publishing bulk inventory for multiple hotels](tutorials/how-to-publish-many-hotels.md)
   * [How to setup Winding Tree Read API](tutorials/how-to-setup-read-api.md)
