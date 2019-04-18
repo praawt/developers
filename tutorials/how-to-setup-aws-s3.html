@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Off-chain adapters for large data · GitBook</title>
+        <title>How to setup AWS S3 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -67,10 +67,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../advanced-tutorials.html" />
+    <link rel="next" href="how-to-publish-entire-hotel.html" />
     
     
-    <link rel="prev" href="how-to-pick-environment.html" />
+    <link rel="prev" href="how-to-setup-write-api.html" />
     
 
     </head>
@@ -218,7 +218,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7" data-path="how-to-pick-off-chain-storage.html">
+        <li class="chapter " data-level="1.7" data-path="how-to-pick-off-chain-storage.html">
             
                 <a href="how-to-pick-off-chain-storage.html">
             
@@ -258,7 +258,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="how-to-setup-aws-s3.html">
+        <li class="chapter active" data-level="1.8.2" data-path="how-to-setup-aws-s3.html">
             
                 <a href="how-to-setup-aws-s3.html">
             
@@ -443,7 +443,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Off-chain adapters for large data</a>
+        <a href=".." >How to setup AWS S3</a>
     </h1>
 </div>
 
@@ -493,78 +493,123 @@
                                 <blockquote>
 <p><em>Last modified: Thu Apr 18 2019 08:29:10 GMT+0000 (Coordinated Universal Time)</em></p>
 </blockquote>
-<h1 id="how-to-pick-an-appropriate-off-chain-storage">How to pick an appropriate off-chain storage</h1>
-<p>In this tutorial, you will learn about storage options in Winding
-Tree ecosystem.</p>
+<h1 id="how-to-setup-aws-s3">How to setup AWS S3</h1>
+<p>Winding Tree <a href="https://github.com/windingtree/wt-write-api" target="_blank">Write API</a> supports
+<a href="https://aws.amazon.com/s3/" target="_blank">AWS S3</a> as an off-chain HTTPS storage out of the box.
+In this tutorial, you will learn how to set it up properly.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li><a href="https://github.com/windingtree/wt-write-api" target="_blank">Winding Tree Write API</a> URL.<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info"><i class="fa fa-info"></i> Info</h3></div><div class="panel-body"><p>Learn how to <a href="how-to-pick-environment.html">discover</a>, <a href="how-to-setup-write-api.html">setup</a> and <a href="">make discoverable</a>
 the Winding Tree ecosystem APIs.</p></div></div>
 </li>
+<li><a href="how-to-pick-off-chain-storage.html">Selected HTTPS off-chain storage</a>.</li>
 </ul>
 <h2 id="step-by-step">Step by step</h2>
-<p>When you are uploading inventory to Winding Tree ecosystem, you have
-to pick where your data will be stored. This is due to the nature of
-Ethereum blockchain, where storing large chunks of data is expensive.
-Another problem is, that even the smallest change in data results
-in the need of a transaction which might get costly and kind of slow.</p>
-<p>That&apos;s why the majority of data in Winding Tree is stored elsewhere,
-in a so called <strong>off-chain storage</strong>. And there are multiple options,
-and as it goes each one has its pros and cons.</p>
-<p>Also, because of the <a href="../data-model.html">data model</a> designed as a
-tree of documents interlinked by URIs, you are able to combine
-multiple types of storages: Just pick a different storage for each
-document.</p>
-<p>On the source code level, every storage can be added to Winding Tree
-ecosystem as an adapter. They are used for both reading and writing
-and are typically plugged into both <a href="https://github.com/windingtree/wt-write-api" target="_blank">Write API</a>
-and <a href="https://github.com/windingtree/wt-read-api" target="_blank">Read API</a>.</p>
-<p>On the user level, you have to choose your storage when using the
-Write API. When you are creating an account, you specify storages
-in the <code>uploaders</code> section. A more detailed description can be
-found directly in the 
-<a href="https://github.com/windingtree/wt-write-api#uploaders" target="_blank">Write API documentation</a>.</p>
-<p>For reading, everything should work out of the box and apart from
-telling the Read API to use all of the adapters, there are no
-additional steps needed.</p>
-<h3 id="swarm">Swarm</h3>
-<p><a href="https://swarm-gateways.net/bzz:/theswarm.eth/" target="_blank">Swarm</a> is a decentralized
-storage developed alongside Ethereum. It is still in its alpha stage
-and is quite unstable and highly experimental.</p>
-<p>Its main advantage is the decentralization aspect - you don&apos;t need to 
-manage your own servers. However, there are quite a few disadvantages:</p>
+<h3 id="getting-an-aws-account">Getting an AWS account</h3>
+<p>An <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/" target="_blank">official tutorial</a>
+describes this quite well.</p>
+<h3 id="create-and-setup-an-s3-bucket">Create and setup an S3 bucket</h3>
+<p>Navigate to <a href="https://s3.console.aws.amazon.com/s3/home" target="_blank">S3 management console</a>
+and click the <em>Create bucket</em> button. Pick a name for your bucket.
+The most important thing here is to setup the bucket so it is accessible from
+the internet. Without it, nobody will be able to read your data.</p>
+<p>So in the <em>Set permissions</em> section, make sure that all of the boxes are unticked.</p>
+<p><img src="../assets/aws-s3-0.png" alt="S3 Bucket permission dialogue"></p>
+<h3 id="create-new-user-with-appropriate-permission-policy">Create new user with appropriate permission policy</h3>
+<p>Since AWS credentials are stored in the Write API, you should create a separate
+AWS user for each hotel that is using your S3 storage. Navigate to the 
+<a href="https://console.aws.amazon.com/iam/" target="_blank">IAM section</a> and go to <em>Users</em>. Click the
+<em>Add user</em> button. Be sure to tick the <em>Programmatic access</em> checkbox.</p>
+<p><img src="../assets/aws-s3-1.png" alt="Create new user dialogue - basic setup"></p>
+<p>Leave the permissions and tags empty for now, we will set it up in a minute.</p>
+<p>On the last screen of the Add user wizard, be sure to copy <strong>Access key ID</strong> and
+<strong>Secret access key</strong> somewhere safe, you will need it to setup the Write API.</p>
+<p><img src="../assets/aws-s3-2.png" alt="Create new user dialogue - access keys"></p>
+<p>Navigate to the user detail and click the <em>Add inline policy</em> button. On the next screen,
+select the JSON tab. This is the place where we allow the user to work with the files
+in the S3 bucket we created earlier. In our case, we named the bucket <code>test-hotels</code>.</p>
+<p><img src="../assets/aws-s3-3.png" alt="User detail"></p>
+<p>Copy and paste the following JSON snippet in the textarea. Change the <code>test-hotels</code>
+bucket name accordingly to your actual configuration. If you are hosting multiple hotels
+in the same bucket, you can specify a path prefix here as well, just change the
+<code>&quot;arn:aws:s3:::test-hotels/*&quot;</code> to something like <code>&quot;arn:aws:s3:::test-hotels/my-fancy-hotel/*&quot;</code>.
+This will prevent this particular AWS user from touching files that belong to other hotels.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;Version&quot;</span>: <span class="hljs-string">&quot;2012-10-17&quot;</span>,
+  <span class="hljs-string">&quot;Statement&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;Sid&quot;</span>: <span class="hljs-string">&quot;VisualEditor1&quot;</span>,
+      <span class="hljs-string">&quot;Effect&quot;</span>: <span class="hljs-string">&quot;Allow&quot;</span>,
+      <span class="hljs-string">&quot;Action&quot;</span>: [
+        <span class="hljs-string">&quot;s3:PutObject&quot;</span>,
+        <span class="hljs-string">&quot;s3:PutObjectAcl&quot;</span>,
+        <span class="hljs-string">&quot;s3:DeleteObjectVersion&quot;</span>,
+        <span class="hljs-string">&quot;s3:DeleteObject&quot;</span>
+      ],
+      <span class="hljs-string">&quot;Resource&quot;</span>: [
+        <span class="hljs-string">&quot;arn:aws:s3:::test-hotels/*&quot;</span>
+      ]
+    }
+  ]
+}
+</code></pre>
+<p><img src="../assets/aws-s3-4.png" alt="User detail"></p>
+<p>After clicking the <em>Review policy</em> button, you will have to name the policy. After that, click 
+the <em>Create policy</em> button.</p>
+<p>If everything went correctly, you now have an AWS user that can only work with the files in
+the specific S3 bucket or even subdirectory. That&apos;s everything you need to do on AWS.</p>
+<h3 id="create-an-account-in-the-write-api">Create an account in the Write API</h3>
+<p>The next step is to actually publish some data into the bucket. We will test
+it with the Write API.</p>
+<p>Write API is working with the concept of <em>accounts</em>. Every account
+is a virtual user of the API and has the following properties
+associated with it:</p>
 <ul>
-<li>Still an alpha phase - data can get lost or may become unavailable</li>
-<li>Content hash based addressing - even the smallest change in the data
-means that it will get a new address.</li>
+<li>Ethereum wallet that is used to sign and pay for all on-chain transactions</li>
+<li>Uploaders configuration that is used when uploading inventory to Winding Tree
+ecosystem.</li>
 </ul>
-<p>As the documents in the tree are linked with URIs with each other, every
-change will get propagated upwards and will result into an on-chain
-transaction.</p>
-<p>Swarm is great for rapid prototyping and testing, but due to its alpha
-nature I wouldn&apos;t use it in production just yet. The addressing issue
-can be mitigated by using <a href="https://swarm-guide.readthedocs.io/en/latest/usage.html#feeds" target="_blank">Swarm feeds</a>
-which we want to support eventually.</p>
-<h3 id="https">HTTPS</h3>
-<p>For a more robust storage system, we support serving the documents via
-good old HTTPS. This allows you to even serve the documents dynamically
-from your existing backend. You then only need to make sure that your API
-speaks the proper data format.</p>
-<p>The biggest disadvantage is that you need to host your data somewhere. The
-Write API supports upload to <a href="https://aws.amazon.com/s3/" target="_blank">AWS S3</a> out of the
-box, but the Adapter itself does not contain any HTTPS upload specific code.
-It is up to you.</p>
-<h3 id="more-options">More options</h3>
-<p>There are of course plenty of options available, some more mature than others.
-In our <a href="https://blog.windingtree.com/decentralized-storage-for-winding-tree-f86535bee014" target="_blank">older blogpost</a>,
-we discuss a lot of them and our reasoning for choosing Swarm and HTTPS in more
-detail.</p>
-<p>If you&apos;d like to use a so far unsupported storage option, we welcome and third
-party contribution. Thank you!</p>
+<p>In our case, we need to configure the <code>uploaders</code> section to use the S3. The fields
+are pretty self-explanatory:</p>
+<ul>
+<li><code>accessKeyId</code> - Piece of AWS credentials for the user saved during the user creation</li>
+<li><code>secretAccessKey</code> - Piece of AWS credentials for the user saved during the user creation</li>
+<li><code>region</code> - AWS S3 bucket region</li>
+<li><code>bucket</code> - Name of the S3 bucket</li>
+<li><code>keyPrefix</code> - Optional directory to upload hotel data to</li>
+</ul>
+<p>Every account is represented as a JSON object. We will store this one in a file
+called <code>account.json</code>.</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;wallet&quot;</span>: {<span class="hljs-string">&quot;version&quot;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;7fe84016-4686-4622-97c9-dc7b47f5f5c6&quot;</span>,<span class="hljs-string">&quot;crypto&quot;</span>:{<span class="hljs-string">&quot;ciphertext&quot;</span>:<span class="hljs-string">&quot;ef9dcce915eeb0c4f7aa2bb16b9ae6ce5a4444b4ed8be45d94e6b7fe7f4f9b47&quot;</span>,<span class="hljs-string">&quot;cipherparams&quot;</span>:{<span class="hljs-string">&quot;iv&quot;</span>:<span class="hljs-string">&quot;31b12ef1d308ea1edacc4ab00de80d55&quot;</span>},<span class="hljs-string">&quot;cipher&quot;</span>:<span class="hljs-string">&quot;aes-128-ctr&quot;</span>,<span class="hljs-string">&quot;kdf&quot;</span>:<span class="hljs-string">&quot;scrypt&quot;</span>,<span class="hljs-string">&quot;kdfparams&quot;</span>:{<span class="hljs-string">&quot;dklen&quot;</span>:<span class="hljs-number">32</span>,<span class="hljs-string">&quot;salt&quot;</span>:<span class="hljs-string">&quot;d06ccd5d9c5d75e1a66a81d2076628f5716a3161ca204d92d04a42c057562541&quot;</span>,<span class="hljs-string">&quot;n&quot;</span>:<span class="hljs-number">8192</span>,<span class="hljs-string">&quot;r&quot;</span>:<span class="hljs-number">8</span>,<span class="hljs-string">&quot;p&quot;</span>:<span class="hljs-number">1</span>},<span class="hljs-string">&quot;mac&quot;</span>:<span class="hljs-string">&quot;2c30bc373c19c5b41385b85ffde14b9ea9f0f609c7812a10fdcb0a565034d9db&quot;</span>}},
+  <span class="hljs-string">&quot;uploaders&quot;</span>: {
+    <span class="hljs-string">&quot;root&quot;</span>: {
+      <span class="hljs-string">&quot;s3&quot;</span>: {
+        <span class="hljs-string">&quot;accessKeyId&quot;</span>: <span class="hljs-string">&quot;AKIAQNXI4SLEJIKRTYHK&quot;</span>,
+        <span class="hljs-string">&quot;secretAccessKey&quot;</span>: <span class="hljs-string">&quot;PMOAMAmwVUT3GDfG/Z5N5BwWKJwoaTcOqF/Wxt0c&quot;</span>,
+        <span class="hljs-string">&quot;region&quot;</span>: <span class="hljs-string">&quot;eu-west-1&quot;</span>,
+        <span class="hljs-string">&quot;bucket&quot;</span>: <span class="hljs-string">&quot;test-hotels&quot;</span>,
+        <span class="hljs-string">&quot;keyPrefix&quot;</span>: <span class="hljs-string">&quot;my-fancy-hotel&quot;</span>
+      }
+    }
+  }
+}
+</code></pre>
+<p>To create an account with this setup, you need to do the following call:</p>
+<pre><code class="lang-sh">$ curl -X POST localhost:8000/accounts \
+  -H <span class="hljs-string">&apos;Content-Type: application/json&apos;</span> \
+  --data @account.json
+
+<span class="hljs-comment"># accountId and accessKey are generated and will be different every time</span>
+{<span class="hljs-string">&quot;accountId&quot;</span>:<span class="hljs-string">&quot;aa43edaf8266e8f8&quot;</span>,<span class="hljs-string">&quot;accessKey&quot;</span>:<span class="hljs-string">&quot;usgq6tSBW+wDYA/MBF367HnNp4tGKaCTRPy3JHPEqJmFBuxq1sA7UhFOpuV80ngC&quot;</span>}
+</code></pre>
+<p>If you then try to <a href="how-to-publish-inventory.html">create a hotel</a> with this account,
+all of its data should get safely stored in your AWS S3 bucket.</p>
 <h2 id="where-to-next">Where to next</h2>
 <ul>
-<li><a href="https://github.com/windingtree/off-chain-adapter-swarm" target="_blank">Adapter for Swarm storage (Javascript)</a></li>
-<li><a href="https://github.com/windingtree/off-chain-adapter-http" target="_blank">Adapter for HTTPS storage (Javascript)</a></li>
+<li><a href="how-to-publish-inventory.html">Publishing inventory and availability offering</a></li>
+<li><a href="how-to-publish-entire-hotel.html">Publishing inventory and availability offering for an entire hotel</a></li>
+<li><a href="how-to-publish-many-hotels.html">Publishing inventory and availability offering for many hotels</a></li>
 </ul>
 
                                 
@@ -584,12 +629,12 @@ party contribution. Thank you!</p>
 
             
                 
-                <a href="how-to-pick-environment.html" class="navigation navigation-prev " aria-label="Previous page: Runtime Environments">
+                <a href="how-to-setup-write-api.html" class="navigation navigation-prev " aria-label="Previous page: Setting up Winding Tree Write API">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../advanced-tutorials.html" class="navigation navigation-next " aria-label="Next page: Advanced Tutorials">
+                <a href="how-to-publish-entire-hotel.html" class="navigation navigation-next " aria-label="Next page: Publishing bulk inventory for an entire hotel">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -600,7 +645,7 @@ party contribution. Thank you!</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Off-chain adapters for large data","level":"1.7","depth":1,"next":{"title":"Advanced Tutorials","level":"1.8","depth":1,"path":"advanced-tutorials.md","ref":"advanced-tutorials.md","articles":[{"title":"Setting up Winding Tree Write API","level":"1.8.1","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},{"title":"How to setup AWS S3","level":"1.8.2","depth":2,"path":"tutorials/how-to-setup-aws-s3.md","ref":"tutorials/how-to-setup-aws-s3.md","articles":[]},{"title":"Publishing bulk inventory for an entire hotel","level":"1.8.3","depth":2,"path":"tutorials/how-to-publish-entire-hotel.md","ref":"tutorials/how-to-publish-entire-hotel.md","articles":[]},{"title":"Publishing bulk inventory for multiple hotels","level":"1.8.4","depth":2,"path":"tutorials/how-to-publish-many-hotels.md","ref":"tutorials/how-to-publish-many-hotels.md","articles":[]},{"title":"How to setup Winding Tree Read API","level":"1.8.5","depth":2,"path":"tutorials/how-to-setup-read-api.md","ref":"tutorials/how-to-setup-read-api.md","articles":[]},{"title":"How to accept bookings?","level":"1.8.6","depth":2,"path":"tutorials/how-to-accept-bookings.md","ref":"tutorials/how-to-accept-bookings.md","articles":[]},{"title":"How to build a Hotel Booking Page","level":"1.8.7","depth":2,"path":"tutorials/how-to-build-a-booking-page.md","ref":"tutorials/how-to-build-a-booking-page.md","articles":[]}]},"previous":{"title":"Runtime Environments","level":"1.6","depth":1,"path":"tutorials/how-to-pick-environment.md","ref":"tutorials/how-to-pick-environment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing","link-checker"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"link-checker":{"fqdn":["developers.windingtree.com"],"dieOnError":true},"callouts":{},"insert-logo-link":{"src":"https://developers.windingtree.com/assets/logo.svg","url":"https://developers.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-pick-off-chain-storage.md","mtime":"2019-04-18T08:29:10.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-18T08:30:14.367Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to setup AWS S3","level":"1.8.2","depth":2,"next":{"title":"Publishing bulk inventory for an entire hotel","level":"1.8.3","depth":2,"path":"tutorials/how-to-publish-entire-hotel.md","ref":"tutorials/how-to-publish-entire-hotel.md","articles":[]},"previous":{"title":"Setting up Winding Tree Write API","level":"1.8.1","depth":2,"path":"tutorials/how-to-setup-write-api.md","ref":"tutorials/how-to-setup-write-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["insert-logo-link","last-modified","callouts","-sharing","link-checker"],"root":"book","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"last-modified":{},"link-checker":{"fqdn":["developers.windingtree.com"],"dieOnError":true},"callouts":{},"insert-logo-link":{"src":"https://developers.windingtree.com/assets/logo.svg","url":"https://developers.windingtree.com/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"tutorials/how-to-setup-aws-s3.md","mtime":"2019-04-18T08:29:10.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-18T08:30:14.367Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
