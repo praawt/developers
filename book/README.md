@@ -1,14 +1,16 @@
 # Winding Tree Platform Overview
 
-Winding Tree is a direct-connect marketplace for travel companies. It is an open-source ecosystem of interoperable API standards and harmonized data structures enabling decentralized distribution and discovery of travel products and services, built using Ethereum, distributed databases and other open technologies.
+Winding Tree is a direct-connect marketplace for travel companies. It is an open-source ecosystem of interoperable API standards and harmonized data structures enabling decentralized distribution and discovery of travel products and services.
 
-If you are already familiar with Winding Tree on the high level, feel free to skip to the [technical documentation](getting-started.md).
+Winding Tree uses a variety of open technologies, including Ethereum blockchain.
+
+If you are already familiar with Winding Tree, feel free to skip to the [documentation](getting-started.md).
 
 ## Who is It For?
 
 Winding Tree is a completely decentralized platform (like the Internet) where **travel suppliers** (hotels, airlines, car rentals, insurance providers, etc.) can showcase their products and services without a need to go through an intermediary. And, of course, where **travel agencies and travel management companies** can access those products and purchase them.
 
-Moreover, because the platform is open-source, we foresee that new products and services will be added to it soon. Are you an **insurance company** or **provider of security information**? Why not offer your products to OTAs and TMCs on the platform? Are you a new OTA? Gain competitive advantage by combining travel products in new interesting ways.
+Because the platform is open-source, we foresee that new products and services will be added to it soon. Are you an **insurance company** or **provider of security information**? Why not offer your products to OTAs and TMCs through the platform? Are you a new OTA? Gain competitive advantage by accessing inventory you could not access before.
 
 ## Why Decentralization Matters?
 
@@ -16,7 +18,7 @@ Current intermediaries in the travel industry don't just charge unnecessarily la
 
 ## What Winding Tree is Not
 
-Winding Tree is not a website for booking travel, nor we're a PMS or PSS (although we've created examples of how these systems can be built on top of the platform). Winding Tree is just a set of protocols and conventions built in a collaborative way.
+Winding Tree is not a website for booking travel, nor we're a PMS or PSS (although we've created examples of how these systems can be integrated or built on top of the platform). **Winding Tree is just a set of protocols and conventions!**
 
 ![wt platform](assets/diagram.png)
 
@@ -26,29 +28,22 @@ Winding Tree is designed to provide two key features that any marketplace requir
 
 ### Aggregation
 
-There are thousands of travel companies out there and it is not feasible to connect to each and every one individually. That's why aggregation is important and why current intermediaries are so powerful, not because they have great technology.
+There are thousands of travel companies out there and it's important to have one database of these companies in one place. That's why current intermediaries are so powerful, not because they have great technology.
 
 ### Trust
 
-As a supplier, you want to control who can access your inventory. And as a buyer of travel products you want to be sure that the hotel you're booking for your customer exists. Winding Tree Protocol defines a few rules that help both buyers and sellers to establish trust in each other, all in a completely decentralized manner.
+As a supplier, you want to control who can access your inventory. As an OTA, you want to be sure that the hotel you're booking for your customer exists. Winding Tree Protocol defines a few simple rules that help both buyers and sellers to establish trust in each other, all in a completely decentralized manner.
 
 ## How Does Winding Tree Work?
 
-Functional components of the Winding Tree platform are:
+Winding Tree architecture has several layers:
 
-- Identity Registry Smart Contract (IRSC)
-- Hotel Index Smart Contract (HISC)
-- Airline Index Smart Contract (AISC)
+- personal wallets
+- organization smart contracts
+- segment directory smart contracts
+- index smart contract
 
-Winding Tree also defines a few data standards for working with the smart contracts above and provides libraries to simplify the workflow. Below is an example workflow to send a transaction on the platform:
-
-1. Hotel registers with IRSC
-2. Hotel registers with HISC
-3. OTA registers with IRSC
-4. OTA performs a search through HISC and discovers the Hotel
-5. OTA and Hotel can now communicate through their APIs directly, but that communication should be signed with both companies' ID keys
-
-Please note that the actual booking requests and confirmations are never stored on the blockchain in any shape or form.
+![wt platform](assets/winding-tree-architecture.png)
 
 ## Use-Cases
 
