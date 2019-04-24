@@ -12,7 +12,7 @@ Moreover, because the platform is open-source, we foresee that new products and 
 
 ## Why Decentralization Matters?
 
-Current intermediaries in the travel industry don't just charge unnecessarily large fees, they also act as gatekeepers of the industry, picking and choosing companies and ideas that will have access to the marketplace. Because there are just few intermediaries, they also don't have any incentive to update their technology stack, that's why travel tech is so out of date.
+Current intermediaries in the travel industry don't just charge unnecessarily large fees, they also act as gatekeepers of the industry, picking and choosing companies and ideas that will have access to the marketplace. Because there are just few intermediaries, they also don't have any incentive to update their technology stack, that's why travel tech is so out of date. (To better understand this issue, we recommend reading [The Master Switch](https://www.goodreads.com/book/show/8201080-the-master-switch) by Tim Wu.)
 
 ## What Winding Tree is Not
 
