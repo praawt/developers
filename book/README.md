@@ -1,6 +1,6 @@
 # Winding Tree Platform Overview
 
-Winding Tree is a direct-connect marketplace for travel companies. It is an open-source ecosystem of interoperable API standards and harmonized data structures enabling decentralized distribution and discovery of travel products and services.
+Winding Tree is a marketplace for travel companies. It is an open-source ecosystem of interoperable API standards and harmonized data structures enabling decentralized distribution and discovery of travel products and services.
 
 Winding Tree uses a variety of open technologies, including Ethereum blockchain.
 
