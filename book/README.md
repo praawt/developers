@@ -1,4 +1,4 @@
-# Winding Tree Platform Overview
+# Winding Tree Platform Overview (40,000 feet)
 
 Winding Tree is a marketplace for travel companies. It is an open-source ecosystem of interoperable API standards and harmonized data structures enabling decentralized distribution and discovery of travel products and services.
 
@@ -19,8 +19,6 @@ Current intermediaries in the travel industry don't just charge unnecessarily la
 ## What Winding Tree is Not
 
 Winding Tree is not a website for booking travel, nor we're a PMS or PSS (although we've created examples of how these systems can be integrated or built on top of the platform). **Winding Tree is just a set of protocols and conventions!**
-
-![wt platform](assets/diagram.png)
 
 ## What Does Winding Tree Do?
 
@@ -45,6 +43,8 @@ Winding Tree architecture has several layers:
 ![wt platform](assets/winding-tree-architecture.png)
 
 This design allows for suppliers to be easily discovered by potential buyers of their products and services. In addition to that, each organization is required to list one or more public keys in their smart contract and sign all their API calls and responses with the corresponded private keys, which clearly identifies the parties. Think of it as DNS + ID system.
+
+For a 30,000 feet overview of platform functionality, please refer to []
 
 ## Use-Cases
 
