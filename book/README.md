@@ -38,14 +38,17 @@ As a supplier, you want to control who can access your inventory. As an OTA, you
 
 Winding Tree architecture has several layers:
 
-- personal wallets
-- organization smart contracts
-- segment directory smart contracts
-- index smart contract
+- Organization ID smart contracts
+- Segment Directory smart contracts
+- The Index smart contract
 
 ![wt platform](assets/winding-tree-architecture.png)
 
+This design allows for suppliers to be easily discovered by potential buyers of their products and services. In addition to that, each organization is required to list one or more public keys in their smart contract and sign all their API calls and responses with the corresponded private keys, which clearly identifies the parties. Think of it as DNS + ID system.
+
 ## Use-Cases
+
+### Distribution
 
 The distribution use-case is covered in the example above. An OTA can easily access inventory from many companies. What else can be done on top of the platform?
 
