@@ -10,7 +10,7 @@ If you are already familiar with Winding Tree, feel free to skip to the [documen
 
 Winding Tree is a completely decentralized platform (like the Internet) where **travel suppliers** (hotels, airlines, car rentals, insurance providers, etc.) can showcase their products and services without a need to go through an intermediary. And, of course, where **travel agencies and travel management companies** can access those products and purchase them.
 
-Because the platform is open-source, we foresee that new products and services will be added to it soon. Are you an **insurance company** or **provider of security information**? Why not offer your products to OTAs and TMCs through the platform? Are you a new OTA? Gain competitive advantage by accessing inventory you could not access before.
+Because the platform is open-source, we foresee that new products and services will be added to it soon. Are you an **insurance company** or **provider of security information**? Why not offer your products to OTAs (Online Travel Agencies) and TMCs (Travel Management Companies) through the platform? Are you a new OTA? Gain competitive advantage by accessing inventory you could not access before.
 
 ## Why Decentralization Matters?
 
@@ -50,12 +50,8 @@ This design allows for suppliers to be easily discovered by potential buyers of 
 
 ### Distribution
 
-The distribution use-case is covered in the example above. An OTA can easily access inventory from many companies. What else can be done on top of the platform?
+The first use-case that the Winding Tree platform aims to solve is distribution. It is easy to see from the diagram above that it an OTA is able to connect to a supplier API without the need to go through an intermediary. Our vision is to foster innovation in the travel industry by allowing the long tail of travel companies to be able to access the supplier inventory (after all, innovation must be based on experimentation), while making the marketplace safe and secure for all parties. That is why we created the Winding Tree Trust Engine, a simple set of rules that can help a small OTA to prove their trustworthiness to a large supplier, without a third trusted party.
 
 ### Settlement
 
 Because all the API calls between market participants are signed with their keys, both companies have unfalsifiable proof of these transactions. E.g. the hotel has a record of the OTA owing them a certain amount of money. At the same time the OTA has evidence that the hotel has to provide rooms for the OTA customers.
-
-### Trust Building
-
-Now, let's imagine that the OTA, in order to access the hotel inventory, had to go through a rigorous vetting process with the hotel account manager. (After all, supplier should have full control over their inventory.) But after some time doing business with the hotel, the OTA has cryptographic proof that they do business with that hotel. They can use that information (stripped of any personal data) to prove to another hotel that they are a company in good standing.
