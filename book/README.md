@@ -54,4 +54,4 @@ The first use-case that the Winding Tree platform aims to solve is distribution.
 
 ### Settlement
 
-Because all the API calls between market participants are signed with their keys, both companies have unfalsifiable proof of these transactions. E.g. the hotel has a record of the OTA owing them a certain amount of money. At the same time the OTA has evidence that the hotel has to provide rooms for the OTA customers.
+Because all the API calls between market participants are signed with their keys, both companies have unfalsifiable proof of these transactions. E.g. the hotel has a record of the OTA owing them a certain amount of money. At the same time the OTA has evidence that the hotel has to provide rooms for the OTA customers. (Please note that unless all travel companies agree to settle in crypto, an intermediary with a bank account is required.)
