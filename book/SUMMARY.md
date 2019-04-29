@@ -1,6 +1,7 @@
 # Summary
 
 * [Platform Overview](README.md)
+* [How It Works](how-it-works.md)
 * [Getting Started](getting-started.md)
   * [Publish Inventory](tutorials/how-to-publish-inventory.md)
   * [Query Listings](tutorials/how-to-retrieve-inventory.md)
