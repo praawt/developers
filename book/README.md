@@ -18,7 +18,7 @@ Current intermediaries in the travel industry don't just charge unnecessarily la
 
 ## What Winding Tree is Not
 
-Winding Tree is not a website for booking travel, nor we're a PMS or PSS (although we've created examples of how these systems can be integrated or built on top of the platform). **Winding Tree is just a set of protocols and conventions!**
+Winding Tree is not a website for booking travel, nor are we a PMS or PSS (although we've created examples of how these systems can be integrated or built on top of the platform). **Winding Tree is just a set of protocols and conventions!**
 
 ## What Does Winding Tree Do?
 
@@ -42,7 +42,7 @@ Winding Tree architecture has several layers:
 
 ![wt platform](assets/winding-tree-architecture.png)
 
-This design allows for suppliers to be easily discovered by potential buyers of their products and services. In addition to that, each organization is required to list one or more public keys in their smart contract and sign all their API calls and responses with the corresponded private keys, which clearly identifies the parties. Think of it as DNS + ID system.
+This design allows for suppliers to be easily discovered by potential buyers of their products and services. In addition to that, each organization is required to list one or more public keys in their smart contract and sign all their API calls and responses with the corresponding private keys, which clearly identify the parties. Think of it as DNS + ID system.
 
 For a 30,000 feet overview of platform functionality, please refer to []
 
@@ -72,7 +72,7 @@ Distribution is the obvious use-case for Winding Tree. How is it better than the
     </tr>
     <tr>
       <td>Outdated Tech</td>
-      <td>Monopolies and duopolies have no incentive to innovate and update their technology. They only do so by charing its clients, directly or indirectly.</td>
+      <td>Monopolies and duopolies have no incentive to innovate and update their technology. They only do so by charging its clients, directly or indirectly.</td>
       <td>The community working on open-source software and standards maintain the platform constantly.</td>
     </tr>
     <tr>
@@ -98,13 +98,13 @@ Distribution is the obvious use-case for Winding Tree. How is it better than the
     <tr>
       <td>Innovation</td>
       <td>Monopolies and duopolies have very little incentive to innovate, that is why travel, technologically, is 10 years behind.</td>
-      <td>Open-source, collaborative approach proved to be the best catalizator of innovation. The whole internet, including Google, Facebook, Amazon, and thousands of <a href="https://www.zdnet.com/article/why-microsoft-is-turning-into-an-open-source-company/">other companies</a>, would not be possible without open-source.</td>
+      <td>Open-source, collaborative approach proved to be the best catalyst of innovation. The whole internet, including Google, Facebook, Amazon, and thousands of <a href="https://www.zdnet.com/article/why-microsoft-is-turning-into-an-open-source-company/">other companies</a>, would not be possible without open-source.</td>
     </tr>
   </tbody>
 </table>
 
 
-The first use-case that the Winding Tree platform aims to solve is distribution. It is easy to see from the diagram above that an OTA is able to connect to a supplier API without the need to go through an intermediary. Our vision is to foster innovation in the travel industry by allowing the long tail of travel companies to be able to access the supplier inventory (after all, innovation must be based on experimentation), while making the marketplace safe and secure for all parties. That is why we created the Winding Tree Trust Engine, a simple set of rules that can help a small OTA to prove their trustworthiness to a large supplier, without a third trusted party.
+The first use-case that the Winding Tree platform aims to solve is distribution. It is easy to see from the diagram above that an OTA is able to connect to a supplier API without the need to go through an intermediary. Our vision is to foster innovation in the travel industry by allowing the long tail of travel companies to be able to access supplier inventory (after all, innovation must be based on experimentation), while making the marketplace safe and secure for all parties. That is why we've created the Winding Tree Trust Engine, a simple set of rules that can help a small OTA to prove their trustworthiness to a large supplier, without a third trusted party.
 
 Why distribute through winding tree?
 
@@ -114,7 +114,7 @@ Because all the API calls between market participants are signed with their keys
 
 How do we settle that faster?
 
-CC/Cash, IATA rules, what about hotels? Traveler profile and insight (prinvciple: everyone should own their information)
+CC/Cash, IATA rules, what about hotels? Traveler profile and insight (principle: everyone should own their information)
 
 ## Interlining
 
